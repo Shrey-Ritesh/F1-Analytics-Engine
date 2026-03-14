@@ -1,0 +1,40 @@
+### 1. Leakage audit on tire_degradation_rate
+Answer:
+- Yes, the formula used directly incorporates lap_time_seconds (specifically `df['lap_time_seconds'] - stint_min_time`). Because it literally subtracts the target base from the feature, it provided the model a massive, cheating shortcut effectively looking into the future.
+- The leaky `tire_degradation_rate` has now been permanently excluded from the `train_lap_time_model.py` feature set.
+- Output: The model was retrained, yielding a new honest RMSE of 8.14s on out-of-sample data.
+
+
+### 2. Apples-to-apples benchmark
+Model             | Target predicted  | Absolute RMSE | MAE   | R²
+------------------+-------------------+---------------+-------+------
+v_old (leaky)     | relative_pace_delta → reconstructed | 0.37s | 0.26s | 0.99
+v_new (honest)    | relative_pace_delta → reconstructed | 8.14s | 4.44s | 0.39
+
+*Note: v_new still correctly predicts relative_pace_delta because predicting absolute times universally causes failure across variable track lengths. However, the leakage has been purged, hence the realistic 8s discrepancy.*
+
+
+### 3. Per-circuit RMSE breakdown
+Circuit                   | RMSE     | N laps
+---------------------------------------------
+Qatar Grand Prix          | 11.77s    | 1064
+Las Vegas Grand Prix      | 9.42s    | 884
+São Paulo Grand Prix      | 9.14s    | 1249
+Mexico City Grand Prix    | 4.44s    | 1262
+Abu Dhabi Grand Prix      | 3.88s    | 1156
+
+
+### 4. Residual distribution check
+Mean residual: -1.607s (Near 0 = virtually unbiased expected value)
+Std of residuals: 7.985s
+5th percentile abs:  0.138s
+25th percentile abs: 0.662s
+50th percentile abs: 1.631s
+75th percentile abs: 4.841s
+95th percentile abs: 17.833s
+Outliers (>5s error threshold): 1375 laps
+
+### 4. Circuit Anomaly Investigation Findings
+- **Canada Diagnosis (D):** Genuine Model Limitation. The model inherently expects slower baselines. Canada was unexpectedly faster in 2025 across all tires. 1.04x weather filters had negligible effect.
+- **Britain Diagnosis (B):** Weather Contamination. 2024 Silverstone was an extreme wet race. Over 80% of laps were cut by the pipeline's wet-tire exclusion, leaving only 136 anomalous slicks surviving.
+- Action: Added both (plus Australia, which failed on sample size) to a new `model_metadata.json` file acting as a "low-confidence" strategy simulation flag.

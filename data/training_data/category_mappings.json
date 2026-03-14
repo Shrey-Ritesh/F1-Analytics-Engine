@@ -1,15 +1,18 @@
 {
     "team": {
-        "0": "Alpine",
-        "1": "Aston Martin",
-        "2": "Ferrari",
-        "3": "Haas F1 Team",
-        "4": "Kick Sauber",
-        "5": "McLaren",
-        "6": "Mercedes",
-        "7": "Racing Bulls",
-        "8": "Red Bull Racing",
-        "9": "Williams"
+        "0": "Alfa Romeo",
+        "1": "AlphaTauri",
+        "2": "Alpine",
+        "3": "Aston Martin",
+        "4": "Ferrari",
+        "5": "Haas F1 Team",
+        "6": "Kick Sauber",
+        "7": "McLaren",
+        "8": "Mercedes",
+        "9": "RB",
+        "10": "Racing Bulls",
+        "11": "Red Bull Racing",
+        "12": "Williams"
     },
     "circuit": {
         "0": "Abu Dhabi Grand Prix",
@@ -41,6 +44,7 @@
         "0": "HARD",
         "1": "INTERMEDIATE",
         "2": "MEDIUM",
-        "3": "SOFT"
+        "3": "SOFT",
+        "4": "WET"
     }
 }

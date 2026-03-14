@@ -3,7 +3,7 @@ import numpy as np
 import os
 import logging
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-from sklearn.model_selection import RandomizedSearchCV, GroupKFold
+from sklearn.model_selection import GridSearchCV, GroupKFold
 import joblib
 
 try:
@@ -16,9 +16,7 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
 def train_lap_time_model(data_path: str, model_dir: str):
     """
-    Trains and evaluates tuned XGBoost model to predict lap_time_delta.
-    Evaluates back on reconstructed lap_time_seconds.
-    Saves it to models/lap_time_model.pkl
+    Trains and evaluates an XGBoost model predicting relative_pace_delta.
     """
     logging.info(f"Loading training data from {data_path}")
     if not os.path.exists(data_path):
@@ -27,147 +25,137 @@ def train_lap_time_model(data_path: str, model_dir: str):
         
     df = pd.read_csv(data_path)
     
-    # Feature Engineering inside the script as requested
-    logging.info("Engineering new features...")
-    df['track_evolution'] = df['lap'] / df['laps_remaining'].replace(0, 1)
-    df['dirty_air_flag'] = (df['gap_to_car_ahead_seconds'] < 1.5).astype(int)
-    
-    # New features for v3/v4
-    df['drs_enabled'] = (df['lap'] > 2).astype(int)
-    
-    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-    mapping_path = os.path.join(project_root, 'data', 'training_data', 'category_mappings.json')
-    
-    import json
-    if os.path.exists(mapping_path):
-        with open(mapping_path, 'r') as f:
-            mappings = json.load(f)
-            
-        circuit_dict = mappings.get('circuit', {})
-        
-        street_circuits = ['Monaco Grand Prix', 'Singapore Grand Prix', 'Azerbaijan Grand Prix', 'Las Vegas Grand Prix', 'Miami Grand Prix', 'Saudi Arabian Grand Prix']
-        high_speed_circuits = ['Italian Grand Prix', 'Belgian Grand Prix', 'British Grand Prix', 'Saudi Arabian Grand Prix', 'Qatar Grand Prix']
-        technical_circuits = ['Hungarian Grand Prix', 'Spanish Grand Prix', 'Dutch Grand Prix', 'Emilia Romagna Grand Prix', 'Japanese Grand Prix', 'United States Grand Prix']
-        power_circuits = ['Canadian Grand Prix', 'Austrian Grand Prix', 'Mexico City Grand Prix', 'Bahrain Grand Prix', 'Abu Dhabi Grand Prix', 'Chinese Grand Prix', 'Australian Grand Prix', 'São Paulo Grand Prix']
-        
-        def assign_track_type(circuit_name):
-            if circuit_name in street_circuits: return 0
-            if circuit_name in high_speed_circuits: return 1
-            if circuit_name in technical_circuits: return 2
-            if circuit_name in power_circuits: return 3
-            return 2
-            
-        code_to_track_type = {}
-        for code_str, name in circuit_dict.items():
-            code_to_track_type[int(code_str)] = assign_track_type(name)
-            
-        df['track_type'] = df['circuit'].map(code_to_track_type)
-    else:
-        df['track_type'] = 0
-    
-    # V4: TARGET DELTA CREATION
-    df['lap_time_delta'] = df['lap_time_seconds'] - df['expected_lap_time']
-    
-    # Remove Target Leakage
-    logging.info("Removing target leakage columns...")
-    leakage_cols = ['final_race_position', 'podium_finish', 'race_winner']
-    df = df.drop(columns=[col for col in leakage_cols if col in df.columns], errors='ignore')
-    
-    target_col = 'lap_time_delta'
-    absolute_target_col = 'lap_time_seconds'
-
     # Handle NaNs safely
     df = df.fillna(0)
     
-    # Sort data
+    # 3a. Add a compound interaction feature inside the XGBoost pipeline
+    # The interaction between how far in the stint we are and the tire degradation base rate
+    df['compound_interaction'] = df['stint_progress_pct'] * df['compound_base_deg_rate']
+    
+    # Define Leaky/Excluded columns
+    # We remove these as they provide unfair future glimpses or are part of the target calculation
+    exclude_cols = [
+        'lap_time_seconds',
+        'final_race_position',
+        'podium_finish',
+        'race_winner',
+        'relative_pace_delta',
+        'expected_lap_time',
+        'tire_degradation_rate' # LEAKY: Uses actual lap_time_seconds
+    ]
+    
+    # Define Target Variables
+    target_col = 'relative_pace_delta'
+    absolute_target_col = 'lap_time_seconds' # For reconstruction evaluation
+    
+    # Sort data chronologically mapping
     df = df.sort_values(by=['race_year', 'round_number', 'lap'])
     
-    # Split features and target
-    y = df[target_col]
+    # Validation strategy group definition
+    # Combine race_year and round_number to stringently isolate each unique race globally
+    df['cv_group'] = df['race_year'].astype(str) + "_" + df['round_number'].astype(str)
+    groups = df['cv_group']
     
-    # Drop both lap_time_seconds and lap_time_delta from X
-    X = df.drop(columns=[target_col, absolute_target_col])
-    groups = df['round_number']
+    # Determine the test splits. We'll simulate a chronological hold-out for true final testing.
+    # GroupKFold handles the CV during tuning, but we want the final test on unseen data.
+    unique_groups = df['cv_group'].unique()
+    split_idx = int(len(unique_groups) * 0.8)
+    train_groups = unique_groups[:split_idx]
     
-    logging.info(f"GroupKFold split applied on {len(df['round_number'].unique())} total rounds.")
-    logging.info(f"Total shapes -> X: {X.shape}, y: {y.shape}")
+    train_df = df[df['cv_group'].isin(train_groups)]
+    test_df = df[~df['cv_group'].isin(train_groups)]
+    
+    logging.info(f"GroupKFold split prepared. {len(unique_groups)} total races.")
+    logging.info(f"Training on {len(train_groups)} races. Held-out final testing on {len(unique_groups) - len(train_groups)} races.")
+    
+    # Extract Targets
+    y_train = train_df[target_col]
+    
+    # Extract features, ensuring leaky exclusions are dropped completely.
+    X_train = train_df.drop(columns=[c for c in exclude_cols if c in train_df.columns] + ['cv_group'], errors='ignore')
+    groups_train = train_df['cv_group']
     
     if not XGB_AVAILABLE:
         logging.error("XGBoost is not available.")
         return
 
-    # Hyperparameter tuning using RandomizedSearchCV with GroupKFold
+    # 3b. Tune XGBoost hyperparameters using GridSearchCV
     param_grid = {
-        'max_depth': [5, 7, 9, 12],
-        'learning_rate': [0.01, 0.05, 0.1, 0.2],
-        'n_estimators': [200, 300, 500],
-        'subsample': [0.8, 0.9, 1.0],
-        'colsample_bytree': [0.8, 0.9, 1.0]
+        'max_depth': [4, 6, 8],
+        'learning_rate': [0.05, 0.1],
+        'n_estimators': [300, 500],
+        'subsample': [0.8, 1.0],
+        'colsample_bytree': [0.8, 1.0]
     }
     
     xgb_model = xgb.XGBRegressor(random_state=42, n_jobs=-1)
-    
+    # n_splits=5 matches general industry practice for cross val grouping
     gkf = GroupKFold(n_splits=5)
     
-    logging.info("\n--- Starting RandomizedSearchCV for XGBoost (5-fold GroupKFold) ---")
-    search = RandomizedSearchCV(
+    logging.info("\n--- Starting GridSearchCV for XGBoost (GroupKFold) ---")
+    search = GridSearchCV(
         estimator=xgb_model,
-        param_distributions=param_grid,
-        n_iter=20,
+        param_grid=param_grid,
         scoring='neg_root_mean_squared_error',
         cv=gkf,
         verbose=1,
-        random_state=42,
         n_jobs=-1
     )
     
-    search.fit(X, y, groups=groups)
+    search.fit(X_train, y_train, groups=groups_train)
     best_model = search.best_estimator_
     
     logging.info(f"Best Hyperparameters found: {search.best_params_}")
     
+    # Mean CV RMSE
     mean_cv_rmse = -search.best_score_
-    logging.info(f"Best Mean CV RMSE (predicting delta) during tuning: {mean_cv_rmse:.4f} seconds")
+    cv_std = search.cv_results_['std_test_score'][search.best_index_]
     
-    # Test Evaluation
-    rounds = sorted(df['round_number'].unique())
-    split_idx = int(len(rounds) * 0.8)
-    train_rounds = rounds[:split_idx]
+    # 4. Final Evaluation on Held-Out Test Set
+    X_test = test_df.drop(columns=[c for c in exclude_cols if c in test_df.columns] + ['cv_group'], errors='ignore')
     
-    test_df = df[~df['round_number'].isin(train_rounds)]
-    y_test_abs = test_df[absolute_target_col]
-    X_test = test_df.drop(columns=[target_col, absolute_target_col])
-    
-    # Predict deltas
+    # Predict the target (relative pace delta)
     predictions_delta = best_model.predict(X_test)
     
-    # Reconstruct absolute lap times
-    predictions_abs = predictions_delta + X_test['expected_lap_time']
+    # Reconstruct the absolute lap times
+    # predicted lap time = predicted_delta + expected_lap_time
+    expected_laps_test = test_df['expected_lap_time'].values
+    predictions_abs = predictions_delta + expected_laps_test
     
+    # True absolute lap times
+    y_test_abs = test_df[absolute_target_col].values
+    
+    # Metrics
     rmse = np.sqrt(mean_squared_error(y_test_abs, predictions_abs))
     mae = mean_absolute_error(y_test_abs, predictions_abs)
     r2 = r2_score(y_test_abs, predictions_abs)
     
+    # 3c. Output a feature importance table sorted by gain
+    # importance_type='gain' provides the fractional contribution of each feature to the model 
+    booster = best_model.get_booster()
+    gain_importances = booster.get_score(importance_type='gain')
+    importances_df = pd.DataFrame(list(gain_importances.items()), columns=['Feature', 'Gain'])
+    importances_df = importances_df.sort_values(by='Gain', ascending=False)
+    
+    # Save Feature Importance list
+    os.makedirs(model_dir, exist_ok=True)
+    fi_export_path = os.path.join(model_dir, 'feature_importance.csv')
+    importances_df.to_csv(fi_export_path, index=False)
+    
     logging.info("\n=========================================")
-    logging.info(f" FINAL XGBoost PERFORMANCE (on held-out future rounds, reconstructed)")
-    logging.info(f" Mean CV RMSE (Delta): {mean_cv_rmse:.4f}")
-    logging.info(f" Test RMSE:            {rmse:.4f} seconds")
-    logging.info(f" Test MAE:             {mae:.4f} seconds")
-    logging.info(f" Test R²:              {r2:.4f}")
+    logging.info(f" FINAL XGBOOST PERFORMANCE METRICS")
+    logging.info(f" Cross-val RMSE:       {mean_cv_rmse:.4f} ± {cv_std:.4f}")
+    logging.info(f" Test RMSE (Absolute): {rmse:.4f} seconds")
+    logging.info(f" Test MAE  (Absolute): {mae:.4f} seconds")
+    logging.info(f" Test R² Score:        {r2:.4f}")
     logging.info("=========================================\n")
     
-    # Extract Top 20 Feature Importances
-    importances = best_model.feature_importances_
-    feature_names = X.columns
-    importances_df = pd.DataFrame({'Feature': feature_names, 'Importance': importances})
-    importances_df = importances_df.sort_values(by='Importance', ascending=False).head(20)
-    
-    logging.info("Top 20 Feature Importances:")
-    for idx, row in importances_df.iterrows():
-        logging.info(f"  {row['Feature']:<30} {row['Importance']:.4f}")
+    logging.info("--- Top 15 Features by Gain Importance ---")
+    top_15 = importances_df.head(15)
+    for idx, row in top_15.iterrows():
+        logging.info(f"  {row['Feature']:<30} {row['Gain']:.4f}")
         
-    # Save Model
-    os.makedirs(model_dir, exist_ok=True)
+    # 5. Save the improved model
     model_export_path = os.path.join(model_dir, 'lap_time_model.pkl')
     logging.info(f"\nSaving tuned model to {model_export_path} ...")
     joblib.dump(best_model, model_export_path)

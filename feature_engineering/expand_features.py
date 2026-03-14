@@ -135,12 +135,36 @@ def expand_features(data_dir: str):
     
     df['expected_lap_time'] = df.groupby(['race_year', 'circuit', 'tire_compound'])['lap_time_seconds'].transform('median')
     
-    # Relative Pace Delta
-    # Measures how fast a driver is compared to the average pace of the race on that specific lap
-    # Negative value -> faster than field, Positive value -> slower than field
-    lap_avg_time = df.groupby(['race_year', 'round_number', 'lap'])['lap_time_seconds'].transform('mean')
-    df['relative_pace_delta'] = df['lap_time_seconds'] - lap_avg_time
+    # Measures how fast a driver is compared to the expected baseline lap time
+    # Negative value -> faster than expectation, Positive value -> slower
+    df['relative_pace_delta'] = df['lap_time_seconds'] - df['expected_lap_time']
     
+    # --- NEW EXPERT FEATURES ---
+    
+    # a) tire_cold_flag: binary 1 if tire_age_laps <= 2 (cold tire, pre-thermal window)
+    df['tire_cold_flag'] = (df['tire_age_laps'] <= 2).astype(int)
+    
+    # b) compound_base_deg_rate: mapping generic tire compound to a float degradation constant
+    tire_deg_map = {'SOFT': 0.035, 'MEDIUM': 0.022, 'HARD': 0.014, 'INTERMEDIATE': 0.008, 'WET': 0.005}
+    df['compound_base_deg_rate'] = df['tire_compound'].map(tire_deg_map).fillna(0.01)
+    
+    # c) adjusted_tire_stress: pressure applied based on how far in the specific tire life we are
+    df['adjusted_tire_stress'] = df['tire_age_laps'] * df['compound_base_deg_rate']
+    
+    # d) fuel_time_effect: estimated lap time cost from fuel mass (~0.03s per kg in F1)
+    df['fuel_time_effect'] = df['fuel_load_estimate'] * 0.03
+    
+    # e) stint_progress_pct: tracks how far through the specific tire stint we are (0.0 to 1.0)
+    df['stint_progress_pct'] = df['tire_age_laps'] / df['stint_length']
+    
+    # f) dirty_air_flag: binary 1 if gap_to_car_ahead is < 1.0 (wakes degrade aero/tires)
+    df['dirty_air_flag'] = (df['gap_to_car_ahead_seconds'] < 1.0).astype(int)
+    
+    # g) laps_remaining_pct: driver behavior proxy based on remaining race phase
+    df['laps_remaining_pct'] = df['laps_remaining'] / (df['lap'] + df['laps_remaining'])
+    
+    # h) position_vs_grid: relative position tracking compared to starting grid slot
+    df['position_vs_grid'] = df['position'] - df['grid_position']
     
     # Clean up and arrange columns
     requested_columns = [
@@ -150,7 +174,9 @@ def expand_features(data_dir: str):
         'tire_compound', 'tire_age_laps', 'stint_number', 'stint_length', 'pit_stop',
         'lap_time_seconds', 'track_temperature',
         'tire_degradation_rate', 'fuel_load_estimate', 'expected_lap_time', 'relative_pace_delta',
-        'final_race_position', 'podium_finish', 'race_winner'
+        'final_race_position', 'podium_finish', 'race_winner',
+        'tire_cold_flag', 'compound_base_deg_rate', 'adjusted_tire_stress', 'fuel_time_effect',
+        'stint_progress_pct', 'dirty_air_flag', 'laps_remaining_pct', 'position_vs_grid'
     ]
     
     # Add any columns we missed as NaN
