@@ -174,8 +174,8 @@ def train_lap_time_model(data_path: str, model_dir: str):
     logging.info("Model saved successfully. Pipeline complete.")
 
 if __name__ == "__main__":
-    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
     dataset_path = os.path.join(project_root, 'data', 'training_data', 'f1_training_dataset.csv')
-    models_dir = os.path.join(project_root, 'models')
+    models_dir = os.path.join(project_root, 'models', 'lap_time_prediction')
     
     train_lap_time_model(dataset_path, models_dir)
