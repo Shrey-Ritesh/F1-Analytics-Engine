@@ -33,9 +33,9 @@ flowchart TD
     end
 
     subgraph Machine Learning Pipeline
-        J --> N(model/lab_time_model/train_lap_time_model.py)
-        N -->|GroupKFold Target: lap_time_delta| O{XGBoost Regressor}
-        O -->|0.37s Error| P[(lap_time_model.pkl)]
+        J --> N(model/lap_time_model/v7_temporal_train.py)
+        N -->|Temporal Split Target: lap_time_seconds| O{XGBoost Regressor}
+        O -->|1.88s Test Error| P[(lap_time_model_v7.pkl)]
     end
 ```
 
@@ -43,26 +43,25 @@ flowchart TD
 
 ## Core Modules & Capabilities
 
-### 1. Ingestion & Preprocessing
-Extracts raw timing, laps, weather, and compound arrays seamlessly from FastF1 APIs. Automates cleaning, structural joining, and imputation logic into a unified foundational `master_dataset.csv`.
+### 1. Multi-Season Ingestion & Preprocessing
+Extracts raw timing, laps, weather, and compound arrays seamlessly from FastF1 APIs spanning 2023, 2024, and 2025. Automates cleaning, structural joining, and imputation logic into a unified foundational `master_dataset.csv`.
 
 ### 2. Feature Engineering Logic (`expand_features.py`)
-Expands the crude raw telemetry from 9 base columns to an intelligently synthesized **32-Feature DataFrame**, producing elements fundamentally critical to machine learning trees:
-- **Tire Degradation Rates**: Calculating the slope of drop-off as a stint is elongated.
-- **Track Evolution**: Proxies for track rubbering-in.
-- **Dirty Air Flags**: Checks delta gaps to the car immediately ahead.
-- **Lap Time Delta Physics**: Standardizes the physics equation by completely removing track length variance—calculating pure mathematical driver/car capability.
+Expands the crude raw telemetry from 9 base columns to an intelligently synthesized **39-Feature DataFrame**, producing elements fundamentally critical to machine learning trees:
+- **Compound Degradation Core**: Calculating specific tire stress interactions based on stint progression and dynamic compound constants.
+- **Track Baselines**: Establishing strict, non-leaky empirical median capability bounds for isolated dry-stint physics.
+- **Dirty Air & Cold Tire Flags**: Penalty checks measuring gap proximity and thermal tire warmup.
 - **Dual Export Protocol**: Spits out a human-readable CSV while identically outputting a label-encoded integer matrix optimized specifically to avoid Python dtype errors in sklearn algorithms, backed by an index definition JSON.
 
 ### 3. Driver Performance Analyzer 
 Independently ranks driver efficiency mathematically. Eliminates statistical spoofing (e.g. drivers inflating their stats via sampling only small, fast circuits) by normalizing to `lap_time_delta` against standard deviation consistency limits. 
 
-### 4. Lap Time Delta Prediction Model (`train_lap_time_model.py`)
-A highly optimized `XGBRegressor` machine learning model.
-- **Anti-Leakage**: Strips target leakages `final_race_position` prior to fitting.
-- **Temporal GroupKFold**: Strictly isolates cross-validation boundaries exactly by `round_number` to ensure the AI algorithm has never theoretically seen future weather patterns or track rubber mappings while testing.
-- **Delta Base Logic**: The model uniquely infers the absolute lap time by predicting solely the *variance/delta* the driver is bleeding against the track's standardized expected loop, ensuring total adaptability to unfamiliar/unseen global circuits.
-- **Performance**: Predicts out-of-sample/future empirical lap times with an **RMSE of 0.377 seconds.**
+### 4. Lap Time Prediction Engine (v7)
+A highly optimized, multi-season `XGBRegressor` machine learning model.
+- **Anti-Leakage Auditing**: Strips all target leakages (`expected_lap_time`, `final_race_position`) prior to fitting, forcing the tree to learn from natively unassisted physics.
+- **Temporal Out-of-Sample Isolation**: Strictly trains exclusively on historic `2023` and `2024` telemetry, mathematically evaluated entirely on out-of-sample data simulating the `2025` season directly.
+- **Model Metadata Guardrails**: Outputs a `.json` mapping algorithm flagging low-confidence tracks (e.g., Extreme Wet Silverstone/Circuit Gevilles) to inform Strategy Simulator bounds dynamically.
+- **Performance**: Predicts out-of-sample empirical absolute lap times dynamically across 24 countries natively with an intrinsic **RMSE of 1.88 seconds.**
 
 ---
 
@@ -83,7 +82,7 @@ python main.py
 
 To retrain the master XGBoost prediction model:
 ```bash
-python model/lab_time_model/train_lap_time_model.py
+python model/lap_time_model/v7_temporal_train.py
 ```
 
 ---
