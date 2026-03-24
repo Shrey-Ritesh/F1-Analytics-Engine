@@ -10,7 +10,8 @@ def build_feature_dataset(year: int, data_dir: str):
     Extracts relevant features for machine learning models and saves them to master_dataset.csv.
     Required columns: driver, circuit, lap, tire_compound, track_temperature, lap_time_seconds, position, pit_stop, race_year.
     """
-    cleaned_path = os.path.join(data_dir, f'cleaned_data_{year}.csv')
+    year_dir = os.path.join(data_dir, 'training_data', str(year))
+    cleaned_path = os.path.join(year_dir, f'cleaned_data_{year}.csv')
     if not os.path.exists(cleaned_path):
         logging.error(f"Cleaned data for {year} not found. Run preprocessing first.")
         return None

@@ -69,7 +69,9 @@ def fetch_multiple_seasons(seasons: list, data_dir: str):
 
         if all_laps:
             laps_df = pd.concat(all_laps, ignore_index=True)
-            laps_path = os.path.join(data_dir, f'raw_laps_{year}.csv')
+            year_dir = os.path.join(data_dir, 'training_data', str(year))
+            os.makedirs(year_dir, exist_ok=True)
+            laps_path = os.path.join(year_dir, f'raw_laps_{year}.csv')
             laps_df.to_csv(laps_path, index=False)
             logging.info(f"Saved {len(laps_df)} laps to {laps_path}")
         else:
@@ -77,7 +79,9 @@ def fetch_multiple_seasons(seasons: list, data_dir: str):
             
         if all_results:
             results_df = pd.concat(all_results, ignore_index=True)
-            results_path = os.path.join(data_dir, f'raw_results_{year}.csv')
+            year_dir = os.path.join(data_dir, 'training_data', str(year))
+            os.makedirs(year_dir, exist_ok=True)
+            results_path = os.path.join(year_dir, f'raw_results_{year}.csv')
             results_df.to_csv(results_path, index=False)
             logging.info(f"Saved {len(results_df)} results to {results_path}")
         else:

@@ -10,8 +10,9 @@ def clean_and_merge_data(year: int, data_dir: str):
     Reads raw laps and results data for a given year, cleans them,
     and merges them into a single comprehensive dataset.
     """
-    laps_path = os.path.join(data_dir, f'raw_laps_{year}.csv')
-    results_path = os.path.join(data_dir, f'raw_results_{year}.csv')
+    year_dir = os.path.join(data_dir, 'training_data', str(year))
+    laps_path = os.path.join(year_dir, f'raw_laps_{year}.csv')
+    results_path = os.path.join(year_dir, f'raw_results_{year}.csv')
     
     if not os.path.exists(laps_path) or not os.path.exists(results_path):
         logging.error(f"Raw data for {year} not found in {data_dir}. Run ingestion first.")
@@ -66,7 +67,7 @@ def clean_and_merge_data(year: int, data_dir: str):
     # Drop rows without lap times to clean up NaNs (e.g., Red Flags)
     merged_df = merged_df.dropna(subset=['lap_time_seconds'])
     
-    cleaned_path = os.path.join(data_dir, f'cleaned_data_{year}.csv')
+    cleaned_path = os.path.join(year_dir, f'cleaned_data_{year}.csv')
     merged_df.to_csv(cleaned_path, index=False)
     logging.info(f"Cleaned dataset saved to {cleaned_path} with {len(merged_df)} rows.")
     
