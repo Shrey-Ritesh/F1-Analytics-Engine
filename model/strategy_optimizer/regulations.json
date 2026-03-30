@@ -1,0 +1,33 @@
+{
+    "version": "2025",
+    "last_updated": "2025-03-30",
+    "default_rules": {
+        "min_stops": 1,
+        "min_compounds": 2,
+        "max_laps_per_set": null,
+        "valid_dry_compounds": [
+            "SOFT",
+            "MEDIUM",
+            "HARD"
+        ],
+        "valid_wet_compounds": [
+            "INTERMEDIATE",
+            "WET"
+        ],
+        "min_stint_laps": 5
+    },
+    "circuit_overrides": {
+        "Monaco Grand Prix": {
+            "min_stops": 2,
+            "min_compounds": 3,
+            "max_laps_per_set": null,
+            "notes": "2025 mandatory: 3 tyre sets required"
+        },
+        "Qatar Grand Prix": {
+            "min_stops": 2,
+            "min_compounds": 2,
+            "max_laps_per_set": 25,
+            "notes": "2025 Pirelli mandate: 25 lap maximum per tyre set"
+        }
+    }
+}

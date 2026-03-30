@@ -38,3 +38,10 @@ Outliers (>5s error threshold): 1375 laps
 - **Canada Diagnosis (D):** Genuine Model Limitation. The model inherently expects slower baselines. Canada was unexpectedly faster in 2025 across all tires. 1.04x weather filters had negligible effect.
 - **Britain Diagnosis (B):** Weather Contamination. 2024 Silverstone was an extreme wet race. Over 80% of laps were cut by the pipeline's wet-tire exclusion, leaving only 136 anomalous slicks surviving.
 - Action: Added both (plus Australia, which failed on sample size) to a new `model_metadata.json` file acting as a "low-confidence" strategy simulation flag.
+
+### 5. Strategy Simulation Known Limitations
+Known limitations for strategy simulation:
+- Mean residual: -1.05s (correct at inference by adding 1.05s per lap)
+- Undercut precision: model resolves strategy deltas to ~2-3s accuracy
+  Undercuts within 1s window should be treated as inconclusive
+- Low confidence circuits: Canada, Britain, Australia (widen bounds ±4s)

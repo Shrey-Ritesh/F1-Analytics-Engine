@@ -1,0 +1,1361 @@
+race_year,circuit,driver,driver_id,n_stops,pit_laps,compounds,final_position,total_laps,data_quality
+2023,Abu Dhabi Grand Prix,ALB,23,2,"[16.0, 43.0]","['MEDIUM', 'HARD', 'HARD']",14.0,58.0,clean
+2023,Abu Dhabi Grand Prix,ALO,14,2,"[12.0, 36.0]","['MEDIUM', 'HARD', 'HARD']",7.0,58.0,clean
+2023,Abu Dhabi Grand Prix,BOT,77,1,[29.0],"['HARD', 'MEDIUM']",19.0,57.0,clean
+2023,Abu Dhabi Grand Prix,GAS,10,2,"[17.0, 32.0]","['MEDIUM', 'HARD', 'HARD']",13.0,58.0,clean
+2023,Abu Dhabi Grand Prix,HAM,44,2,"[15.0, 35.0]","['MEDIUM', 'HARD', 'HARD']",9.0,58.0,clean
+2023,Abu Dhabi Grand Prix,HUL,27,2,"[13.0, 33.0]","['MEDIUM', 'HARD', 'HARD']",15.0,58.0,clean
+2023,Abu Dhabi Grand Prix,LEC,16,2,"[17.0, 35.0]","['MEDIUM', 'HARD', 'HARD']",3.0,58.0,clean
+2023,Abu Dhabi Grand Prix,MAG,20,2,"[5.0, 22.0]","['MEDIUM', 'HARD', 'HARD']",20.0,57.0,clean
+2023,Abu Dhabi Grand Prix,NOR,4,2,"[14.0, 33.0]","['MEDIUM', 'HARD', 'HARD']",5.0,58.0,clean
+2023,Abu Dhabi Grand Prix,OCO,31,1,[15.0],"['MEDIUM', 'HARD']",12.0,58.0,clean
+2023,Abu Dhabi Grand Prix,PER,11,2,"[17.0, 42.0]","['MEDIUM', 'HARD', 'HARD']",2.0,58.0,clean
+2023,Abu Dhabi Grand Prix,PIA,81,2,"[13.0, 36.0]","['MEDIUM', 'HARD', 'HARD']",6.0,58.0,clean
+2023,Abu Dhabi Grand Prix,RIC,3,2,"[7.0, 31.0]","['MEDIUM', 'HARD', 'HARD']",11.0,58.0,clean
+2023,Abu Dhabi Grand Prix,RUS,63,2,"[14.0, 34.0]","['MEDIUM', 'HARD', 'HARD']",4.0,58.0,clean
+2023,Abu Dhabi Grand Prix,SAI,55,3,"[23.0, 56.0, 57.0]","['HARD', 'HARD', 'SOFT', 'UNKNOWN']",15.0,57.0,suspect
+2023,Abu Dhabi Grand Prix,SAR,2,2,"[15.0, 41.0]","['MEDIUM', 'HARD', 'HARD']",16.0,58.0,clean
+2023,Abu Dhabi Grand Prix,STR,18,2,"[22.0, 42.0]","['HARD', 'HARD', 'MEDIUM']",10.0,58.0,clean
+2023,Abu Dhabi Grand Prix,TSU,22,1,[22.0],"['MEDIUM', 'HARD']",8.0,58.0,clean
+2023,Abu Dhabi Grand Prix,VER,1,2,"[16.0, 43.0]","['MEDIUM', 'HARD', 'HARD']",1.0,58.0,clean
+2023,Abu Dhabi Grand Prix,ZHO,24,2,"[13.0, 37.0]","['MEDIUM', 'HARD', 'MEDIUM']",17.0,58.0,clean
+2023,Australian Grand Prix,ALB,23,0,[],['MEDIUM'],6.0,6.0,dnf
+2023,Australian Grand Prix,ALO,14,0,[],['HARD'],3.0,54.0,dnf
+2023,Australian Grand Prix,BOT,77,2,"[1.0, 53.0]","['SOFT', 'HARD', 'UNKNOWN']",14.0,53.0,suspect
+2023,Australian Grand Prix,DEV,21,1,[45.0],"['MEDIUM', 'SOFT']",16.0,53.0,clean
+2023,Australian Grand Prix,GAS,10,0,[],['HARD'],5.0,54.0,dnf
+2023,Australian Grand Prix,HAM,44,1,[57.0],"['HARD', 'UNKNOWN']",2.0,57.0,suspect
+2023,Australian Grand Prix,HUL,27,0,[],['HARD'],9.0,54.0,dnf
+2023,Australian Grand Prix,MAG,20,1,[7.0],"['MEDIUM', 'HARD']",12.0,52.0,clean
+2023,Australian Grand Prix,NOR,4,0,[],['HARD'],8.0,54.0,dnf
+2023,Australian Grand Prix,OCO,31,1,[1.0],"['SOFT', 'HARD']",10.0,54.0,clean
+2023,Australian Grand Prix,PER,11,2,"[1.0, 2.0]","['HARD', 'MEDIUM', 'HARD']",7.0,54.0,clean
+2023,Australian Grand Prix,PIA,81,1,[54.0],"['HARD', 'UNKNOWN']",11.0,54.0,suspect
+2023,Australian Grand Prix,RUS,63,1,[7.0],"['MEDIUM', 'HARD']",14.0,17.0,clean
+2023,Australian Grand Prix,SAI,55,1,[7.0],"['MEDIUM', 'HARD']",4.0,54.0,clean
+2023,Australian Grand Prix,SAR,2,3,"[1.0, 2.0, 36.0]","['HARD', 'MEDIUM', 'MEDIUM', 'HARD']",15.0,53.0,clean
+2023,Australian Grand Prix,STR,18,0,[],['HARD'],6.0,54.0,dnf
+2023,Australian Grand Prix,TSU,22,1,[54.0],"['HARD', 'UNKNOWN']",13.0,54.0,suspect
+2023,Australian Grand Prix,VER,1,0,[],['HARD'],1.0,54.0,dnf
+2023,Australian Grand Prix,ZHO,24,2,"[1.0, 54.0]","['SOFT', 'HARD', 'UNKNOWN']",12.0,54.0,suspect
+2023,Austrian Grand Prix,ALB,23,3,"[2.0, 14.0, 41.0]","['MEDIUM', 'MEDIUM', 'HARD', 'HARD']",11.0,71.0,clean
+2023,Austrian Grand Prix,ALO,14,3,"[2.0, 15.0, 44.0]","['HARD', 'HARD', 'MEDIUM', 'MEDIUM']",6.0,71.0,clean
+2023,Austrian Grand Prix,BOT,77,3,"[2.0, 21.0, 40.0]","['HARD', 'HARD', 'MEDIUM', 'HARD']",16.0,70.0,clean
+2023,Austrian Grand Prix,DEV,21,3,"[2.0, 12.0, 37.0]","['MEDIUM', 'MEDIUM', 'HARD', 'MEDIUM']",15.0,70.0,clean
+2023,Austrian Grand Prix,GAS,10,3,"[2.0, 14.0, 44.0]","['MEDIUM', 'MEDIUM', 'HARD', 'MEDIUM']",9.0,71.0,clean
+2023,Austrian Grand Prix,HAM,44,3,"[2.0, 14.0, 42.0]","['MEDIUM', 'MEDIUM', 'HARD', 'MEDIUM']",7.0,71.0,clean
+2023,Austrian Grand Prix,HUL,27,2,"[2.0, 11.0]","['MEDIUM', 'MEDIUM', 'HARD']",19.0,12.0,clean
+2023,Austrian Grand Prix,LEC,16,3,"[2.0, 15.0, 47.0]","['MEDIUM', 'MEDIUM', 'MEDIUM', 'HARD']",2.0,71.0,clean
+2023,Austrian Grand Prix,MAG,20,2,"[1.0, 2.0]","['HARD', 'MEDIUM', 'HARD']",19.0,70.0,clean
+2023,Austrian Grand Prix,NOR,4,3,"[2.0, 14.0, 41.0]","['MEDIUM', 'MEDIUM', 'HARD', 'HARD']",5.0,71.0,clean
+2023,Austrian Grand Prix,OCO,31,3,"[2.0, 14.0, 40.0]","['MEDIUM', 'MEDIUM', 'HARD', 'HARD']",12.0,70.0,clean
+2023,Austrian Grand Prix,PER,11,3,"[2.0, 25.0, 50.0]","['MEDIUM', 'MEDIUM', 'MEDIUM', 'HARD']",3.0,71.0,clean
+2023,Austrian Grand Prix,PIA,81,4,"[2.0, 14.0, 22.0, 41.0]","['MEDIUM', 'MEDIUM', 'HARD', 'HARD', 'MEDIUM']",18.0,70.0,suspect
+2023,Austrian Grand Prix,RUS,63,3,"[2.0, 14.0, 41.0]","['MEDIUM', 'MEDIUM', 'HARD', 'MEDIUM']",8.0,71.0,clean
+2023,Austrian Grand Prix,SAI,55,3,"[2.0, 15.0, 45.0]","['MEDIUM', 'MEDIUM', 'MEDIUM', 'HARD']",4.0,71.0,clean
+2023,Austrian Grand Prix,SAR,2,3,"[2.0, 14.0, 43.0]","['MEDIUM', 'MEDIUM', 'HARD', 'HARD']",13.0,70.0,clean
+2023,Austrian Grand Prix,STR,18,4,"[2.0, 15.0, 36.0, 54.0]","['MEDIUM', 'MEDIUM', 'HARD', 'HARD', 'MEDIUM']",10.0,71.0,suspect
+2023,Austrian Grand Prix,TSU,22,4,"[1.0, 2.0, 23.0, 43.0]","['MEDIUM', 'HARD', 'HARD', 'HARD', 'MEDIUM']",17.0,70.0,suspect
+2023,Austrian Grand Prix,VER,1,4,"[2.0, 24.0, 49.0, 69.0]","['MEDIUM', 'MEDIUM', 'HARD', 'MEDIUM', 'SOFT']",1.0,71.0,suspect
+2023,Austrian Grand Prix,ZHO,24,3,"[2.0, 8.0, 38.0]","['MEDIUM', 'MEDIUM', 'HARD', 'HARD']",14.0,70.0,clean
+2023,Azerbaijan Grand Prix,ALB,23,1,[7.0],"['MEDIUM', 'HARD']",12.0,51.0,clean
+2023,Azerbaijan Grand Prix,ALO,14,1,[11.0],"['MEDIUM', 'HARD']",4.0,51.0,clean
+2023,Azerbaijan Grand Prix,BOT,77,3,"[6.0, 12.0, 34.0]","['MEDIUM', 'HARD', 'HARD', 'MEDIUM']",18.0,50.0,clean
+2023,Azerbaijan Grand Prix,DEV,21,0,[],['HARD'],12.0,9.0,dnf
+2023,Azerbaijan Grand Prix,GAS,10,2,"[5.0, 23.0]","['MEDIUM', 'HARD', 'HARD']",14.0,51.0,clean
+2023,Azerbaijan Grand Prix,HAM,44,1,[9.0],"['MEDIUM', 'HARD']",6.0,51.0,clean
+2023,Azerbaijan Grand Prix,HUL,27,1,[49.0],"['HARD', 'SOFT']",17.0,50.0,clean
+2023,Azerbaijan Grand Prix,LEC,16,1,[11.0],"['MEDIUM', 'HARD']",3.0,51.0,clean
+2023,Azerbaijan Grand Prix,MAG,20,1,[10.0],"['MEDIUM', 'HARD']",13.0,51.0,clean
+2023,Azerbaijan Grand Prix,NOR,4,1,[9.0],"['MEDIUM', 'HARD']",9.0,51.0,clean
+2023,Azerbaijan Grand Prix,OCO,31,1,[50.0],"['HARD', 'SOFT']",15.0,51.0,clean
+2023,Azerbaijan Grand Prix,PER,11,1,[11.0],"['MEDIUM', 'HARD']",1.0,51.0,clean
+2023,Azerbaijan Grand Prix,PIA,81,1,[8.0],"['MEDIUM', 'HARD']",11.0,51.0,clean
+2023,Azerbaijan Grand Prix,RUS,63,1,[49.0],"['HARD', 'SOFT']",8.0,51.0,clean
+2023,Azerbaijan Grand Prix,SAI,55,0,[],['HARD'],5.0,51.0,dnf
+2023,Azerbaijan Grand Prix,SAR,2,1,[8.0],"['MEDIUM', 'HARD']",16.0,51.0,clean
+2023,Azerbaijan Grand Prix,STR,18,0,[],['HARD'],7.0,51.0,dnf
+2023,Azerbaijan Grand Prix,TSU,22,1,[8.0],"['MEDIUM', 'HARD']",10.0,51.0,clean
+2023,Azerbaijan Grand Prix,VER,1,1,[10.0],"['MEDIUM', 'HARD']",2.0,51.0,clean
+2023,Azerbaijan Grand Prix,ZHO,24,1,[36.0],"['HARD', 'UNKNOWN']",18.0,36.0,suspect
+2023,Bahrain Grand Prix,ALB,23,3,"[11.0, 26.0, 40.0]","['SOFT', 'SOFT', 'HARD', 'SOFT']",10.0,57.0,clean
+2023,Bahrain Grand Prix,ALO,14,2,"[14.0, 34.0]","['SOFT', 'HARD', 'HARD']",3.0,57.0,clean
+2023,Bahrain Grand Prix,BOT,77,2,"[11.0, 29.0]","['SOFT', 'HARD', 'HARD']",8.0,57.0,clean
+2023,Bahrain Grand Prix,DEV,21,2,"[11.0, 27.0]","['SOFT', 'HARD', 'HARD']",14.0,56.0,clean
+2023,Bahrain Grand Prix,GAS,10,3,"[9.0, 25.0, 40.0]","['SOFT', 'HARD', 'HARD', 'SOFT']",9.0,57.0,clean
+2023,Bahrain Grand Prix,HAM,44,2,"[12.0, 30.0]","['SOFT', 'HARD', 'HARD']",5.0,57.0,clean
+2023,Bahrain Grand Prix,HUL,27,3,"[11.0, 26.0, 40.0]","['SOFT', 'HARD', 'HARD', 'SOFT']",15.0,56.0,clean
+2023,Bahrain Grand Prix,LEC,16,2,"[13.0, 33.0]","['SOFT', 'HARD', 'HARD']",3.0,39.0,clean
+2023,Bahrain Grand Prix,MAG,20,3,"[15.0, 29.0, 40.0]","['HARD', 'HARD', 'SOFT', 'SOFT']",13.0,56.0,clean
+2023,Bahrain Grand Prix,NOR,4,6,"[10.0, 17.0, 27.0, 37.0, 47.0, 54.0]","['SOFT', 'HARD', 'SOFT', 'MEDIUM', 'HARD', 'SOFT', 'SOFT']",17.0,55.0,suspect
+2023,Bahrain Grand Prix,OCO,31,4,"[12.0, 15.0, 32.0, 41.0]","['SOFT', 'HARD', 'HARD', 'HARD', 'UNKNOWN']",17.0,41.0,suspect
+2023,Bahrain Grand Prix,PER,11,2,"[17.0, 34.0]","['SOFT', 'SOFT', 'HARD']",2.0,57.0,clean
+2023,Bahrain Grand Prix,PIA,81,1,[13.0],"['SOFT', 'UNKNOWN']",16.0,13.0,suspect
+2023,Bahrain Grand Prix,RUS,63,2,"[13.0, 31.0]","['SOFT', 'HARD', 'HARD']",7.0,57.0,clean
+2023,Bahrain Grand Prix,SAI,55,2,"[13.0, 31.0]","['SOFT', 'HARD', 'HARD']",4.0,57.0,clean
+2023,Bahrain Grand Prix,SAR,2,3,"[12.0, 30.0, 40.0]","['SOFT', 'SOFT', 'HARD', 'SOFT']",12.0,56.0,clean
+2023,Bahrain Grand Prix,STR,18,2,"[15.0, 30.0]","['SOFT', 'HARD', 'HARD']",6.0,57.0,clean
+2023,Bahrain Grand Prix,TSU,22,3,"[10.0, 26.0, 40.0]","['SOFT', 'HARD', 'HARD', 'SOFT']",11.0,57.0,clean
+2023,Bahrain Grand Prix,VER,1,2,"[14.0, 36.0]","['SOFT', 'SOFT', 'HARD']",1.0,57.0,clean
+2023,Bahrain Grand Prix,ZHO,24,3,"[12.0, 32.0, 54.0]","['SOFT', 'HARD', 'SOFT', 'SOFT']",16.0,56.0,clean
+2023,Belgian Grand Prix,ALB,23,3,"[7.0, 23.0, 33.0]","['SOFT', 'MEDIUM', 'MEDIUM', 'SOFT']",14.0,44.0,clean
+2023,Belgian Grand Prix,ALO,14,2,"[10.0, 29.0]","['MEDIUM', 'MEDIUM', 'SOFT']",5.0,44.0,clean
+2023,Belgian Grand Prix,BOT,77,2,"[6.0, 24.0]","['SOFT', 'MEDIUM', 'MEDIUM']",12.0,44.0,clean
+2023,Belgian Grand Prix,GAS,10,1,[23.0],"['SOFT', 'MEDIUM']",11.0,44.0,clean
+2023,Belgian Grand Prix,HAM,44,3,"[12.0, 27.0, 42.0]","['SOFT', 'MEDIUM', 'SOFT', 'MEDIUM']",4.0,44.0,clean
+2023,Belgian Grand Prix,HUL,27,2,"[12.0, 24.0]","['MEDIUM', 'SOFT', 'SOFT']",18.0,44.0,clean
+2023,Belgian Grand Prix,LEC,16,2,"[13.0, 28.0]","['SOFT', 'MEDIUM', 'SOFT']",3.0,44.0,clean
+2023,Belgian Grand Prix,MAG,20,2,"[5.0, 25.0]","['SOFT', 'MEDIUM', 'MEDIUM']",15.0,44.0,clean
+2023,Belgian Grand Prix,NOR,4,2,"[5.0, 17.0]","['MEDIUM', 'HARD', 'SOFT']",7.0,44.0,clean
+2023,Belgian Grand Prix,OCO,31,2,"[6.0, 25.0]","['SOFT', 'MEDIUM', 'SOFT']",8.0,44.0,clean
+2023,Belgian Grand Prix,PER,11,2,"[13.0, 29.0]","['SOFT', 'MEDIUM', 'SOFT']",2.0,44.0,clean
+2023,Belgian Grand Prix,RIC,3,2,"[5.0, 22.0]","['SOFT', 'MEDIUM', 'MEDIUM']",16.0,44.0,clean
+2023,Belgian Grand Prix,RUS,63,1,[22.0],"['MEDIUM', 'SOFT']",6.0,44.0,clean
+2023,Belgian Grand Prix,SAI,55,2,"[7.0, 23.0]","['SOFT', 'MEDIUM', 'UNKNOWN']",19.0,23.0,suspect
+2023,Belgian Grand Prix,SAR,2,3,"[8.0, 24.0, 34.0]","['SOFT', 'MEDIUM', 'MEDIUM', 'SOFT']",17.0,44.0,clean
+2023,Belgian Grand Prix,STR,18,1,[20.0],"['MEDIUM', 'SOFT']",9.0,44.0,clean
+2023,Belgian Grand Prix,TSU,22,2,"[9.0, 24.0]","['MEDIUM', 'MEDIUM', 'SOFT']",10.0,44.0,clean
+2023,Belgian Grand Prix,VER,1,2,"[14.0, 30.0]","['SOFT', 'MEDIUM', 'SOFT']",1.0,44.0,clean
+2023,Belgian Grand Prix,ZHO,24,2,"[7.0, 25.0]","['SOFT', 'MEDIUM', 'SOFT']",13.0,44.0,clean
+2023,British Grand Prix,ALB,23,1,[32.0],"['MEDIUM', 'SOFT']",8.0,52.0,clean
+2023,British Grand Prix,ALO,14,1,[33.0],"['MEDIUM', 'SOFT']",7.0,52.0,clean
+2023,British Grand Prix,BOT,77,1,[32.0],"['HARD', 'SOFT']",13.0,52.0,clean
+2023,British Grand Prix,DEV,21,2,"[27.0, 32.0]","['SOFT', 'MEDIUM', 'SOFT']",17.0,52.0,clean
+2023,British Grand Prix,GAS,10,1,[31.0],"['MEDIUM', 'SOFT']",15.0,45.0,clean
+2023,British Grand Prix,HAM,44,1,[33.0],"['MEDIUM', 'SOFT']",3.0,52.0,clean
+2023,British Grand Prix,HUL,27,2,"[7.0, 32.0]","['HARD', 'MEDIUM', 'SOFT']",14.0,52.0,clean
+2023,British Grand Prix,LEC,16,2,"[18.0, 32.0]","['MEDIUM', 'HARD', 'MEDIUM']",9.0,52.0,clean
+2023,British Grand Prix,MAG,20,0,[],['MEDIUM'],14.0,31.0,dnf
+2023,British Grand Prix,NOR,4,1,[33.0],"['MEDIUM', 'HARD']",2.0,52.0,clean
+2023,British Grand Prix,OCO,31,1,[9.0],"['SOFT', 'UNKNOWN']",12.0,9.0,suspect
+2023,British Grand Prix,PER,11,1,[28.0],"['MEDIUM', 'SOFT']",6.0,52.0,clean
+2023,British Grand Prix,PIA,81,1,[29.0],"['MEDIUM', 'HARD']",4.0,52.0,clean
+2023,British Grand Prix,RUS,63,1,[28.0],"['SOFT', 'MEDIUM']",5.0,52.0,clean
+2023,British Grand Prix,SAI,55,1,[26.0],"['MEDIUM', 'HARD']",10.0,52.0,clean
+2023,British Grand Prix,SAR,2,1,[29.0],"['MEDIUM', 'SOFT']",12.0,52.0,clean
+2023,British Grand Prix,STR,18,1,[31.0],"['MEDIUM', 'SOFT']",11.0,52.0,clean
+2023,British Grand Prix,TSU,22,2,"[14.0, 32.0]","['SOFT', 'HARD', 'SOFT']",16.0,52.0,clean
+2023,British Grand Prix,VER,1,1,[33.0],"['MEDIUM', 'SOFT']",1.0,52.0,clean
+2023,British Grand Prix,ZHO,24,3,"[24.0, 33.0, 36.0]","['MEDIUM', 'HARD', 'SOFT', 'SOFT']",15.0,52.0,clean
+2023,Canadian Grand Prix,ALB,23,1,[12.0],"['MEDIUM', 'HARD']",7.0,70.0,clean
+2023,Canadian Grand Prix,ALO,14,2,"[12.0, 41.0]","['MEDIUM', 'HARD', 'HARD']",2.0,70.0,clean
+2023,Canadian Grand Prix,BOT,77,1,[36.0],"['HARD', 'MEDIUM']",11.0,70.0,clean
+2023,Canadian Grand Prix,DEV,21,2,"[11.0, 50.0]","['MEDIUM', 'HARD', 'HARD']",18.0,69.0,clean
+2023,Canadian Grand Prix,GAS,10,2,"[10.0, 33.0]","['SOFT', 'HARD', 'HARD']",13.0,70.0,clean
+2023,Canadian Grand Prix,HAM,44,2,"[12.0, 40.0]","['MEDIUM', 'HARD', 'MEDIUM']",3.0,70.0,clean
+2023,Canadian Grand Prix,HUL,27,2,"[11.0, 31.0]","['MEDIUM', 'HARD', 'HARD']",15.0,69.0,clean
+2023,Canadian Grand Prix,LEC,16,1,[39.0],"['MEDIUM', 'HARD']",4.0,70.0,clean
+2023,Canadian Grand Prix,MAG,20,2,"[35.0, 53.0]","['HARD', 'MEDIUM', 'MEDIUM']",17.0,69.0,clean
+2023,Canadian Grand Prix,NOR,4,2,"[12.0, 35.0]","['MEDIUM', 'HARD', 'HARD']",9.0,70.0,clean
+2023,Canadian Grand Prix,OCO,31,2,"[12.0, 36.0]","['MEDIUM', 'HARD', 'HARD']",8.0,70.0,clean
+2023,Canadian Grand Prix,PER,11,2,"[37.0, 68.0]","['HARD', 'MEDIUM', 'SOFT']",6.0,70.0,clean
+2023,Canadian Grand Prix,PIA,81,2,"[12.0, 37.0]","['MEDIUM', 'HARD', 'HARD']",12.0,70.0,clean
+2023,Canadian Grand Prix,RUS,63,0,[],['HARD'],8.0,53.0,dnf
+2023,Canadian Grand Prix,SAI,55,1,[38.0],"['MEDIUM', 'HARD']",5.0,70.0,clean
+2023,Canadian Grand Prix,SAR,2,0,[],['MEDIUM'],18.0,6.0,dnf
+2023,Canadian Grand Prix,STR,18,2,"[11.0, 27.0]","['MEDIUM', 'HARD', 'HARD']",10.0,70.0,clean
+2023,Canadian Grand Prix,TSU,22,2,"[1.0, 34.0]","['MEDIUM', 'HARD', 'HARD']",14.0,35.0,clean
+2023,Canadian Grand Prix,VER,1,2,"[12.0, 42.0]","['MEDIUM', 'HARD', 'MEDIUM']",1.0,70.0,clean
+2023,Canadian Grand Prix,ZHO,24,2,"[12.0, 32.0]","['MEDIUM', 'HARD', 'HARD']",16.0,69.0,clean
+2023,Dutch Grand Prix,ALB,23,3,"[44.0, 61.0, 63.0]","['SOFT', 'MEDIUM', 'INTERMEDIATE', 'INTERMEDIATE']",8.0,72.0,clean
+2023,Dutch Grand Prix,ALO,14,5,"[2.0, 10.0, 48.0, 61.0, 64.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'SOFT', 'INTERMEDIATE', 'INTERMEDIATE']",2.0,72.0,suspect
+2023,Dutch Grand Prix,BOT,77,4,"[16.0, 47.0, 59.0, 63.0]","['SOFT', 'MEDIUM', 'SOFT', 'INTERMEDIATE', 'INTERMEDIATE']",16.0,72.0,suspect
+2023,Dutch Grand Prix,GAS,10,4,"[1.0, 11.0, 46.0, 60.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'SOFT', 'INTERMEDIATE']",4.0,72.0,suspect
+2023,Dutch Grand Prix,HAM,44,4,"[3.0, 9.0, 45.0, 60.0]","['MEDIUM', 'INTERMEDIATE', 'SOFT', 'SOFT', 'INTERMEDIATE']",6.0,72.0,suspect
+2023,Dutch Grand Prix,HUL,27,4,"[16.0, 48.0, 60.0, 63.0]","['SOFT', 'MEDIUM', 'SOFT', 'INTERMEDIATE', 'INTERMEDIATE']",12.0,72.0,suspect
+2023,Dutch Grand Prix,LAW,40,6,"[1.0, 10.0, 17.0, 46.0, 59.0, 63.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'MEDIUM', 'SOFT', 'INTERMEDIATE', 'INTERMEDIATE']",14.0,72.0,suspect
+2023,Dutch Grand Prix,LEC,16,3,"[1.0, 11.0, 41.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'UNKNOWN']",17.0,41.0,suspect
+2023,Dutch Grand Prix,MAG,20,5,"[1.0, 9.0, 35.0, 60.0, 63.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'MEDIUM', 'INTERMEDIATE', 'INTERMEDIATE']",15.0,72.0,suspect
+2023,Dutch Grand Prix,NOR,4,5,"[3.0, 10.0, 42.0, 60.0, 63.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'SOFT', 'INTERMEDIATE', 'INTERMEDIATE']",7.0,72.0,suspect
+2023,Dutch Grand Prix,OCO,31,5,"[2.0, 10.0, 43.0, 61.0, 63.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'SOFT', 'WET', 'INTERMEDIATE']",10.0,72.0,suspect
+2023,Dutch Grand Prix,PER,11,5,"[1.0, 12.0, 45.0, 60.0, 63.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'SOFT', 'INTERMEDIATE', 'INTERMEDIATE']",3.0,72.0,suspect
+2023,Dutch Grand Prix,PIA,81,4,"[15.0, 46.0, 60.0, 63.0]","['SOFT', 'SOFT', 'MEDIUM', 'INTERMEDIATE', 'INTERMEDIATE']",9.0,72.0,suspect
+2023,Dutch Grand Prix,RUS,63,6,"[4.0, 10.0, 16.0, 60.0, 63.0, 67.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'HARD', 'INTERMEDIATE', 'INTERMEDIATE', 'INTERMEDIATE']",17.0,72.0,suspect
+2023,Dutch Grand Prix,SAI,55,4,"[2.0, 10.0, 41.0, 60.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'SOFT', 'INTERMEDIATE']",5.0,72.0,suspect
+2023,Dutch Grand Prix,SAR,2,0,[],['SOFT'],20.0,14.0,dnf
+2023,Dutch Grand Prix,STR,18,6,"[4.0, 9.0, 16.0, 34.0, 60.0, 63.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'MEDIUM', 'SOFT', 'INTERMEDIATE', 'INTERMEDIATE']",11.0,72.0,suspect
+2023,Dutch Grand Prix,TSU,22,4,"[1.0, 10.0, 60.0, 63.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'INTERMEDIATE', 'INTERMEDIATE']",13.0,72.0,suspect
+2023,Dutch Grand Prix,VER,1,6,"[2.0, 11.0, 49.0, 61.0, 63.0, 64.0]","['SOFT', 'INTERMEDIATE', 'SOFT', 'SOFT', 'INTERMEDIATE', 'WET', 'INTERMEDIATE']",1.0,72.0,suspect
+2023,Dutch Grand Prix,ZHO,24,4,"[1.0, 10.0, 37.0, 60.0]","['SOFT', 'INTERMEDIATE', 'MEDIUM', 'SOFT', 'INTERMEDIATE']",13.0,62.0,suspect
+2023,Hungarian Grand Prix,ALB,23,2,"[8.0, 31.0]","['MEDIUM', 'HARD', 'HARD']",11.0,69.0,clean
+2023,Hungarian Grand Prix,ALO,14,2,"[20.0, 43.0]","['MEDIUM', 'HARD', 'HARD']",9.0,70.0,clean
+2023,Hungarian Grand Prix,BOT,77,2,"[9.0, 40.0]","['MEDIUM', 'HARD', 'HARD']",12.0,69.0,clean
+2023,Hungarian Grand Prix,GAS,10,1,[1.0],"['SOFT', 'UNKNOWN']",20.0,1.0,suspect
+2023,Hungarian Grand Prix,HAM,44,2,"[16.0, 49.0]","['MEDIUM', 'HARD', 'MEDIUM']",4.0,70.0,clean
+2023,Hungarian Grand Prix,HUL,27,2,"[16.0, 38.0]","['MEDIUM', 'HARD', 'HARD']",14.0,69.0,clean
+2023,Hungarian Grand Prix,LEC,16,2,"[17.0, 43.0]","['MEDIUM', 'HARD', 'HARD']",6.0,70.0,clean
+2023,Hungarian Grand Prix,MAG,20,2,"[14.0, 41.0]","['MEDIUM', 'HARD', 'HARD']",17.0,69.0,clean
+2023,Hungarian Grand Prix,NOR,4,2,"[17.0, 44.0]","['MEDIUM', 'HARD', 'MEDIUM']",2.0,70.0,clean
+2023,Hungarian Grand Prix,OCO,31,1,[2.0],"['MEDIUM', 'UNKNOWN']",19.0,2.0,suspect
+2023,Hungarian Grand Prix,PER,11,2,"[24.0, 42.0]","['HARD', 'MEDIUM', 'MEDIUM']",3.0,70.0,clean
+2023,Hungarian Grand Prix,PIA,81,2,"[18.0, 42.0]","['MEDIUM', 'HARD', 'MEDIUM']",5.0,70.0,clean
+2023,Hungarian Grand Prix,RIC,3,2,"[18.0, 29.0]","['MEDIUM', 'HARD', 'MEDIUM']",13.0,69.0,clean
+2023,Hungarian Grand Prix,RUS,63,2,"[28.0, 46.0]","['HARD', 'MEDIUM', 'MEDIUM']",7.0,70.0,clean
+2023,Hungarian Grand Prix,SAI,55,2,"[15.0, 44.0]","['SOFT', 'HARD', 'HARD']",8.0,70.0,clean
+2023,Hungarian Grand Prix,SAR,2,3,"[13.0, 34.0, 67.0]","['MEDIUM', 'HARD', 'HARD', 'UNKNOWN']",17.0,67.0,suspect
+2023,Hungarian Grand Prix,STR,18,2,"[9.0, 34.0]","['SOFT', 'HARD', 'HARD']",10.0,69.0,clean
+2023,Hungarian Grand Prix,TSU,22,2,"[9.0, 44.0]","['SOFT', 'HARD', 'MEDIUM']",15.0,69.0,clean
+2023,Hungarian Grand Prix,VER,1,2,"[23.0, 51.0]","['MEDIUM', 'HARD', 'MEDIUM']",1.0,70.0,clean
+2023,Hungarian Grand Prix,ZHO,24,2,"[10.0, 38.0]","['MEDIUM', 'HARD', 'HARD']",16.0,69.0,clean
+2023,Italian Grand Prix,ALB,23,1,[15.0],"['MEDIUM', 'HARD']",7.0,51.0,clean
+2023,Italian Grand Prix,ALO,14,1,[21.0],"['MEDIUM', 'HARD']",9.0,51.0,clean
+2023,Italian Grand Prix,BOT,77,1,[25.0],"['HARD', 'MEDIUM']",10.0,50.0,clean
+2023,Italian Grand Prix,GAS,10,2,"[10.0, 31.0]","['MEDIUM', 'HARD', 'MEDIUM']",15.0,50.0,clean
+2023,Italian Grand Prix,HAM,44,1,[27.0],"['HARD', 'MEDIUM']",6.0,51.0,clean
+2023,Italian Grand Prix,HUL,27,2,"[14.0, 39.0]","['MEDIUM', 'HARD', 'MEDIUM']",17.0,50.0,clean
+2023,Italian Grand Prix,LAW,40,2,"[13.0, 33.0]","['MEDIUM', 'HARD', 'MEDIUM']",12.0,50.0,clean
+2023,Italian Grand Prix,LEC,16,1,[20.0],"['MEDIUM', 'HARD']",4.0,51.0,clean
+2023,Italian Grand Prix,MAG,20,2,"[12.0, 33.0]","['HARD', 'MEDIUM', 'MEDIUM']",18.0,50.0,clean
+2023,Italian Grand Prix,NOR,4,1,[22.0],"['MEDIUM', 'HARD']",8.0,51.0,clean
+2023,Italian Grand Prix,OCO,31,2,"[24.0, 39.0]","['MEDIUM', 'HARD', 'UNKNOWN']",18.0,39.0,suspect
+2023,Italian Grand Prix,PER,11,1,[21.0],"['MEDIUM', 'HARD']",2.0,51.0,clean
+2023,Italian Grand Prix,PIA,81,2,"[23.0, 41.0]","['MEDIUM', 'HARD', 'MEDIUM']",11.0,50.0,clean
+2023,Italian Grand Prix,RUS,63,1,[19.0],"['MEDIUM', 'HARD']",5.0,51.0,clean
+2023,Italian Grand Prix,SAI,55,1,[19.0],"['MEDIUM', 'HARD']",3.0,51.0,clean
+2023,Italian Grand Prix,SAR,2,1,[14.0],"['MEDIUM', 'HARD']",13.0,50.0,clean
+2023,Italian Grand Prix,STR,18,1,[20.0],"['MEDIUM', 'HARD']",16.0,50.0,clean
+2023,Italian Grand Prix,VER,1,1,[20.0],"['MEDIUM', 'HARD']",1.0,51.0,clean
+2023,Italian Grand Prix,ZHO,24,2,"[11.0, 33.0]","['MEDIUM', 'HARD', 'MEDIUM']",14.0,50.0,clean
+2023,Japanese Grand Prix,ALB,23,3,"[1.0, 13.0, 26.0]","['MEDIUM', 'MEDIUM', 'SOFT', 'UNKNOWN']",16.0,26.0,suspect
+2023,Japanese Grand Prix,ALO,14,2,"[11.0, 25.0]","['SOFT', 'HARD', 'HARD']",8.0,53.0,clean
+2023,Japanese Grand Prix,BOT,77,2,"[1.0, 6.0]","['SOFT', 'SOFT', 'UNKNOWN']",19.0,6.0,suspect
+2023,Japanese Grand Prix,GAS,10,2,"[18.0, 34.0]","['MEDIUM', 'HARD', 'HARD']",10.0,53.0,clean
+2023,Japanese Grand Prix,HAM,44,2,"[16.0, 34.0]","['MEDIUM', 'HARD', 'HARD']",5.0,53.0,clean
+2023,Japanese Grand Prix,HUL,27,3,"[8.0, 21.0, 37.0]","['SOFT', 'MEDIUM', 'HARD', 'MEDIUM']",14.0,52.0,clean
+2023,Japanese Grand Prix,LAW,40,2,"[10.0, 25.0]","['SOFT', 'MEDIUM', 'HARD']",11.0,52.0,clean
+2023,Japanese Grand Prix,LEC,16,2,"[17.0, 34.0]","['MEDIUM', 'MEDIUM', 'HARD']",4.0,53.0,clean
+2023,Japanese Grand Prix,MAG,20,2,"[12.0, 31.0]","['MEDIUM', 'HARD', 'HARD']",15.0,52.0,clean
+2023,Japanese Grand Prix,NOR,4,2,"[17.0, 36.0]","['MEDIUM', 'HARD', 'HARD']",2.0,53.0,clean
+2023,Japanese Grand Prix,OCO,31,2,"[1.0, 28.0]","['MEDIUM', 'HARD', 'HARD']",9.0,53.0,clean
+2023,Japanese Grand Prix,PER,11,2,"[12.0, 15.0]","['HARD', 'SOFT', 'UNKNOWN']",19.0,15.0,suspect
+2023,Japanese Grand Prix,PIA,81,2,"[13.0, 35.0]","['MEDIUM', 'HARD', 'HARD']",3.0,53.0,clean
+2023,Japanese Grand Prix,RUS,63,1,[24.0],"['MEDIUM', 'HARD']",7.0,53.0,clean
+2023,Japanese Grand Prix,SAI,55,2,"[18.0, 38.0]","['MEDIUM', 'MEDIUM', 'HARD']",6.0,53.0,clean
+2023,Japanese Grand Prix,SAR,2,3,"[5.0, 21.0, 22.0]","['MEDIUM', 'MEDIUM', 'HARD', 'UNKNOWN']",17.0,22.0,suspect
+2023,Japanese Grand Prix,STR,18,2,"[14.0, 20.0]","['SOFT', 'MEDIUM', 'UNKNOWN']",12.0,20.0,suspect
+2023,Japanese Grand Prix,TSU,22,2,"[9.0, 30.0]","['SOFT', 'MEDIUM', 'HARD']",12.0,52.0,clean
+2023,Japanese Grand Prix,VER,1,2,"[16.0, 37.0]","['MEDIUM', 'MEDIUM', 'HARD']",1.0,53.0,clean
+2023,Japanese Grand Prix,ZHO,24,3,"[1.0, 10.0, 29.0]","['SOFT', 'SOFT', 'SOFT', 'HARD']",13.0,52.0,clean
+2023,Las Vegas Grand Prix,ALB,23,1,[16.0],"['MEDIUM', 'HARD']",12.0,50.0,clean
+2023,Las Vegas Grand Prix,ALO,14,2,"[1.0, 26.0]","['MEDIUM', 'HARD', 'HARD']",9.0,50.0,clean
+2023,Las Vegas Grand Prix,BOT,77,2,"[1.0, 24.0]","['MEDIUM', 'HARD', 'MEDIUM']",17.0,50.0,clean
+2023,Las Vegas Grand Prix,GAS,10,1,[17.0],"['MEDIUM', 'HARD']",11.0,50.0,clean
+2023,Las Vegas Grand Prix,HAM,44,2,"[17.0, 26.0]","['HARD', 'MEDIUM', 'HARD']",8.0,50.0,clean
+2023,Las Vegas Grand Prix,HUL,27,2,"[12.0, 26.0]","['MEDIUM', 'HARD', 'HARD']",15.0,45.0,clean
+2023,Las Vegas Grand Prix,LEC,16,1,[21.0],"['MEDIUM', 'HARD']",2.0,50.0,clean
+2023,Las Vegas Grand Prix,MAG,20,2,"[14.0, 26.0]","['MEDIUM', 'HARD', 'HARD']",13.0,50.0,clean
+2023,Las Vegas Grand Prix,NOR,4,0,[],['MEDIUM'],13.0,2.0,dnf
+2023,Las Vegas Grand Prix,OCO,31,1,[20.0],"['MEDIUM', 'HARD']",5.0,50.0,clean
+2023,Las Vegas Grand Prix,PER,11,2,"[1.0, 26.0]","['MEDIUM', 'HARD', 'HARD']",3.0,50.0,clean
+2023,Las Vegas Grand Prix,PIA,81,2,"[16.0, 43.0]","['HARD', 'HARD', 'MEDIUM']",10.0,50.0,clean
+2023,Las Vegas Grand Prix,RIC,3,1,[17.0],"['MEDIUM', 'HARD']",14.0,50.0,clean
+2023,Las Vegas Grand Prix,RUS,63,2,"[15.0, 26.0]","['MEDIUM', 'HARD', 'HARD']",4.0,50.0,clean
+2023,Las Vegas Grand Prix,SAI,55,2,"[3.0, 26.0]","['MEDIUM', 'HARD', 'HARD']",7.0,50.0,clean
+2023,Las Vegas Grand Prix,SAR,2,1,[15.0],"['MEDIUM', 'HARD']",16.0,50.0,clean
+2023,Las Vegas Grand Prix,STR,18,2,"[3.0, 26.0]","['SOFT', 'HARD', 'HARD']",6.0,50.0,clean
+2023,Las Vegas Grand Prix,TSU,22,2,"[10.0, 21.0]","['SOFT', 'MEDIUM', 'HARD']",17.0,46.0,clean
+2023,Las Vegas Grand Prix,VER,1,2,"[16.0, 26.0]","['MEDIUM', 'HARD', 'HARD']",1.0,50.0,clean
+2023,Las Vegas Grand Prix,ZHO,24,1,[26.0],"['HARD', 'MEDIUM']",15.0,50.0,clean
+2023,Mexico City Grand Prix,ALB,23,1,[33.0],"['HARD', 'MEDIUM']",9.0,71.0,clean
+2023,Mexico City Grand Prix,ALO,14,3,"[29.0, 34.0, 47.0]","['MEDIUM', 'HARD', 'HARD', 'UNKNOWN']",18.0,47.0,suspect
+2023,Mexico City Grand Prix,BOT,77,2,"[31.0, 34.0]","['MEDIUM', 'HARD', 'HARD']",15.0,71.0,clean
+2023,Mexico City Grand Prix,GAS,10,2,"[28.0, 34.0]","['MEDIUM', 'HARD', 'HARD']",11.0,71.0,clean
+2023,Mexico City Grand Prix,HAM,44,1,[24.0],"['MEDIUM', 'MEDIUM']",2.0,71.0,clean
+2023,Mexico City Grand Prix,HUL,27,2,"[23.0, 34.0]","['MEDIUM', 'HARD', 'MEDIUM']",14.0,71.0,clean
+2023,Mexico City Grand Prix,LEC,16,1,[31.0],"['MEDIUM', 'HARD']",3.0,71.0,clean
+2023,Mexico City Grand Prix,MAG,20,1,[23.0],"['MEDIUM', 'HARD']",16.0,31.0,clean
+2023,Mexico City Grand Prix,NOR,4,3,"[11.0, 33.0, 34.0]","['SOFT', 'HARD', 'MEDIUM', 'MEDIUM']",5.0,71.0,clean
+2023,Mexico City Grand Prix,OCO,31,1,[34.0],"['HARD', 'MEDIUM']",10.0,71.0,clean
+2023,Mexico City Grand Prix,PER,11,1,[1.0],"['MEDIUM', 'UNKNOWN']",20.0,1.0,suspect
+2023,Mexico City Grand Prix,PIA,81,2,"[25.0, 34.0]","['MEDIUM', 'HARD', 'MEDIUM']",8.0,71.0,clean
+2023,Mexico City Grand Prix,RIC,3,2,"[27.0, 34.0]","['MEDIUM', 'HARD', 'HARD']",7.0,71.0,clean
+2023,Mexico City Grand Prix,RUS,63,2,"[26.0, 34.0]","['MEDIUM', 'HARD', 'MEDIUM']",6.0,71.0,clean
+2023,Mexico City Grand Prix,SAI,55,1,[30.0],"['MEDIUM', 'HARD']",4.0,71.0,clean
+2023,Mexico City Grand Prix,SAR,2,2,"[22.0, 34.0]","['MEDIUM', 'HARD', 'MEDIUM']",12.0,70.0,clean
+2023,Mexico City Grand Prix,STR,18,3,"[30.0, 34.0, 66.0]","['MEDIUM', 'HARD', 'HARD', 'UNKNOWN']",17.0,66.0,suspect
+2023,Mexico City Grand Prix,TSU,22,2,"[9.0, 34.0]","['MEDIUM', 'HARD', 'HARD']",13.0,71.0,clean
+2023,Mexico City Grand Prix,VER,1,2,"[19.0, 33.0]","['MEDIUM', 'HARD', 'HARD']",1.0,71.0,clean
+2023,Mexico City Grand Prix,ZHO,24,2,"[21.0, 34.0]","['MEDIUM', 'HARD', 'HARD']",16.0,71.0,clean
+2023,Miami Grand Prix,ALB,23,1,[22.0],"['MEDIUM', 'HARD']",14.0,57.0,clean
+2023,Miami Grand Prix,ALO,14,1,[24.0],"['MEDIUM', 'HARD']",3.0,57.0,clean
+2023,Miami Grand Prix,BOT,77,1,[15.0],"['MEDIUM', 'HARD']",13.0,57.0,clean
+2023,Miami Grand Prix,DEV,21,1,[15.0],"['MEDIUM', 'HARD']",18.0,57.0,clean
+2023,Miami Grand Prix,GAS,10,1,[15.0],"['MEDIUM', 'HARD']",8.0,57.0,clean
+2023,Miami Grand Prix,HAM,44,1,[37.0],"['HARD', 'MEDIUM']",6.0,57.0,clean
+2023,Miami Grand Prix,HUL,27,1,[33.0],"['HARD', 'MEDIUM']",15.0,57.0,clean
+2023,Miami Grand Prix,LEC,16,1,[17.0],"['MEDIUM', 'HARD']",7.0,57.0,clean
+2023,Miami Grand Prix,MAG,20,1,[14.0],"['MEDIUM', 'HARD']",10.0,57.0,clean
+2023,Miami Grand Prix,NOR,4,1,[4.0],"['SOFT', 'HARD']",17.0,57.0,clean
+2023,Miami Grand Prix,OCO,31,1,[39.0],"['HARD', 'MEDIUM']",9.0,57.0,clean
+2023,Miami Grand Prix,PER,11,1,[20.0],"['MEDIUM', 'HARD']",2.0,57.0,clean
+2023,Miami Grand Prix,PIA,81,1,[5.0],"['SOFT', 'HARD']",19.0,56.0,clean
+2023,Miami Grand Prix,RUS,63,1,[17.0],"['MEDIUM', 'HARD']",4.0,57.0,clean
+2023,Miami Grand Prix,SAI,55,1,[18.0],"['MEDIUM', 'HARD']",5.0,57.0,clean
+2023,Miami Grand Prix,SAR,2,1,[2.0],"['MEDIUM', 'HARD']",20.0,56.0,clean
+2023,Miami Grand Prix,STR,18,1,[42.0],"['HARD', 'MEDIUM']",12.0,57.0,clean
+2023,Miami Grand Prix,TSU,22,1,[36.0],"['HARD', 'MEDIUM']",11.0,57.0,clean
+2023,Miami Grand Prix,VER,1,1,[45.0],"['HARD', 'MEDIUM']",1.0,57.0,clean
+2023,Miami Grand Prix,ZHO,24,1,[31.0],"['HARD', 'MEDIUM']",16.0,57.0,clean
+2023,Monaco Grand Prix,ALB,23,2,"[18.0, 52.0]","['MEDIUM', 'HARD', 'INTERMEDIATE']",14.0,77.0,clean
+2023,Monaco Grand Prix,ALO,14,2,"[54.0, 55.0]","['HARD', 'MEDIUM', 'INTERMEDIATE']",2.0,78.0,clean
+2023,Monaco Grand Prix,BOT,77,1,[51.0],"['HARD', 'INTERMEDIATE']",11.0,77.0,clean
+2023,Monaco Grand Prix,DEV,21,1,[53.0],"['MEDIUM', 'INTERMEDIATE']",12.0,77.0,clean
+2023,Monaco Grand Prix,GAS,10,2,"[47.0, 54.0]","['HARD', 'MEDIUM', 'INTERMEDIATE']",7.0,78.0,clean
+2023,Monaco Grand Prix,HAM,44,2,"[31.0, 54.0]","['MEDIUM', 'HARD', 'INTERMEDIATE']",4.0,78.0,clean
+2023,Monaco Grand Prix,HUL,27,3,"[1.0, 54.0, 59.0]","['MEDIUM', 'HARD', 'INTERMEDIATE', 'WET']",16.0,76.0,clean
+2023,Monaco Grand Prix,LEC,16,2,"[44.0, 55.0]","['HARD', 'MEDIUM', 'INTERMEDIATE']",6.0,78.0,clean
+2023,Monaco Grand Prix,MAG,20,0,[],['HARD'],19.0,70.0,dnf
+2023,Monaco Grand Prix,NOR,4,2,"[50.0, 54.0]","['MEDIUM', 'HARD', 'INTERMEDIATE']",9.0,77.0,clean
+2023,Monaco Grand Prix,OCO,31,2,"[32.0, 54.0]","['MEDIUM', 'HARD', 'INTERMEDIATE']",3.0,78.0,clean
+2023,Monaco Grand Prix,PER,11,5,"[1.0, 34.0, 53.0, 57.0, 70.0]","['MEDIUM', 'HARD', 'MEDIUM', 'INTERMEDIATE', 'WET', 'INTERMEDIATE']",17.0,76.0,suspect
+2023,Monaco Grand Prix,PIA,81,1,[54.0],"['HARD', 'INTERMEDIATE']",10.0,77.0,clean
+2023,Monaco Grand Prix,RUS,63,1,[54.0],"['HARD', 'INTERMEDIATE']",5.0,78.0,clean
+2023,Monaco Grand Prix,SAI,55,2,"[33.0, 55.0]","['HARD', 'MEDIUM', 'INTERMEDIATE']",8.0,78.0,clean
+2023,Monaco Grand Prix,SAR,2,3,"[20.0, 23.0, 52.0]","['MEDIUM', 'HARD', 'SOFT', 'INTERMEDIATE']",18.0,76.0,clean
+2023,Monaco Grand Prix,STR,18,1,[51.0],"['HARD', 'INTERMEDIATE']",16.0,53.0,clean
+2023,Monaco Grand Prix,TSU,22,1,[53.0],"['MEDIUM', 'INTERMEDIATE']",15.0,76.0,clean
+2023,Monaco Grand Prix,VER,1,1,[55.0],"['MEDIUM', 'INTERMEDIATE']",1.0,78.0,clean
+2023,Monaco Grand Prix,ZHO,24,2,"[1.0, 52.0]","['SOFT', 'HARD', 'INTERMEDIATE']",13.0,77.0,clean
+2023,Qatar Grand Prix,ALB,23,3,"[18.0, 31.0, 44.0]","['MEDIUM', 'MEDIUM', 'HARD', 'HARD']",13.0,57.0,clean
+2023,Qatar Grand Prix,ALO,14,3,"[11.0, 26.0, 44.0]","['MEDIUM', 'MEDIUM', 'HARD', 'MEDIUM']",6.0,57.0,clean
+2023,Qatar Grand Prix,BOT,77,3,"[3.0, 21.0, 39.0]","['SOFT', 'MEDIUM', 'HARD', 'HARD']",8.0,57.0,clean
+2023,Qatar Grand Prix,GAS,10,3,"[11.0, 26.0, 44.0]","['MEDIUM', 'MEDIUM', 'HARD', 'MEDIUM']",10.0,57.0,clean
+2023,Qatar Grand Prix,HUL,27,3,"[13.0, 27.0, 39.0]","['MEDIUM', 'HARD', 'MEDIUM', 'HARD']",16.0,56.0,clean
+2023,Qatar Grand Prix,LAW,40,3,"[3.0, 21.0, 39.0]","['SOFT', 'HARD', 'HARD', 'MEDIUM']",17.0,56.0,clean
+2023,Qatar Grand Prix,LEC,16,3,"[12.0, 25.0, 43.0]","['MEDIUM', 'MEDIUM', 'HARD', 'MEDIUM']",5.0,57.0,clean
+2023,Qatar Grand Prix,MAG,20,3,"[3.0, 21.0, 39.0]","['SOFT', 'MEDIUM', 'HARD', 'HARD']",14.0,56.0,clean
+2023,Qatar Grand Prix,NOR,4,3,"[13.0, 27.0, 44.0]","['MEDIUM', 'MEDIUM', 'MEDIUM', 'HARD']",3.0,57.0,clean
+2023,Qatar Grand Prix,OCO,31,3,"[10.0, 25.0, 43.0]","['MEDIUM', 'MEDIUM', 'HARD', 'MEDIUM']",7.0,57.0,clean
+2023,Qatar Grand Prix,PER,11,3,"[17.0, 31.0, 43.0]","['HARD', 'MEDIUM', 'MEDIUM', 'MEDIUM']",11.0,57.0,clean
+2023,Qatar Grand Prix,PIA,81,3,"[12.0, 25.0, 43.0]","['MEDIUM', 'MEDIUM', 'MEDIUM', 'HARD']",2.0,57.0,clean
+2023,Qatar Grand Prix,RUS,63,4,"[1.0, 14.0, 32.0, 50.0]","['MEDIUM', 'MEDIUM', 'MEDIUM', 'HARD', 'SOFT']",4.0,57.0,clean
+2023,Qatar Grand Prix,SAR,2,3,"[13.0, 26.0, 40.0]","['MEDIUM', 'MEDIUM', 'HARD', 'UNKNOWN']",17.0,40.0,suspect
+2023,Qatar Grand Prix,STR,18,3,"[3.0, 21.0, 39.0]","['MEDIUM', 'MEDIUM', 'HARD', 'MEDIUM']",9.0,57.0,clean
+2023,Qatar Grand Prix,TSU,22,3,"[9.0, 22.0, 40.0]","['MEDIUM', 'MEDIUM', 'HARD', 'HARD']",15.0,56.0,clean
+2023,Qatar Grand Prix,VER,1,3,"[17.0, 34.0, 51.0]","['MEDIUM', 'MEDIUM', 'HARD', 'MEDIUM']",1.0,57.0,clean
+2023,Qatar Grand Prix,ZHO,24,3,"[18.0, 35.0, 52.0]","['MEDIUM', 'HARD', 'HARD', 'SOFT']",12.0,57.0,clean
+2023,Saudi Arabian Grand Prix,ALB,23,1,[17.0],"['MEDIUM', 'HARD']",15.0,26.0,clean
+2023,Saudi Arabian Grand Prix,ALO,14,1,[18.0],"['MEDIUM', 'HARD']",3.0,50.0,clean
+2023,Saudi Arabian Grand Prix,BOT,77,3,"[9.0, 17.0, 35.0]","['MEDIUM', 'HARD', 'MEDIUM', 'SOFT']",18.0,49.0,clean
+2023,Saudi Arabian Grand Prix,DEV,21,1,[17.0],"['MEDIUM', 'HARD']",14.0,50.0,clean
+2023,Saudi Arabian Grand Prix,GAS,10,1,[14.0],"['MEDIUM', 'HARD']",9.0,50.0,clean
+2023,Saudi Arabian Grand Prix,HAM,44,1,[18.0],"['HARD', 'MEDIUM']",5.0,50.0,clean
+2023,Saudi Arabian Grand Prix,HUL,27,1,[11.0],"['MEDIUM', 'HARD']",12.0,50.0,clean
+2023,Saudi Arabian Grand Prix,LEC,16,1,[16.0],"['SOFT', 'HARD']",7.0,50.0,clean
+2023,Saudi Arabian Grand Prix,MAG,20,1,[8.0],"['MEDIUM', 'HARD']",10.0,50.0,clean
+2023,Saudi Arabian Grand Prix,NOR,4,2,"[2.0, 19.0]","['SOFT', 'HARD', 'MEDIUM']",17.0,50.0,clean
+2023,Saudi Arabian Grand Prix,OCO,31,1,[16.0],"['MEDIUM', 'HARD']",8.0,50.0,clean
+2023,Saudi Arabian Grand Prix,PER,11,1,[18.0],"['MEDIUM', 'HARD']",1.0,50.0,clean
+2023,Saudi Arabian Grand Prix,PIA,81,1,[1.0],"['MEDIUM', 'HARD']",15.0,50.0,clean
+2023,Saudi Arabian Grand Prix,RUS,63,1,[18.0],"['MEDIUM', 'HARD']",4.0,50.0,clean
+2023,Saudi Arabian Grand Prix,SAI,55,1,[15.0],"['MEDIUM', 'HARD']",6.0,50.0,clean
+2023,Saudi Arabian Grand Prix,SAR,2,1,[18.0],"['HARD', 'MEDIUM']",16.0,50.0,clean
+2023,Saudi Arabian Grand Prix,STR,18,1,[13.0],"['MEDIUM', 'HARD']",10.0,16.0,clean
+2023,Saudi Arabian Grand Prix,TSU,22,1,[17.0],"['MEDIUM', 'HARD']",11.0,50.0,clean
+2023,Saudi Arabian Grand Prix,VER,1,1,[18.0],"['MEDIUM', 'HARD']",2.0,50.0,clean
+2023,Saudi Arabian Grand Prix,ZHO,24,2,"[11.0, 18.0]","['MEDIUM', 'HARD', 'MEDIUM']",13.0,50.0,clean
+2023,Singapore Grand Prix,ALB,23,2,"[20.0, 43.0]","['MEDIUM', 'HARD', 'MEDIUM']",11.0,62.0,clean
+2023,Singapore Grand Prix,ALO,14,2,"[20.0, 44.0]","['MEDIUM', 'HARD', 'SOFT']",15.0,62.0,clean
+2023,Singapore Grand Prix,BOT,77,1,[40.0],"['HARD', 'MEDIUM']",15.0,51.0,clean
+2023,Singapore Grand Prix,GAS,10,1,[20.0],"['MEDIUM', 'HARD']",6.0,62.0,clean
+2023,Singapore Grand Prix,HAM,44,2,"[20.0, 44.0]","['MEDIUM', 'HARD', 'MEDIUM']",3.0,62.0,clean
+2023,Singapore Grand Prix,HUL,27,1,[20.0],"['MEDIUM', 'HARD']",13.0,62.0,clean
+2023,Singapore Grand Prix,LAW,40,1,[20.0],"['MEDIUM', 'HARD']",9.0,62.0,clean
+2023,Singapore Grand Prix,LEC,16,1,[20.0],"['SOFT', 'HARD']",4.0,62.0,clean
+2023,Singapore Grand Prix,MAG,20,2,"[20.0, 43.0]","['MEDIUM', 'HARD', 'SOFT']",10.0,62.0,clean
+2023,Singapore Grand Prix,NOR,4,1,[20.0],"['MEDIUM', 'HARD']",2.0,62.0,clean
+2023,Singapore Grand Prix,OCO,31,1,[20.0],"['MEDIUM', 'HARD']",6.0,42.0,clean
+2023,Singapore Grand Prix,PER,11,1,[39.0],"['HARD', 'MEDIUM']",8.0,62.0,clean
+2023,Singapore Grand Prix,PIA,81,1,[20.0],"['MEDIUM', 'HARD']",7.0,62.0,clean
+2023,Singapore Grand Prix,RUS,63,2,"[20.0, 44.0]","['MEDIUM', 'HARD', 'MEDIUM']",3.0,61.0,clean
+2023,Singapore Grand Prix,SAI,55,1,[20.0],"['MEDIUM', 'HARD']",1.0,62.0,clean
+2023,Singapore Grand Prix,SAR,2,2,"[19.0, 43.0]","['MEDIUM', 'HARD', 'MEDIUM']",14.0,62.0,clean
+2023,Singapore Grand Prix,VER,1,1,[40.0],"['HARD', 'MEDIUM']",5.0,62.0,clean
+2023,Singapore Grand Prix,ZHO,24,2,"[2.0, 20.0]","['SOFT', 'HARD', 'MEDIUM']",12.0,62.0,clean
+2023,Spanish Grand Prix,ALB,23,2,"[16.0, 37.0]","['SOFT', 'HARD', 'MEDIUM']",16.0,65.0,clean
+2023,Spanish Grand Prix,ALO,14,2,"[19.0, 44.0]","['SOFT', 'SOFT', 'HARD']",7.0,66.0,clean
+2023,Spanish Grand Prix,BOT,77,2,"[5.0, 39.0]","['SOFT', 'HARD', 'HARD']",19.0,65.0,clean
+2023,Spanish Grand Prix,DEV,21,2,"[9.0, 38.0]","['SOFT', 'HARD', 'MEDIUM']",14.0,65.0,clean
+2023,Spanish Grand Prix,GAS,10,2,"[19.0, 39.0]","['SOFT', 'MEDIUM', 'HARD']",11.0,66.0,clean
+2023,Spanish Grand Prix,HAM,44,2,"[24.0, 50.0]","['SOFT', 'MEDIUM', 'SOFT']",2.0,66.0,clean
+2023,Spanish Grand Prix,HUL,27,3,"[8.0, 26.0, 43.0]","['SOFT', 'MEDIUM', 'HARD', 'MEDIUM']",15.0,65.0,clean
+2023,Spanish Grand Prix,LEC,16,2,"[16.0, 41.0]","['HARD', 'SOFT', 'HARD']",12.0,66.0,clean
+2023,Spanish Grand Prix,MAG,20,3,"[10.0, 24.0, 42.0]","['SOFT', 'MEDIUM', 'HARD', 'MEDIUM']",18.0,65.0,clean
+2023,Spanish Grand Prix,NOR,4,3,"[1.0, 22.0, 50.0]","['SOFT', 'HARD', 'MEDIUM', 'SOFT']",17.0,65.0,clean
+2023,Spanish Grand Prix,OCO,31,2,"[13.0, 35.0]","['SOFT', 'MEDIUM', 'HARD']",8.0,66.0,clean
+2023,Spanish Grand Prix,PER,11,2,"[27.0, 50.0]","['MEDIUM', 'HARD', 'SOFT']",4.0,66.0,clean
+2023,Spanish Grand Prix,PIA,81,2,"[17.0, 39.0]","['SOFT', 'HARD', 'MEDIUM']",13.0,65.0,clean
+2023,Spanish Grand Prix,RUS,63,2,"[25.0, 45.0]","['SOFT', 'MEDIUM', 'SOFT']",3.0,66.0,clean
+2023,Spanish Grand Prix,SAI,55,2,"[15.0, 41.0]","['SOFT', 'MEDIUM', 'HARD']",5.0,66.0,clean
+2023,Spanish Grand Prix,SAR,2,2,"[17.0, 36.0]","['MEDIUM', 'HARD', 'HARD']",20.0,65.0,clean
+2023,Spanish Grand Prix,STR,18,2,"[14.0, 34.0]","['SOFT', 'SOFT', 'HARD']",6.0,66.0,clean
+2023,Spanish Grand Prix,TSU,22,2,"[10.0, 34.0]","['SOFT', 'HARD', 'MEDIUM']",9.0,66.0,clean
+2023,Spanish Grand Prix,VER,1,2,"[26.0, 52.0]","['MEDIUM', 'HARD', 'SOFT']",1.0,66.0,clean
+2023,Spanish Grand Prix,ZHO,24,2,"[9.0, 36.0]","['SOFT', 'HARD', 'HARD']",10.0,66.0,clean
+2023,São Paulo Grand Prix,ALO,14,4,"[1.0, 2.0, 25.0, 47.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'SOFT']",3.0,71.0,suspect
+2023,São Paulo Grand Prix,BOT,77,4,"[1.0, 2.0, 18.0, 39.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'UNKNOWN']",12.0,39.0,suspect
+2023,São Paulo Grand Prix,GAS,10,4,"[1.0, 2.0, 26.0, 46.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'SOFT']",7.0,71.0,suspect
+2023,São Paulo Grand Prix,HAM,44,4,"[1.0, 2.0, 18.0, 46.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'SOFT']",8.0,71.0,suspect
+2023,São Paulo Grand Prix,HUL,27,4,"[1.0, 2.0, 21.0, 46.0]","['SOFT', 'MEDIUM', 'SOFT', 'SOFT', 'SOFT']",12.0,70.0,suspect
+2023,São Paulo Grand Prix,NOR,4,4,"[1.0, 2.0, 27.0, 59.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'SOFT']",2.0,71.0,suspect
+2023,São Paulo Grand Prix,OCO,31,5,"[1.0, 2.0, 14.0, 31.0, 51.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'SOFT', 'SOFT']",10.0,70.0,suspect
+2023,São Paulo Grand Prix,PER,11,4,"[1.0, 2.0, 20.0, 46.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'SOFT']",4.0,71.0,suspect
+2023,São Paulo Grand Prix,PIA,81,3,"[1.0, 24.0, 52.0]","['SOFT', 'MEDIUM', 'SOFT', 'SOFT']",14.0,69.0,clean
+2023,São Paulo Grand Prix,RIC,3,3,"[1.0, 26.0, 55.0]","['SOFT', 'SOFT', 'MEDIUM', 'SOFT']",13.0,70.0,clean
+2023,São Paulo Grand Prix,RUS,63,5,"[1.0, 2.0, 19.0, 45.0, 57.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'SOFT', 'UNKNOWN']",12.0,57.0,suspect
+2023,São Paulo Grand Prix,SAI,55,4,"[1.0, 2.0, 26.0, 51.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'SOFT']",6.0,71.0,suspect
+2023,São Paulo Grand Prix,SAR,2,4,"[1.0, 2.0, 17.0, 44.0]","['MEDIUM', 'MEDIUM', 'SOFT', 'SOFT', 'SOFT']",11.0,70.0,suspect
+2023,São Paulo Grand Prix,STR,18,4,"[1.0, 2.0, 22.0, 52.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'SOFT']",5.0,71.0,suspect
+2023,São Paulo Grand Prix,TSU,22,4,"[1.0, 2.0, 26.0, 55.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'SOFT']",9.0,71.0,suspect
+2023,São Paulo Grand Prix,VER,1,4,"[1.0, 2.0, 27.0, 56.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'SOFT']",1.0,71.0,suspect
+2023,São Paulo Grand Prix,ZHO,24,4,"[1.0, 2.0, 15.0, 22.0]","['SOFT', 'SOFT', 'SOFT', 'MEDIUM', 'UNKNOWN']",14.0,22.0,suspect
+2023,United States Grand Prix,ALB,23,2,"[10.0, 29.0]","['MEDIUM', 'HARD', 'MEDIUM']",11.0,56.0,clean
+2023,United States Grand Prix,ALO,14,3,"[19.0, 42.0, 49.0]","['MEDIUM', 'MEDIUM', 'HARD', 'UNKNOWN']",11.0,49.0,suspect
+2023,United States Grand Prix,BOT,77,2,"[10.0, 28.0]","['MEDIUM', 'HARD', 'HARD']",14.0,56.0,clean
+2023,United States Grand Prix,GAS,10,2,"[18.0, 37.0]","['MEDIUM', 'MEDIUM', 'HARD']",8.0,56.0,clean
+2023,United States Grand Prix,HAM,44,2,"[20.0, 38.0]","['MEDIUM', 'HARD', 'MEDIUM']",2.0,56.0,clean
+2023,United States Grand Prix,HUL,27,2,"[19.0, 34.0]","['HARD', 'MEDIUM', 'MEDIUM']",13.0,56.0,clean
+2023,United States Grand Prix,LEC,16,1,[23.0],"['MEDIUM', 'HARD']",6.0,56.0,clean
+2023,United States Grand Prix,MAG,20,2,"[10.0, 29.0]","['MEDIUM', 'HARD', 'MEDIUM']",16.0,55.0,clean
+2023,United States Grand Prix,NOR,4,2,"[17.0, 34.0]","['MEDIUM', 'HARD', 'HARD']",3.0,56.0,clean
+2023,United States Grand Prix,OCO,31,1,[6.0],"['MEDIUM', 'UNKNOWN']",20.0,6.0,suspect
+2023,United States Grand Prix,PER,11,2,"[17.0, 37.0]","['MEDIUM', 'MEDIUM', 'HARD']",5.0,56.0,clean
+2023,United States Grand Prix,PIA,81,1,[10.0],"['MEDIUM', 'UNKNOWN']",18.0,10.0,suspect
+2023,United States Grand Prix,RIC,3,2,"[22.0, 47.0]","['MEDIUM', 'HARD', 'SOFT']",17.0,55.0,clean
+2023,United States Grand Prix,RUS,63,2,"[21.0, 39.0]","['MEDIUM', 'HARD', 'MEDIUM']",7.0,56.0,clean
+2023,United States Grand Prix,SAI,55,2,"[17.0, 35.0]","['MEDIUM', 'MEDIUM', 'HARD']",4.0,56.0,clean
+2023,United States Grand Prix,SAR,2,2,"[11.0, 32.0]","['MEDIUM', 'HARD', 'MEDIUM']",12.0,56.0,clean
+2023,United States Grand Prix,STR,18,2,"[20.0, 40.0]","['HARD', 'MEDIUM', 'MEDIUM']",9.0,56.0,clean
+2023,United States Grand Prix,TSU,22,3,"[17.0, 34.0, 54.0]","['MEDIUM', 'HARD', 'MEDIUM', 'SOFT']",10.0,56.0,clean
+2023,United States Grand Prix,VER,1,2,"[16.0, 35.0]","['MEDIUM', 'MEDIUM', 'HARD']",1.0,56.0,clean
+2023,United States Grand Prix,ZHO,24,2,"[9.0, 27.0]","['MEDIUM', 'HARD', 'HARD']",15.0,55.0,clean
+2024,Abu Dhabi Grand Prix,ALB,23,1,[12.0],"['MEDIUM', 'HARD']",11.0,57.0,clean
+2024,Abu Dhabi Grand Prix,ALO,14,2,"[13.0, 37.0]","['MEDIUM', 'HARD', 'HARD']",9.0,58.0,clean
+2024,Abu Dhabi Grand Prix,BOT,77,2,"[6.0, 30.0]","['MEDIUM', 'HARD', 'UNKNOWN']",18.0,30.0,suspect
+2024,Abu Dhabi Grand Prix,COL,43,2,"[3.0, 26.0]","['MEDIUM', 'HARD', 'UNKNOWN']",19.0,26.0,suspect
+2024,Abu Dhabi Grand Prix,DOO,61,1,[22.0],"['MEDIUM', 'HARD']",15.0,57.0,clean
+2024,Abu Dhabi Grand Prix,GAS,10,1,[14.0],"['MEDIUM', 'HARD']",7.0,58.0,clean
+2024,Abu Dhabi Grand Prix,HAM,44,1,[34.0],"['HARD', 'MEDIUM']",4.0,58.0,clean
+2024,Abu Dhabi Grand Prix,HUL,27,1,[13.0],"['MEDIUM', 'HARD']",8.0,58.0,clean
+2024,Abu Dhabi Grand Prix,LAW,30,3,"[23.0, 24.0, 29.0]","['MEDIUM', 'HARD', 'HARD', 'HARD']",17.0,55.0,clean
+2024,Abu Dhabi Grand Prix,LEC,16,1,[20.0],"['MEDIUM', 'HARD']",3.0,58.0,clean
+2024,Abu Dhabi Grand Prix,MAG,20,4,"[12.0, 29.0, 30.0, 55.0]","['MEDIUM', 'HARD', 'HARD', 'SOFT', 'SOFT']",16.0,57.0,suspect
+2024,Abu Dhabi Grand Prix,NOR,4,1,[26.0],"['MEDIUM', 'HARD']",1.0,58.0,clean
+2024,Abu Dhabi Grand Prix,PIA,81,2,"[4.0, 32.0]","['MEDIUM', 'HARD', 'HARD']",10.0,58.0,clean
+2024,Abu Dhabi Grand Prix,RUS,63,1,[26.0],"['MEDIUM', 'HARD']",5.0,58.0,clean
+2024,Abu Dhabi Grand Prix,SAI,55,1,[25.0],"['MEDIUM', 'HARD']",2.0,58.0,clean
+2024,Abu Dhabi Grand Prix,STR,18,2,"[11.0, 32.0]","['MEDIUM', 'HARD', 'HARD']",12.0,57.0,clean
+2024,Abu Dhabi Grand Prix,TSU,22,1,[22.0],"['MEDIUM', 'HARD']",13.0,57.0,clean
+2024,Abu Dhabi Grand Prix,VER,1,1,[29.0],"['MEDIUM', 'HARD']",6.0,58.0,clean
+2024,Abu Dhabi Grand Prix,ZHO,24,2,"[12.0, 39.0]","['MEDIUM', 'HARD', 'HARD']",14.0,57.0,clean
+2024,Australian Grand Prix,ALB,23,2,"[6.0, 27.0]","['MEDIUM', 'HARD', 'HARD']",11.0,57.0,clean
+2024,Australian Grand Prix,ALO,14,2,"[17.0, 41.0]","['HARD', 'MEDIUM', 'HARD']",6.0,58.0,clean
+2024,Australian Grand Prix,BOT,77,2,"[8.0, 36.0]","['MEDIUM', 'HARD', 'HARD']",14.0,57.0,clean
+2024,Australian Grand Prix,GAS,10,2,"[17.0, 41.0]","['MEDIUM', 'HARD', 'HARD']",13.0,57.0,clean
+2024,Australian Grand Prix,HAM,44,1,[7.0],"['SOFT', 'HARD']",11.0,15.0,clean
+2024,Australian Grand Prix,HUL,27,2,"[17.0, 35.0]","['HARD', 'MEDIUM', 'HARD']",9.0,58.0,clean
+2024,Australian Grand Prix,LEC,16,2,"[9.0, 34.0]","['MEDIUM', 'HARD', 'HARD']",2.0,58.0,clean
+2024,Australian Grand Prix,MAG,20,2,"[7.0, 33.0]","['MEDIUM', 'HARD', 'HARD']",10.0,57.0,clean
+2024,Australian Grand Prix,NOR,4,2,"[14.0, 40.0]","['MEDIUM', 'HARD', 'HARD']",3.0,58.0,clean
+2024,Australian Grand Prix,OCO,31,3,"[9.0, 16.0, 42.0]","['MEDIUM', 'HARD', 'HARD', 'HARD']",16.0,57.0,clean
+2024,Australian Grand Prix,PER,11,2,"[14.0, 35.0]","['MEDIUM', 'HARD', 'HARD']",5.0,58.0,clean
+2024,Australian Grand Prix,PIA,81,2,"[9.0, 39.0]","['MEDIUM', 'HARD', 'HARD']",4.0,58.0,clean
+2024,Australian Grand Prix,RIC,3,2,"[5.0, 29.0]","['SOFT', 'HARD', 'HARD']",12.0,57.0,clean
+2024,Australian Grand Prix,RUS,63,2,"[8.0, 45.0]","['MEDIUM', 'HARD', 'HARD']",7.0,56.0,clean
+2024,Australian Grand Prix,SAI,55,2,"[16.0, 41.0]","['MEDIUM', 'HARD', 'HARD']",1.0,58.0,clean
+2024,Australian Grand Prix,STR,18,2,"[8.0, 37.0]","['MEDIUM', 'HARD', 'HARD']",7.0,58.0,clean
+2024,Australian Grand Prix,TSU,22,2,"[9.0, 36.0]","['MEDIUM', 'HARD', 'HARD']",8.0,58.0,clean
+2024,Australian Grand Prix,VER,1,0,[],['MEDIUM'],2.0,3.0,dnf
+2024,Australian Grand Prix,ZHO,24,2,"[6.0, 35.0]","['SOFT', 'HARD', 'HARD']",15.0,57.0,clean
+2024,Austrian Grand Prix,ALB,23,2,"[12.0, 39.0]","['MEDIUM', 'HARD', 'HARD']",14.0,70.0,clean
+2024,Austrian Grand Prix,ALO,14,3,"[11.0, 35.0, 68.0]","['MEDIUM', 'MEDIUM', 'HARD', 'SOFT']",18.0,70.0,clean
+2024,Austrian Grand Prix,BOT,77,2,"[19.0, 42.0]","['MEDIUM', 'HARD', 'HARD']",16.0,70.0,clean
+2024,Austrian Grand Prix,GAS,10,2,"[20.0, 42.0]","['MEDIUM', 'HARD', 'MEDIUM']",10.0,71.0,clean
+2024,Austrian Grand Prix,HAM,44,2,"[21.0, 53.0]","['MEDIUM', 'HARD', 'MEDIUM']",4.0,71.0,clean
+2024,Austrian Grand Prix,HUL,27,2,"[11.0, 39.0]","['MEDIUM', 'HARD', 'HARD']",6.0,71.0,clean
+2024,Austrian Grand Prix,LEC,16,4,"[1.0, 16.0, 33.0, 51.0]","['MEDIUM', 'HARD', 'MEDIUM', 'MEDIUM', 'MEDIUM']",11.0,71.0,suspect
+2024,Austrian Grand Prix,MAG,20,2,"[10.0, 38.0]","['MEDIUM', 'HARD', 'HARD']",8.0,71.0,clean
+2024,Austrian Grand Prix,NOR,4,3,"[23.0, 51.0, 64.0]","['MEDIUM', 'HARD', 'MEDIUM', 'UNKNOWN']",6.0,64.0,suspect
+2024,Austrian Grand Prix,OCO,31,2,"[19.0, 43.0]","['MEDIUM', 'HARD', 'MEDIUM']",12.0,71.0,clean
+2024,Austrian Grand Prix,PER,11,2,"[21.0, 51.0]","['MEDIUM', 'HARD', 'MEDIUM']",7.0,71.0,clean
+2024,Austrian Grand Prix,PIA,81,2,"[25.0, 51.0]","['MEDIUM', 'HARD', 'MEDIUM']",2.0,71.0,clean
+2024,Austrian Grand Prix,RIC,3,2,"[10.0, 37.0]","['MEDIUM', 'HARD', 'HARD']",9.0,71.0,clean
+2024,Austrian Grand Prix,RUS,63,2,"[22.0, 46.0]","['MEDIUM', 'MEDIUM', 'HARD']",1.0,71.0,clean
+2024,Austrian Grand Prix,SAI,55,2,"[22.0, 47.0]","['MEDIUM', 'HARD', 'MEDIUM']",3.0,71.0,clean
+2024,Austrian Grand Prix,SAR,2,3,"[1.0, 20.0, 49.0]","['MEDIUM', 'MEDIUM', 'HARD', 'MEDIUM']",19.0,69.0,clean
+2024,Austrian Grand Prix,STR,18,2,"[20.0, 43.0]","['MEDIUM', 'MEDIUM', 'HARD']",13.0,70.0,clean
+2024,Austrian Grand Prix,TSU,22,2,"[21.0, 44.0]","['MEDIUM', 'HARD', 'HARD']",15.0,70.0,clean
+2024,Austrian Grand Prix,VER,1,3,"[23.0, 51.0, 64.0]","['MEDIUM', 'HARD', 'MEDIUM', 'SOFT']",5.0,71.0,clean
+2024,Austrian Grand Prix,ZHO,24,2,"[28.0, 51.0]","['HARD', 'MEDIUM', 'HARD']",17.0,70.0,clean
+2024,Azerbaijan Grand Prix,ALB,23,1,[31.0],"['HARD', 'MEDIUM']",7.0,50.0,clean
+2024,Azerbaijan Grand Prix,ALO,14,1,[11.0],"['MEDIUM', 'HARD']",6.0,50.0,clean
+2024,Azerbaijan Grand Prix,BEA,50,1,[14.0],"['MEDIUM', 'HARD']",10.0,50.0,clean
+2024,Azerbaijan Grand Prix,BOT,77,1,[11.0],"['MEDIUM', 'HARD']",18.0,49.0,clean
+2024,Azerbaijan Grand Prix,COL,43,1,[10.0],"['MEDIUM', 'HARD']",8.0,50.0,clean
+2024,Azerbaijan Grand Prix,GAS,10,1,[50.0],"['HARD', 'UNKNOWN']",12.0,50.0,suspect
+2024,Azerbaijan Grand Prix,HAM,44,1,[12.0],"['MEDIUM', 'HARD']",9.0,50.0,clean
+2024,Azerbaijan Grand Prix,HUL,27,1,[15.0],"['MEDIUM', 'HARD']",11.0,50.0,clean
+2024,Azerbaijan Grand Prix,LEC,16,1,[16.0],"['MEDIUM', 'HARD']",2.0,50.0,clean
+2024,Azerbaijan Grand Prix,NOR,4,1,[37.0],"['HARD', 'MEDIUM']",4.0,50.0,clean
+2024,Azerbaijan Grand Prix,OCO,31,1,[49.0],"['HARD', 'UNKNOWN']",17.0,49.0,suspect
+2024,Azerbaijan Grand Prix,PER,11,1,[13.0],"['MEDIUM', 'HARD']",3.0,49.0,clean
+2024,Azerbaijan Grand Prix,PIA,81,1,[15.0],"['MEDIUM', 'HARD']",1.0,50.0,clean
+2024,Azerbaijan Grand Prix,RIC,3,1,[49.0],"['HARD', 'UNKNOWN']",15.0,49.0,suspect
+2024,Azerbaijan Grand Prix,RUS,63,1,[12.0],"['MEDIUM', 'HARD']",3.0,50.0,clean
+2024,Azerbaijan Grand Prix,SAI,55,1,[17.0],"['MEDIUM', 'HARD']",4.0,49.0,clean
+2024,Azerbaijan Grand Prix,STR,18,3,"[1.0, 22.0, 45.0]","['MEDIUM', 'HARD', 'HARD', 'UNKNOWN']",19.0,45.0,suspect
+2024,Azerbaijan Grand Prix,TSU,22,2,"[12.0, 14.0]","['MEDIUM', 'HARD', 'UNKNOWN']",20.0,14.0,suspect
+2024,Azerbaijan Grand Prix,VER,1,2,"[12.0, 49.0]","['MEDIUM', 'HARD', 'UNKNOWN']",7.0,49.0,suspect
+2024,Azerbaijan Grand Prix,ZHO,24,1,[34.0],"['HARD', 'MEDIUM']",16.0,49.0,clean
+2024,Bahrain Grand Prix,ALB,23,2,"[15.0, 36.0]","['SOFT', 'HARD', 'HARD']",15.0,56.0,clean
+2024,Bahrain Grand Prix,ALO,14,2,"[15.0, 41.0]","['SOFT', 'HARD', 'HARD']",9.0,57.0,clean
+2024,Bahrain Grand Prix,BOT,77,2,"[12.0, 30.0]","['SOFT', 'HARD', 'HARD']",19.0,56.0,clean
+2024,Bahrain Grand Prix,GAS,10,3,"[12.0, 31.0, 43.0]","['SOFT', 'HARD', 'HARD', 'SOFT']",18.0,56.0,clean
+2024,Bahrain Grand Prix,HAM,44,2,"[12.0, 33.0]","['SOFT', 'HARD', 'HARD']",7.0,57.0,clean
+2024,Bahrain Grand Prix,HUL,27,3,"[1.0, 20.0, 41.0]","['SOFT', 'HARD', 'HARD', 'SOFT']",16.0,56.0,clean
+2024,Bahrain Grand Prix,LEC,16,2,"[11.0, 34.0]","['SOFT', 'HARD', 'HARD']",4.0,57.0,clean
+2024,Bahrain Grand Prix,MAG,20,2,"[11.0, 32.0]","['SOFT', 'HARD', 'HARD']",12.0,56.0,clean
+2024,Bahrain Grand Prix,NOR,4,2,"[13.0, 33.0]","['SOFT', 'HARD', 'HARD']",6.0,57.0,clean
+2024,Bahrain Grand Prix,OCO,31,2,"[10.0, 30.0]","['SOFT', 'HARD', 'HARD']",17.0,56.0,clean
+2024,Bahrain Grand Prix,PER,11,2,"[12.0, 36.0]","['SOFT', 'HARD', 'SOFT']",2.0,57.0,clean
+2024,Bahrain Grand Prix,PIA,81,2,"[12.0, 34.0]","['SOFT', 'HARD', 'HARD']",8.0,57.0,clean
+2024,Bahrain Grand Prix,RIC,3,2,"[13.0, 35.0]","['SOFT', 'HARD', 'SOFT']",13.0,56.0,clean
+2024,Bahrain Grand Prix,RUS,63,2,"[11.0, 31.0]","['SOFT', 'HARD', 'HARD']",5.0,57.0,clean
+2024,Bahrain Grand Prix,SAI,55,2,"[14.0, 35.0]","['SOFT', 'HARD', 'HARD']",3.0,57.0,clean
+2024,Bahrain Grand Prix,SAR,2,2,"[28.0, 40.0]","['HARD', 'HARD', 'SOFT']",20.0,55.0,clean
+2024,Bahrain Grand Prix,STR,18,2,"[9.0, 27.0]","['SOFT', 'HARD', 'HARD']",10.0,57.0,clean
+2024,Bahrain Grand Prix,TSU,22,2,"[14.0, 34.0]","['SOFT', 'HARD', 'HARD']",14.0,56.0,clean
+2024,Bahrain Grand Prix,VER,1,2,"[17.0, 37.0]","['SOFT', 'HARD', 'SOFT']",1.0,57.0,clean
+2024,Bahrain Grand Prix,ZHO,24,2,"[9.0, 28.0]","['SOFT', 'HARD', 'HARD']",11.0,56.0,clean
+2024,Belgian Grand Prix,ALB,23,2,"[8.0, 23.0]","['MEDIUM', 'MEDIUM', 'HARD']",13.0,44.0,clean
+2024,Belgian Grand Prix,ALO,14,1,[13.0],"['MEDIUM', 'MEDIUM']",9.0,44.0,clean
+2024,Belgian Grand Prix,BOT,77,2,"[11.0, 35.0]","['MEDIUM', 'HARD', 'MEDIUM']",16.0,44.0,clean
+2024,Belgian Grand Prix,GAS,10,2,"[9.0, 28.0]","['MEDIUM', 'HARD', 'HARD']",14.0,44.0,clean
+2024,Belgian Grand Prix,HAM,44,2,"[11.0, 26.0]","['MEDIUM', 'HARD', 'HARD']",2.0,44.0,clean
+2024,Belgian Grand Prix,HUL,27,2,"[7.0, 20.0]","['MEDIUM', 'HARD', 'MEDIUM']",19.0,44.0,clean
+2024,Belgian Grand Prix,LEC,16,2,"[12.0, 25.0]","['MEDIUM', 'HARD', 'HARD']",4.0,44.0,clean
+2024,Belgian Grand Prix,MAG,20,1,[17.0],"['MEDIUM', 'HARD']",15.0,44.0,clean
+2024,Belgian Grand Prix,NOR,4,2,"[15.0, 29.0]","['MEDIUM', 'HARD', 'HARD']",6.0,44.0,clean
+2024,Belgian Grand Prix,OCO,31,2,"[12.0, 30.0]","['MEDIUM', 'HARD', 'HARD']",10.0,44.0,clean
+2024,Belgian Grand Prix,PER,11,3,"[11.0, 21.0, 42.0]","['MEDIUM', 'MEDIUM', 'HARD', 'SOFT']",8.0,44.0,clean
+2024,Belgian Grand Prix,PIA,81,2,"[11.0, 30.0]","['MEDIUM', 'HARD', 'HARD']",3.0,44.0,clean
+2024,Belgian Grand Prix,RIC,3,2,"[8.0, 21.0]","['SOFT', 'MEDIUM', 'SOFT']",11.0,44.0,clean
+2024,Belgian Grand Prix,RUS,63,1,[10.0],"['MEDIUM', 'HARD']",1.0,44.0,clean
+2024,Belgian Grand Prix,SAI,55,2,"[20.0, 28.0]","['HARD', 'MEDIUM', 'HARD']",7.0,44.0,clean
+2024,Belgian Grand Prix,SAR,2,2,"[8.0, 24.0]","['MEDIUM', 'MEDIUM', 'HARD']",18.0,44.0,clean
+2024,Belgian Grand Prix,STR,18,1,[12.0],"['MEDIUM', 'MEDIUM']",12.0,44.0,clean
+2024,Belgian Grand Prix,TSU,22,1,[15.0],"['MEDIUM', 'SOFT']",17.0,44.0,clean
+2024,Belgian Grand Prix,VER,1,2,"[10.0, 28.0]","['MEDIUM', 'HARD', 'MEDIUM']",5.0,44.0,clean
+2024,Belgian Grand Prix,ZHO,24,1,[5.0],"['HARD', 'UNKNOWN']",20.0,5.0,suspect
+2024,British Grand Prix,ALB,23,2,"[27.0, 38.0]","['MEDIUM', 'INTERMEDIATE', 'MEDIUM']",9.0,52.0,clean
+2024,British Grand Prix,ALO,14,2,"[27.0, 38.0]","['MEDIUM', 'INTERMEDIATE', 'MEDIUM']",8.0,52.0,clean
+2024,British Grand Prix,BOT,77,2,"[26.0, 37.0]","['MEDIUM', 'INTERMEDIATE', 'SOFT']",15.0,51.0,clean
+2024,British Grand Prix,HAM,44,2,"[27.0, 38.0]","['MEDIUM', 'INTERMEDIATE', 'SOFT']",1.0,52.0,clean
+2024,British Grand Prix,HUL,27,2,"[26.0, 39.0]","['MEDIUM', 'INTERMEDIATE', 'SOFT']",6.0,52.0,clean
+2024,British Grand Prix,LEC,16,3,"[19.0, 27.0, 37.0]","['MEDIUM', 'INTERMEDIATE', 'INTERMEDIATE', 'SOFT']",14.0,51.0,clean
+2024,British Grand Prix,MAG,20,2,"[27.0, 37.0]","['MEDIUM', 'INTERMEDIATE', 'SOFT']",12.0,52.0,clean
+2024,British Grand Prix,NOR,4,2,"[27.0, 39.0]","['MEDIUM', 'INTERMEDIATE', 'SOFT']",3.0,52.0,clean
+2024,British Grand Prix,OCO,31,4,"[19.0, 21.0, 26.0, 38.0]","['SOFT', 'INTERMEDIATE', 'MEDIUM', 'INTERMEDIATE', 'MEDIUM']",16.0,50.0,suspect
+2024,British Grand Prix,PER,11,4,"[19.0, 28.0, 37.0, 47.0]","['HARD', 'INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM', 'SOFT']",17.0,50.0,suspect
+2024,British Grand Prix,PIA,81,2,"[28.0, 38.0]","['MEDIUM', 'INTERMEDIATE', 'MEDIUM']",4.0,52.0,clean
+2024,British Grand Prix,RIC,3,2,"[26.0, 37.0]","['MEDIUM', 'INTERMEDIATE', 'SOFT']",13.0,51.0,clean
+2024,British Grand Prix,RUS,63,2,"[27.0, 33.0]","['MEDIUM', 'INTERMEDIATE', 'UNKNOWN']",4.0,33.0,suspect
+2024,British Grand Prix,SAI,55,3,"[26.0, 39.0, 50.0]","['MEDIUM', 'INTERMEDIATE', 'HARD', 'SOFT']",5.0,52.0,clean
+2024,British Grand Prix,SAR,2,2,"[27.0, 38.0]","['MEDIUM', 'INTERMEDIATE', 'SOFT']",11.0,52.0,clean
+2024,British Grand Prix,STR,18,2,"[26.0, 39.0]","['MEDIUM', 'INTERMEDIATE', 'MEDIUM']",7.0,52.0,clean
+2024,British Grand Prix,TSU,22,2,"[27.0, 38.0]","['MEDIUM', 'INTERMEDIATE', 'SOFT']",10.0,52.0,clean
+2024,British Grand Prix,VER,1,2,"[26.0, 38.0]","['MEDIUM', 'INTERMEDIATE', 'HARD']",2.0,52.0,clean
+2024,British Grand Prix,ZHO,24,4,"[12.0, 19.0, 26.0, 37.0]","['SOFT', 'MEDIUM', 'INTERMEDIATE', 'INTERMEDIATE', 'SOFT']",18.0,50.0,suspect
+2024,Canadian Grand Prix,ALB,23,2,"[25.0, 44.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",11.0,52.0,clean
+2024,Canadian Grand Prix,ALO,14,2,"[25.0, 44.0]","['INTERMEDIATE', 'INTERMEDIATE', 'HARD']",6.0,70.0,clean
+2024,Canadian Grand Prix,BOT,77,1,[42.0],"['INTERMEDIATE', 'MEDIUM']",13.0,70.0,clean
+2024,Canadian Grand Prix,GAS,10,2,"[25.0, 40.0]","['INTERMEDIATE', 'INTERMEDIATE', 'HARD']",9.0,70.0,clean
+2024,Canadian Grand Prix,HAM,44,3,"[25.0, 43.0, 54.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM', 'HARD']",4.0,70.0,clean
+2024,Canadian Grand Prix,HUL,27,3,"[12.0, 25.0, 44.0]","['WET', 'INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",11.0,70.0,clean
+2024,Canadian Grand Prix,LEC,16,3,"[25.0, 28.0, 31.0]","['INTERMEDIATE', 'INTERMEDIATE', 'HARD', 'INTERMEDIATE']",19.0,40.0,clean
+2024,Canadian Grand Prix,MAG,20,4,"[7.0, 25.0, 41.0, 54.0]","['WET', 'INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM', 'MEDIUM']",12.0,70.0,suspect
+2024,Canadian Grand Prix,NOR,4,2,"[26.0, 47.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",2.0,70.0,clean
+2024,Canadian Grand Prix,OCO,31,1,[44.0],"['INTERMEDIATE', 'MEDIUM']",10.0,70.0,clean
+2024,Canadian Grand Prix,PER,11,2,"[25.0, 43.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",13.0,51.0,clean
+2024,Canadian Grand Prix,PIA,81,2,"[25.0, 44.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",5.0,70.0,clean
+2024,Canadian Grand Prix,RIC,3,2,"[26.0, 43.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",8.0,70.0,clean
+2024,Canadian Grand Prix,RUS,63,3,"[25.0, 45.0, 54.0]","['INTERMEDIATE', 'INTERMEDIATE', 'HARD', 'MEDIUM']",3.0,70.0,clean
+2024,Canadian Grand Prix,SAI,55,2,"[25.0, 43.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",10.0,52.0,clean
+2024,Canadian Grand Prix,SAR,2,0,[],['INTERMEDIATE'],20.0,23.0,dnf
+2024,Canadian Grand Prix,STR,18,2,"[25.0, 44.0]","['INTERMEDIATE', 'INTERMEDIATE', 'HARD']",7.0,70.0,clean
+2024,Canadian Grand Prix,TSU,22,1,[44.0],"['INTERMEDIATE', 'MEDIUM']",14.0,70.0,clean
+2024,Canadian Grand Prix,VER,1,2,"[25.0, 45.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",1.0,70.0,clean
+2024,Canadian Grand Prix,ZHO,24,3,"[24.0, 44.0, 52.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM', 'MEDIUM']",15.0,69.0,clean
+2024,Chinese Grand Prix,ALB,23,2,"[9.0, 23.0]","['MEDIUM', 'MEDIUM', 'HARD']",12.0,56.0,clean
+2024,Chinese Grand Prix,ALO,14,3,"[11.0, 23.0, 43.0]","['MEDIUM', 'HARD', 'SOFT', 'MEDIUM']",7.0,56.0,clean
+2024,Chinese Grand Prix,BOT,77,1,[9.0],"['MEDIUM', 'HARD']",11.0,19.0,clean
+2024,Chinese Grand Prix,GAS,10,3,"[11.0, 23.0, 38.0]","['MEDIUM', 'HARD', 'HARD', 'MEDIUM']",13.0,56.0,clean
+2024,Chinese Grand Prix,HAM,44,2,"[9.0, 21.0]","['SOFT', 'MEDIUM', 'HARD']",9.0,56.0,clean
+2024,Chinese Grand Prix,HUL,27,2,"[8.0, 23.0]","['MEDIUM', 'HARD', 'HARD']",10.0,56.0,clean
+2024,Chinese Grand Prix,LEC,16,1,[21.0],"['MEDIUM', 'HARD']",4.0,56.0,clean
+2024,Chinese Grand Prix,MAG,20,1,[17.0],"['HARD', 'MEDIUM']",15.0,56.0,clean
+2024,Chinese Grand Prix,NOR,4,1,[22.0],"['MEDIUM', 'HARD']",2.0,56.0,clean
+2024,Chinese Grand Prix,OCO,31,2,"[9.0, 23.0]","['MEDIUM', 'HARD', 'HARD']",11.0,56.0,clean
+2024,Chinese Grand Prix,PER,11,2,"[13.0, 23.0]","['MEDIUM', 'HARD', 'HARD']",3.0,56.0,clean
+2024,Chinese Grand Prix,PIA,81,2,"[16.0, 24.0]","['MEDIUM', 'MEDIUM', 'HARD']",8.0,56.0,clean
+2024,Chinese Grand Prix,RIC,3,2,"[14.0, 33.0]","['MEDIUM', 'MEDIUM', 'UNKNOWN']",18.0,33.0,suspect
+2024,Chinese Grand Prix,RUS,63,2,"[11.0, 23.0]","['MEDIUM', 'MEDIUM', 'HARD']",6.0,56.0,clean
+2024,Chinese Grand Prix,SAI,55,1,[17.0],"['MEDIUM', 'HARD']",5.0,56.0,clean
+2024,Chinese Grand Prix,SAR,2,2,"[12.0, 24.0]","['SOFT', 'MEDIUM', 'HARD']",17.0,56.0,clean
+2024,Chinese Grand Prix,STR,18,3,"[9.0, 21.0, 35.0]","['SOFT', 'MEDIUM', 'MEDIUM', 'HARD']",16.0,56.0,clean
+2024,Chinese Grand Prix,TSU,22,2,"[8.0, 23.0]","['SOFT', 'MEDIUM', 'HARD']",14.0,26.0,clean
+2024,Chinese Grand Prix,VER,1,2,"[13.0, 23.0]","['MEDIUM', 'HARD', 'HARD']",1.0,56.0,clean
+2024,Chinese Grand Prix,ZHO,24,3,"[8.0, 23.0, 40.0]","['MEDIUM', 'HARD', 'HARD', 'SOFT']",14.0,56.0,clean
+2024,Dutch Grand Prix,ALB,23,2,"[12.0, 54.0]","['MEDIUM', 'HARD', 'MEDIUM']",14.0,71.0,clean
+2024,Dutch Grand Prix,ALO,14,1,[31.0],"['MEDIUM', 'HARD']",10.0,71.0,clean
+2024,Dutch Grand Prix,BOT,77,2,"[15.0, 43.0]","['SOFT', 'HARD', 'MEDIUM']",19.0,70.0,clean
+2024,Dutch Grand Prix,GAS,10,1,[32.0],"['MEDIUM', 'HARD']",9.0,71.0,clean
+2024,Dutch Grand Prix,HAM,44,2,"[23.0, 48.0]","['SOFT', 'HARD', 'SOFT']",8.0,72.0,clean
+2024,Dutch Grand Prix,HUL,27,1,[14.0],"['MEDIUM', 'HARD']",11.0,71.0,clean
+2024,Dutch Grand Prix,LEC,16,1,[24.0],"['MEDIUM', 'HARD']",3.0,72.0,clean
+2024,Dutch Grand Prix,MAG,20,1,[40.0],"['HARD', 'MEDIUM']",18.0,71.0,clean
+2024,Dutch Grand Prix,NOR,4,1,[28.0],"['MEDIUM', 'HARD']",1.0,72.0,clean
+2024,Dutch Grand Prix,OCO,31,1,[30.0],"['MEDIUM', 'HARD']",15.0,71.0,clean
+2024,Dutch Grand Prix,PER,11,1,[29.0],"['MEDIUM', 'HARD']",6.0,72.0,clean
+2024,Dutch Grand Prix,PIA,81,1,[33.0],"['MEDIUM', 'HARD']",4.0,72.0,clean
+2024,Dutch Grand Prix,RIC,3,1,[29.0],"['MEDIUM', 'HARD']",13.0,71.0,clean
+2024,Dutch Grand Prix,RUS,63,2,"[25.0, 54.0]","['MEDIUM', 'HARD', 'SOFT']",7.0,72.0,clean
+2024,Dutch Grand Prix,SAI,55,1,[30.0],"['MEDIUM', 'HARD']",5.0,72.0,clean
+2024,Dutch Grand Prix,SAR,2,1,[22.0],"['MEDIUM', 'HARD']",16.0,71.0,clean
+2024,Dutch Grand Prix,STR,18,1,[30.0],"['MEDIUM', 'HARD']",12.0,71.0,clean
+2024,Dutch Grand Prix,TSU,22,2,"[14.0, 32.0]","['SOFT', 'MEDIUM', 'HARD']",17.0,71.0,clean
+2024,Dutch Grand Prix,VER,1,1,[27.0],"['MEDIUM', 'HARD']",2.0,72.0,clean
+2024,Dutch Grand Prix,ZHO,24,2,"[18.0, 51.0]","['MEDIUM', 'HARD', 'SOFT']",20.0,70.0,clean
+2024,Emilia Romagna Grand Prix,ALB,23,4,"[8.0, 23.0, 28.0, 51.0]","['MEDIUM', 'MEDIUM', 'MEDIUM', 'MEDIUM', 'UNKNOWN']",20.0,51.0,suspect
+2024,Emilia Romagna Grand Prix,ALO,14,3,"[7.0, 40.0, 59.0]","['SOFT', 'HARD', 'MEDIUM', 'SOFT']",19.0,62.0,clean
+2024,Emilia Romagna Grand Prix,BOT,77,1,[8.0],"['MEDIUM', 'HARD']",18.0,62.0,clean
+2024,Emilia Romagna Grand Prix,GAS,10,2,"[8.0, 30.0]","['SOFT', 'HARD', 'MEDIUM']",16.0,62.0,clean
+2024,Emilia Romagna Grand Prix,HAM,44,1,[27.0],"['MEDIUM', 'HARD']",6.0,63.0,clean
+2024,Emilia Romagna Grand Prix,HUL,27,1,[13.0],"['MEDIUM', 'HARD']",11.0,62.0,clean
+2024,Emilia Romagna Grand Prix,LEC,16,1,[25.0],"['MEDIUM', 'HARD']",3.0,63.0,clean
+2024,Emilia Romagna Grand Prix,MAG,20,1,[37.0],"['MEDIUM', 'HARD']",12.0,62.0,clean
+2024,Emilia Romagna Grand Prix,NOR,4,1,[22.0],"['MEDIUM', 'HARD']",2.0,63.0,clean
+2024,Emilia Romagna Grand Prix,OCO,31,1,[25.0],"['MEDIUM', 'HARD']",14.0,62.0,clean
+2024,Emilia Romagna Grand Prix,PER,11,1,[37.0],"['HARD', 'MEDIUM']",8.0,63.0,clean
+2024,Emilia Romagna Grand Prix,PIA,81,1,[23.0],"['MEDIUM', 'HARD']",4.0,63.0,clean
+2024,Emilia Romagna Grand Prix,RIC,3,1,[11.0],"['MEDIUM', 'HARD']",13.0,62.0,clean
+2024,Emilia Romagna Grand Prix,RUS,63,2,"[21.0, 52.0]","['MEDIUM', 'HARD', 'MEDIUM']",7.0,63.0,clean
+2024,Emilia Romagna Grand Prix,SAI,55,1,[27.0],"['MEDIUM', 'HARD']",5.0,63.0,clean
+2024,Emilia Romagna Grand Prix,SAR,2,1,[31.0],"['HARD', 'MEDIUM']",17.0,62.0,clean
+2024,Emilia Romagna Grand Prix,STR,18,1,[37.0],"['MEDIUM', 'HARD']",9.0,63.0,clean
+2024,Emilia Romagna Grand Prix,TSU,22,1,[12.0],"['MEDIUM', 'HARD']",10.0,62.0,clean
+2024,Emilia Romagna Grand Prix,VER,1,1,[24.0],"['MEDIUM', 'HARD']",1.0,63.0,clean
+2024,Emilia Romagna Grand Prix,ZHO,24,1,[33.0],"['HARD', 'MEDIUM']",15.0,62.0,clean
+2024,Hungarian Grand Prix,ALB,23,2,"[6.0, 29.0]","['SOFT', 'HARD', 'HARD']",14.0,69.0,clean
+2024,Hungarian Grand Prix,ALO,14,2,"[7.0, 37.0]","['SOFT', 'MEDIUM', 'HARD']",11.0,70.0,clean
+2024,Hungarian Grand Prix,BOT,77,2,"[16.0, 45.0]","['MEDIUM', 'HARD', 'HARD']",16.0,69.0,clean
+2024,Hungarian Grand Prix,GAS,10,2,"[28.0, 33.0]","['HARD', 'MEDIUM', 'UNKNOWN']",15.0,33.0,suspect
+2024,Hungarian Grand Prix,HAM,44,2,"[16.0, 40.0]","['MEDIUM', 'HARD', 'HARD']",3.0,70.0,clean
+2024,Hungarian Grand Prix,HUL,27,2,"[2.0, 29.0]","['MEDIUM', 'HARD', 'HARD']",13.0,69.0,clean
+2024,Hungarian Grand Prix,LEC,16,2,"[23.0, 40.0]","['MEDIUM', 'HARD', 'MEDIUM']",4.0,70.0,clean
+2024,Hungarian Grand Prix,MAG,20,2,"[6.0, 34.0]","['SOFT', 'HARD', 'HARD']",15.0,69.0,clean
+2024,Hungarian Grand Prix,NOR,4,2,"[17.0, 45.0]","['MEDIUM', 'HARD', 'MEDIUM']",2.0,70.0,clean
+2024,Hungarian Grand Prix,OCO,31,3,"[6.0, 30.0, 64.0]","['MEDIUM', 'HARD', 'HARD', 'SOFT']",18.0,69.0,clean
+2024,Hungarian Grand Prix,PER,11,2,"[28.0, 47.0]","['HARD', 'MEDIUM', 'MEDIUM']",7.0,70.0,clean
+2024,Hungarian Grand Prix,PIA,81,2,"[18.0, 47.0]","['MEDIUM', 'HARD', 'MEDIUM']",1.0,70.0,clean
+2024,Hungarian Grand Prix,RIC,3,2,"[7.0, 28.0]","['MEDIUM', 'HARD', 'HARD']",12.0,69.0,clean
+2024,Hungarian Grand Prix,RUS,63,2,"[33.0, 53.0]","['HARD', 'MEDIUM', 'HARD']",8.0,70.0,clean
+2024,Hungarian Grand Prix,SAI,55,2,"[21.0, 47.0]","['MEDIUM', 'HARD', 'MEDIUM']",6.0,70.0,clean
+2024,Hungarian Grand Prix,SAR,2,3,"[8.0, 33.0, 63.0]","['MEDIUM', 'HARD', 'HARD', 'SOFT']",17.0,69.0,clean
+2024,Hungarian Grand Prix,STR,18,2,"[14.0, 45.0]","['SOFT', 'MEDIUM', 'HARD']",10.0,70.0,clean
+2024,Hungarian Grand Prix,TSU,22,1,[29.0],"['MEDIUM', 'HARD']",9.0,70.0,clean
+2024,Hungarian Grand Prix,VER,1,2,"[21.0, 49.0]","['MEDIUM', 'HARD', 'MEDIUM']",5.0,70.0,clean
+2024,Hungarian Grand Prix,ZHO,24,2,"[7.0, 36.0]","['MEDIUM', 'HARD', 'HARD']",19.0,69.0,clean
+2024,Italian Grand Prix,ALB,23,1,[17.0],"['MEDIUM', 'HARD']",10.0,53.0,clean
+2024,Italian Grand Prix,ALO,14,2,"[12.0, 35.0]","['MEDIUM', 'HARD', 'HARD']",11.0,53.0,clean
+2024,Italian Grand Prix,BOT,77,1,[33.0],"['HARD', 'MEDIUM']",16.0,52.0,clean
+2024,Italian Grand Prix,COL,43,1,[16.0],"['MEDIUM', 'HARD']",13.0,53.0,clean
+2024,Italian Grand Prix,GAS,10,2,"[10.0, 30.0]","['MEDIUM', 'HARD', 'HARD']",15.0,52.0,clean
+2024,Italian Grand Prix,HAM,44,2,"[15.0, 37.0]","['MEDIUM', 'HARD', 'HARD']",5.0,53.0,clean
+2024,Italian Grand Prix,HUL,27,2,"[5.0, 32.0]","['MEDIUM', 'HARD', 'HARD']",17.0,52.0,clean
+2024,Italian Grand Prix,LEC,16,1,[15.0],"['MEDIUM', 'HARD']",1.0,53.0,clean
+2024,Italian Grand Prix,MAG,20,1,[14.0],"['MEDIUM', 'HARD']",9.0,53.0,clean
+2024,Italian Grand Prix,NOR,4,2,"[14.0, 32.0]","['MEDIUM', 'HARD', 'HARD']",3.0,53.0,clean
+2024,Italian Grand Prix,OCO,31,1,[31.0],"['HARD', 'MEDIUM']",14.0,52.0,clean
+2024,Italian Grand Prix,PER,11,2,"[23.0, 35.0]","['HARD', 'HARD', 'MEDIUM']",8.0,53.0,clean
+2024,Italian Grand Prix,PIA,81,2,"[16.0, 38.0]","['MEDIUM', 'HARD', 'HARD']",2.0,53.0,clean
+2024,Italian Grand Prix,RIC,3,1,[11.0],"['MEDIUM', 'HARD']",12.0,53.0,clean
+2024,Italian Grand Prix,RUS,63,2,"[11.0, 33.0]","['MEDIUM', 'HARD', 'HARD']",7.0,53.0,clean
+2024,Italian Grand Prix,SAI,55,1,[19.0],"['MEDIUM', 'HARD']",4.0,53.0,clean
+2024,Italian Grand Prix,STR,18,3,"[19.0, 36.0, 50.0]","['HARD', 'HARD', 'MEDIUM', 'SOFT']",19.0,52.0,clean
+2024,Italian Grand Prix,TSU,22,1,[7.0],"['HARD', 'UNKNOWN']",19.0,7.0,suspect
+2024,Italian Grand Prix,VER,1,2,"[22.0, 41.0]","['HARD', 'HARD', 'MEDIUM']",6.0,53.0,clean
+2024,Italian Grand Prix,ZHO,24,1,[15.0],"['MEDIUM', 'HARD']",18.0,52.0,clean
+2024,Japanese Grand Prix,ALO,14,3,"[1.0, 13.0, 33.0]","['SOFT', 'SOFT', 'MEDIUM', 'HARD']",6.0,53.0,clean
+2024,Japanese Grand Prix,BOT,77,3,"[1.0, 6.0, 22.0]","['SOFT', 'SOFT', 'HARD', 'HARD']",14.0,52.0,clean
+2024,Japanese Grand Prix,GAS,10,3,"[1.0, 16.0, 32.0]","['SOFT', 'HARD', 'MEDIUM', 'HARD']",16.0,52.0,clean
+2024,Japanese Grand Prix,HAM,44,3,"[1.0, 23.0, 39.0]","['MEDIUM', 'HARD', 'HARD', 'MEDIUM']",9.0,53.0,clean
+2024,Japanese Grand Prix,HUL,27,3,"[1.0, 5.0, 33.0]","['SOFT', 'SOFT', 'HARD', 'HARD']",11.0,52.0,clean
+2024,Japanese Grand Prix,LEC,16,2,"[1.0, 26.0]","['MEDIUM', 'MEDIUM', 'HARD']",4.0,53.0,clean
+2024,Japanese Grand Prix,MAG,20,2,"[1.0, 22.0]","['MEDIUM', 'MEDIUM', 'HARD']",13.0,52.0,clean
+2024,Japanese Grand Prix,NOR,4,3,"[1.0, 11.0, 26.0]","['MEDIUM', 'MEDIUM', 'HARD', 'HARD']",5.0,53.0,clean
+2024,Japanese Grand Prix,OCO,31,3,"[1.0, 19.0, 33.0]","['SOFT', 'HARD', 'HARD', 'MEDIUM']",15.0,52.0,clean
+2024,Japanese Grand Prix,PER,11,3,"[1.0, 15.0, 33.0]","['MEDIUM', 'MEDIUM', 'MEDIUM', 'HARD']",2.0,53.0,clean
+2024,Japanese Grand Prix,PIA,81,3,"[1.0, 12.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD', 'HARD']",8.0,53.0,clean
+2024,Japanese Grand Prix,RUS,63,3,"[1.0, 22.0, 37.0]","['MEDIUM', 'HARD', 'HARD', 'MEDIUM']",7.0,53.0,clean
+2024,Japanese Grand Prix,SAI,55,3,"[1.0, 15.0, 36.0]","['MEDIUM', 'MEDIUM', 'MEDIUM', 'HARD']",3.0,53.0,clean
+2024,Japanese Grand Prix,SAR,2,4,"[1.0, 22.0, 34.0, 41.0]","['SOFT', 'HARD', 'HARD', 'MEDIUM', 'SOFT']",17.0,52.0,suspect
+2024,Japanese Grand Prix,STR,18,4,"[1.0, 12.0, 22.0, 34.0]","['SOFT', 'SOFT', 'MEDIUM', 'HARD', 'SOFT']",12.0,52.0,suspect
+2024,Japanese Grand Prix,TSU,22,3,"[1.0, 7.0, 22.0]","['MEDIUM', 'SOFT', 'HARD', 'HARD']",10.0,52.0,clean
+2024,Japanese Grand Prix,VER,1,3,"[1.0, 16.0, 34.0]","['MEDIUM', 'MEDIUM', 'MEDIUM', 'HARD']",1.0,53.0,clean
+2024,Japanese Grand Prix,ZHO,24,4,"[1.0, 7.0, 11.0, 12.0]","['MEDIUM', 'SOFT', 'HARD', 'HARD', 'UNKNOWN']",18.0,12.0,suspect
+2024,Las Vegas Grand Prix,ALB,23,2,"[9.0, 25.0]","['MEDIUM', 'HARD', 'UNKNOWN']",14.0,25.0,suspect
+2024,Las Vegas Grand Prix,ALO,14,2,"[4.0, 24.0]","['SOFT', 'HARD', 'HARD']",11.0,50.0,clean
+2024,Las Vegas Grand Prix,BOT,77,2,"[17.0, 35.0]","['HARD', 'MEDIUM', 'HARD']",18.0,49.0,clean
+2024,Las Vegas Grand Prix,COL,43,2,"[16.0, 26.0]","['HARD', 'MEDIUM', 'HARD']",14.0,50.0,clean
+2024,Las Vegas Grand Prix,GAS,10,2,"[10.0, 15.0]","['MEDIUM', 'HARD', 'UNKNOWN']",18.0,15.0,suspect
+2024,Las Vegas Grand Prix,HAM,44,2,"[13.0, 27.0]","['MEDIUM', 'HARD', 'HARD']",2.0,50.0,clean
+2024,Las Vegas Grand Prix,HUL,27,2,"[14.0, 33.0]","['MEDIUM', 'HARD', 'HARD']",8.0,50.0,clean
+2024,Las Vegas Grand Prix,LAW,30,2,"[11.0, 38.0]","['MEDIUM', 'HARD', 'HARD']",16.0,50.0,clean
+2024,Las Vegas Grand Prix,LEC,16,2,"[9.0, 31.0]","['MEDIUM', 'HARD', 'HARD']",4.0,50.0,clean
+2024,Las Vegas Grand Prix,MAG,20,1,[17.0],"['MEDIUM', 'HARD']",12.0,50.0,clean
+2024,Las Vegas Grand Prix,NOR,4,3,"[9.0, 30.0, 48.0]","['MEDIUM', 'HARD', 'HARD', 'SOFT']",6.0,50.0,clean
+2024,Las Vegas Grand Prix,OCO,31,3,"[11.0, 12.0, 45.0]","['MEDIUM', 'MEDIUM', 'HARD', 'SOFT']",17.0,49.0,clean
+2024,Las Vegas Grand Prix,PER,11,2,"[17.0, 32.0]","['HARD', 'MEDIUM', 'HARD']",10.0,50.0,clean
+2024,Las Vegas Grand Prix,PIA,81,2,"[10.0, 25.0]","['MEDIUM', 'HARD', 'HARD']",7.0,50.0,clean
+2024,Las Vegas Grand Prix,RUS,63,2,"[12.0, 32.0]","['MEDIUM', 'HARD', 'HARD']",1.0,50.0,clean
+2024,Las Vegas Grand Prix,SAI,55,2,"[10.0, 28.0]","['MEDIUM', 'HARD', 'HARD']",3.0,50.0,clean
+2024,Las Vegas Grand Prix,STR,18,2,"[9.0, 28.0]","['MEDIUM', 'HARD', 'HARD']",15.0,50.0,clean
+2024,Las Vegas Grand Prix,TSU,22,2,"[10.0, 29.0]","['MEDIUM', 'HARD', 'HARD']",9.0,50.0,clean
+2024,Las Vegas Grand Prix,VER,1,2,"[11.0, 27.0]","['MEDIUM', 'HARD', 'HARD']",5.0,50.0,clean
+2024,Las Vegas Grand Prix,ZHO,24,2,"[11.0, 34.0]","['MEDIUM', 'HARD', 'HARD']",13.0,50.0,clean
+2024,Mexico City Grand Prix,ALO,14,1,[15.0],"['MEDIUM', 'UNKNOWN']",17.0,15.0,suspect
+2024,Mexico City Grand Prix,BOT,77,1,[49.0],"['HARD', 'MEDIUM']",14.0,70.0,clean
+2024,Mexico City Grand Prix,COL,43,1,[47.0],"['HARD', 'MEDIUM']",12.0,70.0,clean
+2024,Mexico City Grand Prix,GAS,10,1,[28.0],"['MEDIUM', 'HARD']",10.0,70.0,clean
+2024,Mexico City Grand Prix,HAM,44,1,[28.0],"['MEDIUM', 'HARD']",4.0,71.0,clean
+2024,Mexico City Grand Prix,HUL,27,1,[29.0],"['MEDIUM', 'HARD']",9.0,70.0,clean
+2024,Mexico City Grand Prix,LAW,30,2,"[39.0, 65.0]","['HARD', 'MEDIUM', 'SOFT']",16.0,70.0,clean
+2024,Mexico City Grand Prix,LEC,16,2,"[31.0, 69.0]","['MEDIUM', 'HARD', 'SOFT']",3.0,71.0,clean
+2024,Mexico City Grand Prix,MAG,20,1,[30.0],"['MEDIUM', 'HARD']",7.0,71.0,clean
+2024,Mexico City Grand Prix,NOR,4,1,[30.0],"['MEDIUM', 'HARD']",2.0,71.0,clean
+2024,Mexico City Grand Prix,OCO,31,1,[48.0],"['HARD', 'MEDIUM']",13.0,70.0,clean
+2024,Mexico City Grand Prix,PER,11,3,"[20.0, 43.0, 68.0]","['HARD', 'MEDIUM', 'MEDIUM', 'SOFT']",17.0,70.0,clean
+2024,Mexico City Grand Prix,PIA,81,1,[39.0],"['MEDIUM', 'HARD']",8.0,71.0,clean
+2024,Mexico City Grand Prix,RUS,63,1,[31.0],"['MEDIUM', 'HARD']",5.0,71.0,clean
+2024,Mexico City Grand Prix,SAI,55,1,[32.0],"['MEDIUM', 'HARD']",1.0,71.0,clean
+2024,Mexico City Grand Prix,STR,18,1,[26.0],"['MEDIUM', 'HARD']",11.0,70.0,clean
+2024,Mexico City Grand Prix,VER,1,1,[26.0],"['MEDIUM', 'HARD']",6.0,71.0,clean
+2024,Mexico City Grand Prix,ZHO,24,1,[43.0],"['HARD', 'MEDIUM']",15.0,70.0,clean
+2024,Miami Grand Prix,ALB,23,2,"[10.0, 53.0]","['MEDIUM', 'HARD', 'SOFT']",19.0,57.0,clean
+2024,Miami Grand Prix,ALO,14,1,[22.0],"['HARD', 'MEDIUM']",9.0,57.0,clean
+2024,Miami Grand Prix,BOT,77,2,"[11.0, 29.0]","['SOFT', 'HARD', 'MEDIUM']",17.0,57.0,clean
+2024,Miami Grand Prix,GAS,10,1,[12.0],"['MEDIUM', 'HARD']",12.0,57.0,clean
+2024,Miami Grand Prix,HAM,44,1,[26.0],"['HARD', 'MEDIUM']",6.0,57.0,clean
+2024,Miami Grand Prix,HUL,27,2,"[12.0, 28.0]","['MEDIUM', 'HARD', 'MEDIUM']",11.0,57.0,clean
+2024,Miami Grand Prix,LEC,16,1,[19.0],"['MEDIUM', 'HARD']",3.0,57.0,clean
+2024,Miami Grand Prix,MAG,20,3,"[22.0, 28.0, 31.0]","['HARD', 'MEDIUM', 'MEDIUM', 'MEDIUM']",18.0,57.0,clean
+2024,Miami Grand Prix,NOR,4,1,[29.0],"['MEDIUM', 'HARD']",1.0,57.0,clean
+2024,Miami Grand Prix,OCO,31,1,[22.0],"['MEDIUM', 'HARD']",10.0,57.0,clean
+2024,Miami Grand Prix,PER,11,2,"[17.0, 28.0]","['MEDIUM', 'HARD', 'MEDIUM']",5.0,57.0,clean
+2024,Miami Grand Prix,PIA,81,2,"[27.0, 40.0]","['MEDIUM', 'HARD', 'MEDIUM']",14.0,57.0,clean
+2024,Miami Grand Prix,RIC,3,1,[28.0],"['HARD', 'MEDIUM']",16.0,57.0,clean
+2024,Miami Grand Prix,RUS,63,1,[24.0],"['MEDIUM', 'HARD']",8.0,57.0,clean
+2024,Miami Grand Prix,SAI,55,1,[27.0],"['MEDIUM', 'HARD']",4.0,57.0,clean
+2024,Miami Grand Prix,SAR,2,1,[11.0],"['MEDIUM', 'HARD']",18.0,27.0,clean
+2024,Miami Grand Prix,STR,18,2,"[11.0, 28.0]","['MEDIUM', 'HARD', 'MEDIUM']",13.0,57.0,clean
+2024,Miami Grand Prix,TSU,22,1,[28.0],"['MEDIUM', 'HARD']",7.0,57.0,clean
+2024,Miami Grand Prix,VER,1,1,[23.0],"['MEDIUM', 'HARD']",2.0,57.0,clean
+2024,Miami Grand Prix,ZHO,24,1,[28.0],"['MEDIUM', 'SOFT']",15.0,57.0,clean
+2024,Monaco Grand Prix,ALB,23,1,[1.0],"['MEDIUM', 'HARD']",9.0,77.0,clean
+2024,Monaco Grand Prix,ALO,14,1,[1.0],"['HARD', 'MEDIUM']",11.0,76.0,clean
+2024,Monaco Grand Prix,BOT,77,2,"[1.0, 15.0]","['HARD', 'MEDIUM', 'HARD']",13.0,76.0,clean
+2024,Monaco Grand Prix,GAS,10,1,[1.0],"['HARD', 'MEDIUM']",10.0,77.0,clean
+2024,Monaco Grand Prix,HAM,44,2,"[1.0, 51.0]","['HARD', 'MEDIUM', 'HARD']",7.0,78.0,clean
+2024,Monaco Grand Prix,LEC,16,1,[1.0],"['MEDIUM', 'HARD']",1.0,78.0,clean
+2024,Monaco Grand Prix,NOR,4,1,[1.0],"['MEDIUM', 'HARD']",4.0,78.0,clean
+2024,Monaco Grand Prix,PIA,81,1,[1.0],"['MEDIUM', 'HARD']",2.0,78.0,clean
+2024,Monaco Grand Prix,RIC,3,1,[1.0],"['MEDIUM', 'HARD']",12.0,76.0,clean
+2024,Monaco Grand Prix,RUS,63,1,[1.0],"['HARD', 'MEDIUM']",5.0,78.0,clean
+2024,Monaco Grand Prix,SAI,55,1,[1.0],"['MEDIUM', 'HARD']",3.0,78.0,clean
+2024,Monaco Grand Prix,SAR,2,2,"[1.0, 57.0]","['HARD', 'HARD', 'MEDIUM']",15.0,76.0,clean
+2024,Monaco Grand Prix,STR,18,3,"[1.0, 42.0, 48.0]","['HARD', 'MEDIUM', 'HARD', 'SOFT']",14.0,76.0,clean
+2024,Monaco Grand Prix,TSU,22,1,[1.0],"['MEDIUM', 'HARD']",8.0,77.0,clean
+2024,Monaco Grand Prix,VER,1,2,"[1.0, 52.0]","['HARD', 'MEDIUM', 'HARD']",6.0,78.0,clean
+2024,Monaco Grand Prix,ZHO,24,2,"[1.0, 70.0]","['MEDIUM', 'HARD', 'SOFT']",16.0,76.0,clean
+2024,Qatar Grand Prix,ALB,23,4,"[35.0, 36.0, 37.0, 55.0]","['MEDIUM', 'SOFT', 'SOFT', 'SOFT', 'SOFT']",15.0,56.0,clean
+2024,Qatar Grand Prix,ALO,14,3,"[35.0, 36.0, 37.0]","['MEDIUM', 'HARD', 'MEDIUM', 'MEDIUM']",7.0,57.0,clean
+2024,Qatar Grand Prix,BOT,77,1,[24.0],"['MEDIUM', 'MEDIUM']",11.0,57.0,clean
+2024,Qatar Grand Prix,GAS,10,3,"[35.0, 36.0, 37.0]","['MEDIUM', 'HARD', 'HARD', 'HARD']",5.0,57.0,clean
+2024,Qatar Grand Prix,HAM,44,2,"[34.0, 47.0]","['MEDIUM', 'HARD', 'HARD']",12.0,57.0,clean
+2024,Qatar Grand Prix,HUL,27,4,"[1.0, 31.0, 36.0, 37.0]","['HARD', 'HARD', 'MEDIUM', 'MEDIUM', 'MEDIUM']",13.0,39.0,clean
+2024,Qatar Grand Prix,LAW,30,3,"[35.0, 37.0, 40.0]","['MEDIUM', 'HARD', 'HARD', 'SOFT']",14.0,57.0,clean
+2024,Qatar Grand Prix,LEC,16,1,[35.0],"['MEDIUM', 'HARD']",2.0,57.0,clean
+2024,Qatar Grand Prix,MAG,20,3,"[27.0, 36.0, 37.0]","['MEDIUM', 'HARD', 'HARD', 'HARD']",9.0,57.0,clean
+2024,Qatar Grand Prix,NOR,4,2,"[35.0, 45.0]","['MEDIUM', 'HARD', 'HARD']",10.0,57.0,clean
+2024,Qatar Grand Prix,PER,11,2,"[35.0, 36.0]","['MEDIUM', 'HARD', 'HARD']",5.0,38.0,clean
+2024,Qatar Grand Prix,PIA,81,2,"[34.0, 36.0]","['MEDIUM', 'HARD', 'HARD']",3.0,57.0,clean
+2024,Qatar Grand Prix,RUS,63,4,"[23.0, 35.0, 36.0, 37.0]","['MEDIUM', 'HARD', 'HARD', 'HARD', 'HARD']",4.0,57.0,clean
+2024,Qatar Grand Prix,SAI,55,3,"[34.0, 36.0, 37.0]","['MEDIUM', 'HARD', 'HARD', 'HARD']",6.0,57.0,clean
+2024,Qatar Grand Prix,STR,18,3,"[1.0, 7.0, 8.0]","['MEDIUM', 'HARD', 'HARD', 'UNKNOWN']",18.0,8.0,suspect
+2024,Qatar Grand Prix,TSU,22,4,"[35.0, 36.0, 37.0, 40.0]","['MEDIUM', 'HARD', 'HARD', 'HARD', 'SOFT']",13.0,57.0,clean
+2024,Qatar Grand Prix,VER,1,1,[35.0],"['MEDIUM', 'HARD']",1.0,57.0,clean
+2024,Qatar Grand Prix,ZHO,24,3,"[35.0, 36.0, 37.0]","['MEDIUM', 'HARD', 'HARD', 'HARD']",8.0,57.0,clean
+2024,Saudi Arabian Grand Prix,ALB,23,1,[7.0],"['MEDIUM', 'HARD']",12.0,50.0,clean
+2024,Saudi Arabian Grand Prix,ALO,14,1,[7.0],"['MEDIUM', 'HARD']",5.0,50.0,clean
+2024,Saudi Arabian Grand Prix,BEA,38,1,[7.0],"['SOFT', 'HARD']",7.0,50.0,clean
+2024,Saudi Arabian Grand Prix,BOT,77,2,"[7.0, 35.0]","['SOFT', 'HARD', 'SOFT']",17.0,49.0,clean
+2024,Saudi Arabian Grand Prix,GAS,10,1,[1.0],"['MEDIUM', 'UNKNOWN']",20.0,1.0,suspect
+2024,Saudi Arabian Grand Prix,HAM,44,1,[36.0],"['MEDIUM', 'SOFT']",9.0,50.0,clean
+2024,Saudi Arabian Grand Prix,HUL,27,1,[33.0],"['MEDIUM', 'HARD']",10.0,50.0,clean
+2024,Saudi Arabian Grand Prix,LEC,16,1,[7.0],"['MEDIUM', 'HARD']",3.0,50.0,clean
+2024,Saudi Arabian Grand Prix,MAG,20,1,[7.0],"['MEDIUM', 'HARD']",11.0,50.0,clean
+2024,Saudi Arabian Grand Prix,NOR,4,1,[37.0],"['MEDIUM', 'SOFT']",8.0,50.0,clean
+2024,Saudi Arabian Grand Prix,OCO,31,1,[7.0],"['MEDIUM', 'HARD']",13.0,49.0,clean
+2024,Saudi Arabian Grand Prix,PER,11,1,[7.0],"['MEDIUM', 'HARD']",2.0,50.0,clean
+2024,Saudi Arabian Grand Prix,PIA,81,1,[7.0],"['MEDIUM', 'HARD']",4.0,50.0,clean
+2024,Saudi Arabian Grand Prix,RIC,3,1,[7.0],"['MEDIUM', 'HARD']",16.0,49.0,clean
+2024,Saudi Arabian Grand Prix,RUS,63,1,[7.0],"['MEDIUM', 'HARD']",6.0,50.0,clean
+2024,Saudi Arabian Grand Prix,SAR,2,1,[7.0],"['MEDIUM', 'HARD']",15.0,49.0,clean
+2024,Saudi Arabian Grand Prix,STR,18,0,[],['MEDIUM'],9.0,5.0,dnf
+2024,Saudi Arabian Grand Prix,TSU,22,1,[7.0],"['MEDIUM', 'HARD']",14.0,49.0,clean
+2024,Saudi Arabian Grand Prix,VER,1,1,[7.0],"['MEDIUM', 'HARD']",1.0,50.0,clean
+2024,Saudi Arabian Grand Prix,ZHO,24,1,[41.0],"['MEDIUM', 'SOFT']",18.0,49.0,clean
+2024,Singapore Grand Prix,ALB,23,2,"[11.0, 15.0]","['MEDIUM', 'HARD', 'UNKNOWN']",20.0,15.0,suspect
+2024,Singapore Grand Prix,ALO,14,1,[25.0],"['MEDIUM', 'HARD']",8.0,61.0,clean
+2024,Singapore Grand Prix,BOT,77,1,[33.0],"['HARD', 'MEDIUM']",16.0,61.0,clean
+2024,Singapore Grand Prix,COL,43,1,[29.0],"['MEDIUM', 'HARD']",11.0,61.0,clean
+2024,Singapore Grand Prix,GAS,10,1,[37.0],"['MEDIUM', 'SOFT']",17.0,61.0,clean
+2024,Singapore Grand Prix,HAM,44,1,[17.0],"['SOFT', 'HARD']",6.0,62.0,clean
+2024,Singapore Grand Prix,HUL,27,1,[29.0],"['MEDIUM', 'HARD']",9.0,61.0,clean
+2024,Singapore Grand Prix,LEC,16,1,[36.0],"['MEDIUM', 'HARD']",5.0,62.0,clean
+2024,Singapore Grand Prix,MAG,20,2,"[28.0, 57.0]","['HARD', 'MEDIUM', 'UNKNOWN']",19.0,57.0,suspect
+2024,Singapore Grand Prix,NOR,4,1,[30.0],"['MEDIUM', 'HARD']",1.0,62.0,clean
+2024,Singapore Grand Prix,OCO,31,1,[29.0],"['MEDIUM', 'HARD']",13.0,61.0,clean
+2024,Singapore Grand Prix,PER,11,1,[28.0],"['MEDIUM', 'HARD']",10.0,61.0,clean
+2024,Singapore Grand Prix,PIA,81,1,[38.0],"['MEDIUM', 'HARD']",3.0,62.0,clean
+2024,Singapore Grand Prix,RIC,3,3,"[10.0, 46.0, 58.0]","['SOFT', 'MEDIUM', 'SOFT', 'SOFT']",18.0,61.0,clean
+2024,Singapore Grand Prix,RUS,63,1,[27.0],"['MEDIUM', 'HARD']",4.0,62.0,clean
+2024,Singapore Grand Prix,SAI,55,1,[13.0],"['MEDIUM', 'HARD']",7.0,62.0,clean
+2024,Singapore Grand Prix,STR,18,1,[26.0],"['HARD', 'MEDIUM']",14.0,61.0,clean
+2024,Singapore Grand Prix,TSU,22,1,[33.0],"['MEDIUM', 'SOFT']",12.0,61.0,clean
+2024,Singapore Grand Prix,VER,1,1,[29.0],"['MEDIUM', 'HARD']",2.0,62.0,clean
+2024,Singapore Grand Prix,ZHO,24,1,[34.0],"['HARD', 'MEDIUM']",15.0,61.0,clean
+2024,Spanish Grand Prix,ALB,23,2,"[18.0, 43.0]","['MEDIUM', 'SOFT', 'SOFT']",18.0,65.0,clean
+2024,Spanish Grand Prix,ALO,14,2,"[19.0, 45.0]","['SOFT', 'MEDIUM', 'HARD']",12.0,65.0,clean
+2024,Spanish Grand Prix,BOT,77,2,"[11.0, 28.0]","['SOFT', 'SOFT', 'HARD']",16.0,65.0,clean
+2024,Spanish Grand Prix,GAS,10,2,"[14.0, 38.0]","['SOFT', 'MEDIUM', 'HARD']",9.0,66.0,clean
+2024,Spanish Grand Prix,HAM,44,2,"[16.0, 43.0]","['SOFT', 'MEDIUM', 'SOFT']",3.0,66.0,clean
+2024,Spanish Grand Prix,HUL,27,2,"[12.0, 38.0]","['SOFT', 'MEDIUM', 'HARD']",11.0,66.0,clean
+2024,Spanish Grand Prix,LEC,16,2,"[24.0, 47.0]","['SOFT', 'MEDIUM', 'SOFT']",5.0,66.0,clean
+2024,Spanish Grand Prix,MAG,20,2,"[10.0, 29.0]","['SOFT', 'MEDIUM', 'HARD']",17.0,65.0,clean
+2024,Spanish Grand Prix,NOR,4,2,"[23.0, 47.0]","['SOFT', 'MEDIUM', 'SOFT']",2.0,66.0,clean
+2024,Spanish Grand Prix,OCO,31,2,"[13.0, 37.0]","['SOFT', 'MEDIUM', 'HARD']",10.0,66.0,clean
+2024,Spanish Grand Prix,PER,11,3,"[13.0, 31.0, 49.0]","['SOFT', 'SOFT', 'MEDIUM', 'SOFT']",8.0,66.0,clean
+2024,Spanish Grand Prix,PIA,81,2,"[21.0, 46.0]","['SOFT', 'MEDIUM', 'SOFT']",7.0,66.0,clean
+2024,Spanish Grand Prix,RIC,3,2,"[16.0, 42.0]","['SOFT', 'MEDIUM', 'HARD']",15.0,65.0,clean
+2024,Spanish Grand Prix,RUS,63,2,"[15.0, 36.0]","['SOFT', 'MEDIUM', 'HARD']",4.0,66.0,clean
+2024,Spanish Grand Prix,SAI,55,2,"[15.0, 36.0]","['SOFT', 'MEDIUM', 'HARD']",6.0,66.0,clean
+2024,Spanish Grand Prix,SAR,2,2,"[14.0, 34.0]","['SOFT', 'MEDIUM', 'HARD']",20.0,64.0,clean
+2024,Spanish Grand Prix,STR,18,2,"[17.0, 37.0]","['SOFT', 'MEDIUM', 'HARD']",14.0,65.0,clean
+2024,Spanish Grand Prix,TSU,22,3,"[9.0, 27.0, 44.0]","['SOFT', 'MEDIUM', 'HARD', 'SOFT']",19.0,65.0,clean
+2024,Spanish Grand Prix,VER,1,2,"[17.0, 44.0]","['SOFT', 'MEDIUM', 'SOFT']",1.0,66.0,clean
+2024,Spanish Grand Prix,ZHO,24,2,"[9.0, 41.0]","['SOFT', 'MEDIUM', 'HARD']",13.0,65.0,clean
+2024,São Paulo Grand Prix,ALO,14,1,[27.0],"['INTERMEDIATE', 'INTERMEDIATE']",14.0,69.0,clean
+2024,São Paulo Grand Prix,BEA,50,1,[27.0],"['INTERMEDIATE', 'INTERMEDIATE']",12.0,69.0,clean
+2024,São Paulo Grand Prix,BOT,77,0,[],['INTERMEDIATE'],13.0,69.0,dnf
+2024,São Paulo Grand Prix,COL,43,2,"[26.0, 30.0]","['INTERMEDIATE', 'INTERMEDIATE', 'UNKNOWN']",16.0,30.0,suspect
+2024,São Paulo Grand Prix,GAS,10,0,[],['INTERMEDIATE'],3.0,69.0,dnf
+2024,São Paulo Grand Prix,HAM,44,1,[27.0],"['INTERMEDIATE', 'INTERMEDIATE']",10.0,69.0,clean
+2024,São Paulo Grand Prix,HUL,27,2,"[25.0, 29.0]","['INTERMEDIATE', 'INTERMEDIATE', 'UNKNOWN']",18.0,29.0,suspect
+2024,São Paulo Grand Prix,LAW,30,1,[28.0],"['INTERMEDIATE', 'INTERMEDIATE']",9.0,69.0,clean
+2024,São Paulo Grand Prix,LEC,16,1,[24.0],"['INTERMEDIATE', 'INTERMEDIATE']",5.0,69.0,clean
+2024,São Paulo Grand Prix,NOR,4,1,[28.0],"['INTERMEDIATE', 'INTERMEDIATE']",6.0,69.0,clean
+2024,São Paulo Grand Prix,OCO,31,0,[],['INTERMEDIATE'],2.0,69.0,dnf
+2024,São Paulo Grand Prix,PER,11,1,[27.0],"['INTERMEDIATE', 'INTERMEDIATE']",11.0,69.0,clean
+2024,São Paulo Grand Prix,PIA,81,1,[27.0],"['INTERMEDIATE', 'INTERMEDIATE']",7.0,69.0,clean
+2024,São Paulo Grand Prix,RUS,63,1,[28.0],"['INTERMEDIATE', 'INTERMEDIATE']",4.0,69.0,clean
+2024,São Paulo Grand Prix,SAI,55,1,[27.0],"['INTERMEDIATE', 'INTERMEDIATE']",13.0,38.0,clean
+2024,São Paulo Grand Prix,TSU,22,1,[28.0],"['INTERMEDIATE', 'INTERMEDIATE']",8.0,69.0,clean
+2024,São Paulo Grand Prix,VER,1,0,[],['INTERMEDIATE'],1.0,69.0,dnf
+2024,São Paulo Grand Prix,ZHO,24,2,"[27.0, 28.0]","['INTERMEDIATE', 'INTERMEDIATE', 'INTERMEDIATE']",15.0,69.0,clean
+2024,United States Grand Prix,ALB,23,2,"[3.0, 33.0]","['MEDIUM', 'MEDIUM', 'HARD']",16.0,55.0,clean
+2024,United States Grand Prix,ALO,14,1,[26.0],"['MEDIUM', 'HARD']",13.0,55.0,clean
+2024,United States Grand Prix,BOT,77,1,[15.0],"['MEDIUM', 'HARD']",17.0,55.0,clean
+2024,United States Grand Prix,COL,43,1,[39.0],"['HARD', 'MEDIUM']",10.0,56.0,clean
+2024,United States Grand Prix,GAS,10,1,[18.0],"['MEDIUM', 'HARD']",12.0,56.0,clean
+2024,United States Grand Prix,HAM,44,0,[],['HARD'],12.0,1.0,dnf
+2024,United States Grand Prix,HUL,27,1,[27.0],"['MEDIUM', 'HARD']",8.0,56.0,clean
+2024,United States Grand Prix,LAW,30,1,[36.0],"['HARD', 'MEDIUM']",9.0,56.0,clean
+2024,United States Grand Prix,LEC,16,1,[26.0],"['MEDIUM', 'HARD']",1.0,56.0,clean
+2024,United States Grand Prix,MAG,20,2,"[17.0, 38.0]","['MEDIUM', 'HARD', 'MEDIUM']",11.0,56.0,clean
+2024,United States Grand Prix,NOR,4,1,[31.0],"['MEDIUM', 'HARD']",3.0,56.0,clean
+2024,United States Grand Prix,OCO,31,2,"[31.0, 51.0]","['MEDIUM', 'HARD', 'SOFT']",18.0,55.0,clean
+2024,United States Grand Prix,PER,11,1,[26.0],"['MEDIUM', 'HARD']",7.0,56.0,clean
+2024,United States Grand Prix,PIA,81,1,[32.0],"['MEDIUM', 'HARD']",5.0,56.0,clean
+2024,United States Grand Prix,RUS,63,1,[40.0],"['HARD', 'MEDIUM']",6.0,56.0,clean
+2024,United States Grand Prix,SAI,55,1,[21.0],"['MEDIUM', 'HARD']",2.0,56.0,clean
+2024,United States Grand Prix,STR,18,1,[27.0],"['HARD', 'MEDIUM']",15.0,55.0,clean
+2024,United States Grand Prix,TSU,22,1,[18.0],"['MEDIUM', 'HARD']",14.0,55.0,clean
+2024,United States Grand Prix,VER,1,1,[25.0],"['MEDIUM', 'HARD']",4.0,56.0,clean
+2024,United States Grand Prix,ZHO,24,2,"[13.0, 35.0]","['MEDIUM', 'MEDIUM', 'HARD']",19.0,55.0,clean
+2025,Abu Dhabi Grand Prix,ALB,23,2,"[8.0, 33.0]","['SOFT', 'HARD', 'MEDIUM']",16.0,58.0,clean
+2025,Abu Dhabi Grand Prix,ALO,14,1,[16.0],"['MEDIUM', 'HARD']",6.0,58.0,clean
+2025,Abu Dhabi Grand Prix,ANT,12,1,[32.0],"['HARD', 'MEDIUM']",15.0,58.0,clean
+2025,Abu Dhabi Grand Prix,BEA,87,1,[14.0],"['MEDIUM', 'HARD']",10.0,58.0,clean
+2025,Abu Dhabi Grand Prix,BOR,5,1,[15.0],"['MEDIUM', 'HARD']",12.0,58.0,clean
+2025,Abu Dhabi Grand Prix,COL,43,2,"[15.0, 40.0]","['MEDIUM', 'HARD', 'MEDIUM']",20.0,57.0,clean
+2025,Abu Dhabi Grand Prix,GAS,10,2,"[13.0, 40.0]","['MEDIUM', 'HARD', 'MEDIUM']",19.0,57.0,clean
+2025,Abu Dhabi Grand Prix,HAD,6,1,[14.0],"['MEDIUM', 'HARD']",17.0,57.0,clean
+2025,Abu Dhabi Grand Prix,HAM,44,2,"[8.0, 31.0]","['SOFT', 'HARD', 'MEDIUM']",8.0,58.0,clean
+2025,Abu Dhabi Grand Prix,HUL,27,2,"[7.0, 42.0]","['SOFT', 'HARD', 'MEDIUM']",11.0,58.0,clean
+2025,Abu Dhabi Grand Prix,LAW,30,1,[21.0],"['MEDIUM', 'HARD']",18.0,57.0,clean
+2025,Abu Dhabi Grand Prix,LEC,16,2,"[16.0, 39.0]","['MEDIUM', 'HARD', 'MEDIUM']",4.0,58.0,clean
+2025,Abu Dhabi Grand Prix,NOR,4,2,"[16.0, 40.0]","['MEDIUM', 'HARD', 'HARD']",3.0,58.0,clean
+2025,Abu Dhabi Grand Prix,OCO,31,1,[19.0],"['MEDIUM', 'HARD']",7.0,58.0,clean
+2025,Abu Dhabi Grand Prix,PIA,81,1,[41.0],"['HARD', 'MEDIUM']",2.0,58.0,clean
+2025,Abu Dhabi Grand Prix,RUS,63,1,[14.0],"['MEDIUM', 'HARD']",5.0,58.0,clean
+2025,Abu Dhabi Grand Prix,SAI,55,1,[18.0],"['MEDIUM', 'HARD']",13.0,58.0,clean
+2025,Abu Dhabi Grand Prix,STR,18,1,[42.0],"['HARD', 'MEDIUM']",9.0,58.0,clean
+2025,Abu Dhabi Grand Prix,TSU,22,1,[32.0],"['HARD', 'MEDIUM']",14.0,58.0,clean
+2025,Abu Dhabi Grand Prix,VER,1,1,[23.0],"['MEDIUM', 'HARD']",1.0,58.0,clean
+2025,Australian Grand Prix,ALB,23,2,"[33.0, 44.0]","['INTERMEDIATE', 'MEDIUM', 'INTERMEDIATE']",5.0,57.0,clean
+2025,Australian Grand Prix,ALO,14,0,[],['INTERMEDIATE'],10.0,32.0,dnf
+2025,Australian Grand Prix,ANT,12,2,"[33.0, 44.0]","['INTERMEDIATE', 'HARD', 'INTERMEDIATE']",4.0,57.0,clean
+2025,Australian Grand Prix,BEA,87,2,"[39.0, 44.0]","['INTERMEDIATE', 'MEDIUM', 'INTERMEDIATE']",14.0,57.0,clean
+2025,Australian Grand Prix,BOR,5,2,"[33.0, 44.0]","['INTERMEDIATE', 'MEDIUM', 'INTERMEDIATE']",13.0,45.0,clean
+2025,Australian Grand Prix,GAS,10,2,"[33.0, 46.0]","['INTERMEDIATE', 'HARD', 'INTERMEDIATE']",11.0,57.0,clean
+2025,Australian Grand Prix,HAM,44,1,[33.0],"['INTERMEDIATE', 'HARD']",10.0,57.0,clean
+2025,Australian Grand Prix,HUL,27,2,"[33.0, 44.0]","['INTERMEDIATE', 'MEDIUM', 'INTERMEDIATE']",7.0,57.0,clean
+2025,Australian Grand Prix,LAW,30,1,[33.0],"['INTERMEDIATE', 'MEDIUM']",9.0,46.0,clean
+2025,Australian Grand Prix,LEC,16,1,[34.0],"['INTERMEDIATE', 'HARD']",8.0,57.0,clean
+2025,Australian Grand Prix,NOR,4,2,"[34.0, 44.0]","['INTERMEDIATE', 'HARD', 'INTERMEDIATE']",1.0,57.0,clean
+2025,Australian Grand Prix,OCO,31,2,"[39.0, 46.0]","['INTERMEDIATE', 'MEDIUM', 'INTERMEDIATE']",13.0,57.0,clean
+2025,Australian Grand Prix,PIA,81,1,[34.0],"['INTERMEDIATE', 'INTERMEDIATE']",9.0,57.0,clean
+2025,Australian Grand Prix,RUS,63,2,"[34.0, 44.0]","['INTERMEDIATE', 'HARD', 'INTERMEDIATE']",3.0,57.0,clean
+2025,Australian Grand Prix,STR,18,2,"[33.0, 44.0]","['INTERMEDIATE', 'HARD', 'INTERMEDIATE']",6.0,57.0,clean
+2025,Australian Grand Prix,TSU,22,1,[33.0],"['INTERMEDIATE', 'MEDIUM']",12.0,57.0,clean
+2025,Australian Grand Prix,VER,1,2,"[34.0, 46.0]","['INTERMEDIATE', 'MEDIUM', 'INTERMEDIATE']",2.0,57.0,clean
+2025,Austrian Grand Prix,ALB,23,2,"[13.0, 15.0]","['MEDIUM', 'MEDIUM', 'UNKNOWN']",16.0,15.0,suspect
+2025,Austrian Grand Prix,ALO,14,1,[33.0],"['MEDIUM', 'HARD']",7.0,69.0,clean
+2025,Austrian Grand Prix,BEA,87,2,"[11.0, 39.0]","['SOFT', 'HARD', 'MEDIUM']",11.0,69.0,clean
+2025,Austrian Grand Prix,BOR,5,2,"[21.0, 49.0]","['MEDIUM', 'MEDIUM', 'HARD']",8.0,69.0,clean
+2025,Austrian Grand Prix,COL,43,2,"[13.0, 39.0]","['SOFT', 'MEDIUM', 'HARD']",15.0,69.0,clean
+2025,Austrian Grand Prix,GAS,10,2,"[12.0, 38.0]","['SOFT', 'HARD', 'MEDIUM']",13.0,69.0,clean
+2025,Austrian Grand Prix,HAD,6,2,"[2.0, 28.0]","['SOFT', 'MEDIUM', 'HARD']",12.0,69.0,clean
+2025,Austrian Grand Prix,HAM,44,2,"[26.0, 50.0]","['MEDIUM', 'HARD', 'MEDIUM']",4.0,70.0,clean
+2025,Austrian Grand Prix,HUL,27,2,"[12.0, 42.0]","['SOFT', 'MEDIUM', 'MEDIUM']",9.0,69.0,clean
+2025,Austrian Grand Prix,LAW,30,1,[32.0],"['MEDIUM', 'HARD']",6.0,70.0,clean
+2025,Austrian Grand Prix,LEC,16,2,"[25.0, 49.0]","['MEDIUM', 'HARD', 'MEDIUM']",3.0,70.0,clean
+2025,Austrian Grand Prix,NOR,4,2,"[20.0, 52.0]","['MEDIUM', 'HARD', 'MEDIUM']",1.0,70.0,clean
+2025,Austrian Grand Prix,OCO,31,2,"[19.0, 50.0]","['MEDIUM', 'HARD', 'HARD']",10.0,69.0,clean
+2025,Austrian Grand Prix,PIA,81,2,"[24.0, 53.0]","['MEDIUM', 'HARD', 'MEDIUM']",2.0,70.0,clean
+2025,Austrian Grand Prix,RUS,63,2,"[18.0, 45.0]","['MEDIUM', 'MEDIUM', 'HARD']",5.0,70.0,clean
+2025,Austrian Grand Prix,STR,18,2,"[26.0, 53.0]","['MEDIUM', 'HARD', 'SOFT']",14.0,69.0,clean
+2025,Austrian Grand Prix,TSU,22,3,"[18.0, 30.0, 60.0]","['MEDIUM', 'HARD', 'MEDIUM', 'SOFT']",16.0,68.0,clean
+2025,Azerbaijan Grand Prix,ALB,23,2,"[1.0, 15.0]","['MEDIUM', 'MEDIUM', 'HARD']",11.0,51.0,clean
+2025,Azerbaijan Grand Prix,ALO,14,1,[21.0],"['MEDIUM', 'HARD']",15.0,51.0,clean
+2025,Azerbaijan Grand Prix,ANT,12,1,[18.0],"['MEDIUM', 'HARD']",4.0,51.0,clean
+2025,Azerbaijan Grand Prix,BEA,87,1,[28.0],"['HARD', 'MEDIUM']",13.0,51.0,clean
+2025,Azerbaijan Grand Prix,BOR,5,1,[26.0],"['HARD', 'MEDIUM']",12.0,51.0,clean
+2025,Azerbaijan Grand Prix,COL,43,1,[16.0],"['MEDIUM', 'HARD']",19.0,50.0,clean
+2025,Azerbaijan Grand Prix,GAS,10,1,[35.0],"['HARD', 'MEDIUM']",18.0,50.0,clean
+2025,Azerbaijan Grand Prix,HAD,6,1,[29.0],"['MEDIUM', 'HARD']",10.0,51.0,clean
+2025,Azerbaijan Grand Prix,HAM,44,1,[36.0],"['HARD', 'MEDIUM']",8.0,51.0,clean
+2025,Azerbaijan Grand Prix,HUL,27,1,[36.0],"['HARD', 'MEDIUM']",16.0,51.0,clean
+2025,Azerbaijan Grand Prix,LAW,30,1,[20.0],"['MEDIUM', 'HARD']",5.0,51.0,clean
+2025,Azerbaijan Grand Prix,LEC,16,1,[19.0],"['MEDIUM', 'HARD']",9.0,51.0,clean
+2025,Azerbaijan Grand Prix,NOR,4,1,[37.0],"['MEDIUM', 'HARD']",7.0,51.0,clean
+2025,Azerbaijan Grand Prix,OCO,31,1,[1.0],"['HARD', 'HARD']",14.0,51.0,clean
+2025,Azerbaijan Grand Prix,RUS,63,1,[39.0],"['HARD', 'MEDIUM']",2.0,51.0,clean
+2025,Azerbaijan Grand Prix,SAI,55,1,[27.0],"['MEDIUM', 'HARD']",3.0,51.0,clean
+2025,Azerbaijan Grand Prix,STR,18,1,[37.0],"['MEDIUM', 'HARD']",17.0,51.0,clean
+2025,Azerbaijan Grand Prix,TSU,22,1,[38.0],"['HARD', 'MEDIUM']",6.0,51.0,clean
+2025,Azerbaijan Grand Prix,VER,1,1,[40.0],"['HARD', 'MEDIUM']",1.0,51.0,clean
+2025,Bahrain Grand Prix,ALB,23,2,"[16.0, 32.0]","['SOFT', 'HARD', 'MEDIUM']",12.0,57.0,clean
+2025,Bahrain Grand Prix,ALO,14,2,"[16.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD']",17.0,57.0,clean
+2025,Bahrain Grand Prix,ANT,12,3,"[12.0, 27.0, 32.0]","['SOFT', 'MEDIUM', 'SOFT', 'SOFT']",11.0,57.0,clean
+2025,Bahrain Grand Prix,BEA,87,2,"[14.0, 32.0]","['SOFT', 'HARD', 'SOFT']",10.0,57.0,clean
+2025,Bahrain Grand Prix,BOR,5,2,"[13.0, 32.0]","['MEDIUM', 'HARD', 'MEDIUM']",19.0,57.0,clean
+2025,Bahrain Grand Prix,DOO,7,2,"[9.0, 28.0]","['SOFT', 'MEDIUM', 'HARD']",14.0,57.0,clean
+2025,Bahrain Grand Prix,GAS,10,2,"[10.0, 28.0]","['SOFT', 'MEDIUM', 'HARD']",7.0,57.0,clean
+2025,Bahrain Grand Prix,HAD,6,2,"[6.0, 28.0]","['SOFT', 'MEDIUM', 'HARD']",16.0,57.0,clean
+2025,Bahrain Grand Prix,HAM,44,2,"[17.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD']",5.0,57.0,clean
+2025,Bahrain Grand Prix,HUL,27,2,"[5.0, 27.0]","['SOFT', 'MEDIUM', 'MEDIUM']",15.0,57.0,clean
+2025,Bahrain Grand Prix,LAW,30,2,"[14.0, 32.0]","['MEDIUM', 'HARD', 'SOFT']",13.0,57.0,clean
+2025,Bahrain Grand Prix,LEC,16,2,"[17.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD']",4.0,57.0,clean
+2025,Bahrain Grand Prix,NOR,4,2,"[10.0, 32.0]","['SOFT', 'MEDIUM', 'MEDIUM']",3.0,57.0,clean
+2025,Bahrain Grand Prix,OCO,31,2,"[8.0, 27.0]","['SOFT', 'MEDIUM', 'HARD']",8.0,57.0,clean
+2025,Bahrain Grand Prix,PIA,81,2,"[14.0, 32.0]","['SOFT', 'MEDIUM', 'MEDIUM']",1.0,57.0,clean
+2025,Bahrain Grand Prix,RUS,63,2,"[13.0, 32.0]","['SOFT', 'MEDIUM', 'SOFT']",2.0,57.0,clean
+2025,Bahrain Grand Prix,SAI,55,4,"[14.0, 32.0, 44.0, 45.0]","['SOFT', 'MEDIUM', 'HARD', 'SOFT', 'UNKNOWN']",20.0,45.0,suspect
+2025,Bahrain Grand Prix,STR,18,2,"[12.0, 32.0]","['SOFT', 'MEDIUM', 'HARD']",18.0,57.0,clean
+2025,Bahrain Grand Prix,TSU,22,2,"[11.0, 32.0]","['SOFT', 'MEDIUM', 'SOFT']",9.0,57.0,clean
+2025,Bahrain Grand Prix,VER,1,2,"[10.0, 26.0]","['SOFT', 'HARD', 'MEDIUM']",6.0,57.0,clean
+2025,Belgian Grand Prix,ALB,23,1,[12.0],"['INTERMEDIATE', 'MEDIUM']",6.0,44.0,clean
+2025,Belgian Grand Prix,ALO,14,2,"[11.0, 29.0]","['INTERMEDIATE', 'MEDIUM', 'UNKNOWN']",17.0,29.0,suspect
+2025,Belgian Grand Prix,ANT,12,2,"[12.0, 30.0]","['INTERMEDIATE', 'MEDIUM', 'UNKNOWN']",16.0,30.0,suspect
+2025,Belgian Grand Prix,BEA,87,1,[12.0],"['INTERMEDIATE', 'MEDIUM']",11.0,44.0,clean
+2025,Belgian Grand Prix,BOR,5,1,[12.0],"['INTERMEDIATE', 'MEDIUM']",9.0,44.0,clean
+2025,Belgian Grand Prix,COL,43,2,"[12.0, 28.0]","['INTERMEDIATE', 'MEDIUM', 'UNKNOWN']",19.0,28.0,suspect
+2025,Belgian Grand Prix,GAS,10,1,[11.0],"['INTERMEDIATE', 'MEDIUM']",10.0,44.0,clean
+2025,Belgian Grand Prix,HAD,6,2,"[13.0, 20.0]","['INTERMEDIATE', 'MEDIUM', 'HARD']",20.0,43.0,clean
+2025,Belgian Grand Prix,HAM,44,1,[11.0],"['INTERMEDIATE', 'MEDIUM']",7.0,44.0,clean
+2025,Belgian Grand Prix,HUL,27,2,"[11.0, 32.0]","['INTERMEDIATE', 'MEDIUM', 'UNKNOWN']",12.0,32.0,suspect
+2025,Belgian Grand Prix,LAW,30,1,[12.0],"['INTERMEDIATE', 'MEDIUM']",8.0,44.0,clean
+2025,Belgian Grand Prix,LEC,16,1,[12.0],"['INTERMEDIATE', 'MEDIUM']",3.0,44.0,clean
+2025,Belgian Grand Prix,NOR,4,1,[13.0],"['INTERMEDIATE', 'HARD']",2.0,44.0,clean
+2025,Belgian Grand Prix,OCO,31,1,[13.0],"['INTERMEDIATE', 'MEDIUM']",15.0,44.0,clean
+2025,Belgian Grand Prix,PIA,81,1,[12.0],"['INTERMEDIATE', 'MEDIUM']",1.0,44.0,clean
+2025,Belgian Grand Prix,RUS,63,1,[12.0],"['INTERMEDIATE', 'MEDIUM']",5.0,44.0,clean
+2025,Belgian Grand Prix,SAI,55,2,"[12.0, 26.0]","['INTERMEDIATE', 'MEDIUM', 'HARD']",18.0,44.0,clean
+2025,Belgian Grand Prix,STR,18,1,[12.0],"['INTERMEDIATE', 'MEDIUM']",14.0,44.0,clean
+2025,Belgian Grand Prix,TSU,22,1,[13.0],"['INTERMEDIATE', 'MEDIUM']",13.0,44.0,clean
+2025,Belgian Grand Prix,VER,1,1,[12.0],"['INTERMEDIATE', 'MEDIUM']",4.0,44.0,clean
+2025,British Grand Prix,ALB,23,2,"[12.0, 42.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",8.0,52.0,clean
+2025,British Grand Prix,ALO,14,2,"[11.0, 37.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",9.0,52.0,clean
+2025,British Grand Prix,ANT,12,3,"[2.0, 9.0, 23.0]","['INTERMEDIATE', 'HARD', 'INTERMEDIATE', 'UNKNOWN']",16.0,23.0,suspect
+2025,British Grand Prix,BEA,87,2,"[10.0, 41.0]","['HARD', 'INTERMEDIATE', 'MEDIUM']",11.0,52.0,clean
+2025,British Grand Prix,BOR,5,0,[],['MEDIUM'],17.0,3.0,dnf
+2025,British Grand Prix,GAS,10,2,"[11.0, 41.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",6.0,52.0,clean
+2025,British Grand Prix,HAD,6,1,[10.0],"['MEDIUM', 'INTERMEDIATE']",16.0,15.0,clean
+2025,British Grand Prix,HAM,44,2,"[11.0, 41.0]","['INTERMEDIATE', 'INTERMEDIATE', 'SOFT']",4.0,52.0,clean
+2025,British Grand Prix,HUL,27,2,"[9.0, 42.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",3.0,52.0,clean
+2025,British Grand Prix,LEC,16,2,"[10.0, 42.0]","['MEDIUM', 'INTERMEDIATE', 'SOFT']",14.0,52.0,clean
+2025,British Grand Prix,NOR,4,2,"[11.0, 44.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",1.0,52.0,clean
+2025,British Grand Prix,OCO,31,2,"[18.0, 42.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",13.0,52.0,clean
+2025,British Grand Prix,PIA,81,2,"[11.0, 43.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",2.0,52.0,clean
+2025,British Grand Prix,RUS,63,2,"[10.0, 38.0]","['HARD', 'INTERMEDIATE', 'HARD']",10.0,52.0,clean
+2025,British Grand Prix,SAI,55,2,"[11.0, 41.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",12.0,52.0,clean
+2025,British Grand Prix,STR,18,3,"[6.0, 10.0, 41.0]","['INTERMEDIATE', 'SOFT', 'INTERMEDIATE', 'SOFT']",7.0,52.0,clean
+2025,British Grand Prix,TSU,22,2,"[11.0, 41.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",15.0,51.0,clean
+2025,British Grand Prix,VER,1,2,"[11.0, 41.0]","['INTERMEDIATE', 'INTERMEDIATE', 'MEDIUM']",5.0,52.0,clean
+2025,Canadian Grand Prix,ALB,23,1,[23.0],"['MEDIUM', 'HARD']",19.0,46.0,clean
+2025,Canadian Grand Prix,ALO,14,6,"[15.0, 50.0, 66.0, 67.0, 68.0, 69.0]","['MEDIUM', 'HARD', 'HARD', 'HARD', 'HARD', 'HARD', 'HARD']",7.0,70.0,suspect
+2025,Canadian Grand Prix,ANT,12,5,"[14.0, 38.0, 67.0, 68.0, 69.0]","['MEDIUM', 'HARD', 'HARD', 'HARD', 'HARD', 'HARD']",3.0,70.0,suspect
+2025,Canadian Grand Prix,BEA,87,4,"[18.0, 66.0, 67.0, 68.0]","['MEDIUM', 'HARD', 'SOFT', 'SOFT', 'SOFT']",11.0,69.0,suspect
+2025,Canadian Grand Prix,BOR,5,4,"[49.0, 66.0, 67.0, 68.0]","['HARD', 'MEDIUM', 'MEDIUM', 'MEDIUM', 'MEDIUM']",14.0,69.0,suspect
+2025,Canadian Grand Prix,COL,43,4,"[14.0, 66.0, 67.0, 68.0]","['MEDIUM', 'HARD', 'HARD', 'HARD', 'HARD']",13.0,69.0,suspect
+2025,Canadian Grand Prix,GAS,10,4,"[53.0, 66.0, 67.0, 68.0]","['HARD', 'MEDIUM', 'MEDIUM', 'MEDIUM', 'MEDIUM']",15.0,69.0,suspect
+2025,Canadian Grand Prix,HAD,6,4,"[13.0, 66.0, 67.0, 68.0]","['MEDIUM', 'HARD', 'SOFT', 'SOFT', 'SOFT']",16.0,69.0,suspect
+2025,Canadian Grand Prix,HAM,44,5,"[15.0, 45.0, 67.0, 68.0, 69.0]","['MEDIUM', 'HARD', 'HARD', 'HARD', 'HARD', 'HARD']",6.0,70.0,suspect
+2025,Canadian Grand Prix,HUL,27,5,"[19.0, 66.0, 67.0, 68.0, 69.0]","['MEDIUM', 'HARD', 'HARD', 'HARD', 'HARD', 'HARD']",8.0,70.0,suspect
+2025,Canadian Grand Prix,LAW,30,1,[38.0],"['HARD', 'MEDIUM']",18.0,53.0,clean
+2025,Canadian Grand Prix,LEC,16,5,"[28.0, 53.0, 67.0, 68.0, 69.0]","['HARD', 'HARD', 'MEDIUM', 'MEDIUM', 'MEDIUM', 'MEDIUM']",5.0,70.0,suspect
+2025,Canadian Grand Prix,NOR,4,2,"[29.0, 47.0]","['HARD', 'MEDIUM', 'HARD']",5.0,66.0,clean
+2025,Canadian Grand Prix,OCO,31,4,"[57.0, 66.0, 67.0, 68.0]","['HARD', 'MEDIUM', 'MEDIUM', 'MEDIUM', 'MEDIUM']",9.0,69.0,suspect
+2025,Canadian Grand Prix,PIA,81,5,"[16.0, 45.0, 67.0, 68.0, 69.0]","['MEDIUM', 'HARD', 'HARD', 'SOFT', 'SOFT', 'SOFT']",4.0,70.0,suspect
+2025,Canadian Grand Prix,RUS,63,5,"[13.0, 42.0, 67.0, 68.0, 69.0]","['MEDIUM', 'HARD', 'HARD', 'HARD', 'HARD', 'HARD']",1.0,70.0,suspect
+2025,Canadian Grand Prix,SAI,55,4,"[57.0, 66.0, 67.0, 68.0]","['HARD', 'MEDIUM', 'MEDIUM', 'MEDIUM', 'MEDIUM']",10.0,69.0,suspect
+2025,Canadian Grand Prix,STR,18,5,"[24.0, 51.0, 66.0, 67.0, 68.0]","['HARD', 'HARD', 'MEDIUM', 'SOFT', 'SOFT', 'SOFT']",17.0,69.0,suspect
+2025,Canadian Grand Prix,TSU,22,4,"[56.0, 66.0, 67.0, 68.0]","['HARD', 'MEDIUM', 'MEDIUM', 'MEDIUM', 'MEDIUM']",12.0,69.0,suspect
+2025,Canadian Grand Prix,VER,1,5,"[12.0, 37.0, 67.0, 68.0, 69.0]","['MEDIUM', 'HARD', 'HARD', 'HARD', 'HARD', 'HARD']",2.0,70.0,suspect
+2025,Chinese Grand Prix,ALB,23,1,[20.0],"['MEDIUM', 'HARD']",9.0,56.0,clean
+2025,Chinese Grand Prix,ALO,14,1,[4.0],"['MEDIUM', 'UNKNOWN']",20.0,4.0,suspect
+2025,Chinese Grand Prix,ANT,12,1,[12.0],"['MEDIUM', 'HARD']",8.0,56.0,clean
+2025,Chinese Grand Prix,BEA,87,1,[26.0],"['HARD', 'MEDIUM']",10.0,56.0,clean
+2025,Chinese Grand Prix,BOR,5,2,"[1.0, 26.0]","['MEDIUM', 'HARD', 'HARD']",17.0,55.0,clean
+2025,Chinese Grand Prix,DOO,7,1,[11.0],"['MEDIUM', 'HARD']",14.0,56.0,clean
+2025,Chinese Grand Prix,GAS,10,1,[10.0],"['MEDIUM', 'HARD']",11.0,56.0,clean
+2025,Chinese Grand Prix,HAD,6,2,"[12.0, 33.0]","['MEDIUM', 'HARD', 'HARD']",15.0,56.0,clean
+2025,Chinese Grand Prix,HAM,44,2,"[13.0, 37.0]","['MEDIUM', 'HARD', 'HARD']",6.0,56.0,clean
+2025,Chinese Grand Prix,HUL,27,1,[20.0],"['MEDIUM', 'HARD']",18.0,55.0,clean
+2025,Chinese Grand Prix,LAW,30,2,"[18.0, 30.0]","['HARD', 'MEDIUM', 'HARD']",16.0,56.0,clean
+2025,Chinese Grand Prix,LEC,16,1,[15.0],"['MEDIUM', 'HARD']",5.0,56.0,clean
+2025,Chinese Grand Prix,NOR,4,1,[15.0],"['MEDIUM', 'HARD']",2.0,56.0,clean
+2025,Chinese Grand Prix,OCO,31,1,[11.0],"['MEDIUM', 'HARD']",7.0,56.0,clean
+2025,Chinese Grand Prix,PIA,81,1,[14.0],"['MEDIUM', 'HARD']",1.0,56.0,clean
+2025,Chinese Grand Prix,RUS,63,1,[14.0],"['MEDIUM', 'HARD']",3.0,56.0,clean
+2025,Chinese Grand Prix,SAI,55,1,[17.0],"['MEDIUM', 'HARD']",13.0,56.0,clean
+2025,Chinese Grand Prix,STR,18,1,[36.0],"['HARD', 'MEDIUM']",12.0,56.0,clean
+2025,Chinese Grand Prix,TSU,22,3,"[11.0, 35.0, 46.0]","['MEDIUM', 'HARD', 'HARD', 'MEDIUM']",19.0,55.0,clean
+2025,Chinese Grand Prix,VER,1,1,[13.0],"['MEDIUM', 'HARD']",4.0,56.0,clean
+2025,Dutch Grand Prix,ALB,23,2,"[23.0, 53.0]","['MEDIUM', 'HARD', 'SOFT']",5.0,72.0,clean
+2025,Dutch Grand Prix,ALO,14,2,"[18.0, 40.0]","['MEDIUM', 'HARD', 'HARD']",9.0,72.0,clean
+2025,Dutch Grand Prix,ANT,12,3,"[23.0, 51.0, 53.0]","['MEDIUM', 'HARD', 'SOFT', 'SOFT']",6.0,72.0,clean
+2025,Dutch Grand Prix,BEA,87,1,[53.0],"['HARD', 'MEDIUM']",7.0,72.0,clean
+2025,Dutch Grand Prix,BOR,5,2,"[22.0, 60.0]","['MEDIUM', 'HARD', 'SOFT']",16.0,72.0,clean
+2025,Dutch Grand Prix,COL,43,3,"[19.0, 53.0, 65.0]","['SOFT', 'HARD', 'MEDIUM', 'SOFT']",12.0,72.0,clean
+2025,Dutch Grand Prix,GAS,10,1,[23.0],"['MEDIUM', 'HARD']",17.0,72.0,clean
+2025,Dutch Grand Prix,HAD,6,2,"[23.0, 53.0]","['MEDIUM', 'HARD', 'SOFT']",3.0,72.0,clean
+2025,Dutch Grand Prix,HAM,44,0,[],['MEDIUM'],7.0,22.0,dnf
+2025,Dutch Grand Prix,HUL,27,2,"[19.0, 53.0]","['SOFT', 'HARD', 'MEDIUM']",15.0,72.0,clean
+2025,Dutch Grand Prix,LAW,30,3,"[23.0, 27.0, 52.0]","['MEDIUM', 'HARD', 'SOFT', 'SOFT']",13.0,72.0,clean
+2025,Dutch Grand Prix,LEC,16,2,"[22.0, 52.0]","['MEDIUM', 'HARD', 'UNKNOWN']",5.0,52.0,suspect
+2025,Dutch Grand Prix,NOR,4,2,"[23.0, 53.0]","['MEDIUM', 'HARD', 'HARD']",2.0,64.0,clean
+2025,Dutch Grand Prix,OCO,31,1,[52.0],"['HARD', 'MEDIUM']",11.0,72.0,clean
+2025,Dutch Grand Prix,PIA,81,2,"[23.0, 53.0]","['MEDIUM', 'HARD', 'HARD']",1.0,72.0,clean
+2025,Dutch Grand Prix,RUS,63,2,"[23.0, 53.0]","['MEDIUM', 'HARD', 'SOFT']",4.0,72.0,clean
+2025,Dutch Grand Prix,SAI,55,4,"[23.0, 27.0, 51.0, 65.0]","['MEDIUM', 'HARD', 'SOFT', 'SOFT', 'SOFT']",14.0,72.0,suspect
+2025,Dutch Grand Prix,STR,18,2,"[8.0, 52.0]","['MEDIUM', 'HARD', 'HARD']",8.0,72.0,clean
+2025,Dutch Grand Prix,TSU,22,2,"[19.0, 53.0]","['SOFT', 'HARD', 'SOFT']",10.0,72.0,clean
+2025,Dutch Grand Prix,VER,1,2,"[23.0, 53.0]","['SOFT', 'MEDIUM', 'SOFT']",2.0,72.0,clean
+2025,Emilia Romagna Grand Prix,ALB,23,2,"[29.0, 47.0]","['MEDIUM', 'HARD', 'HARD']",5.0,63.0,clean
+2025,Emilia Romagna Grand Prix,ALO,14,2,"[12.0, 46.0]","['MEDIUM', 'HARD', 'MEDIUM']",11.0,63.0,clean
+2025,Emilia Romagna Grand Prix,ANT,12,1,[29.0],"['HARD', 'MEDIUM']",8.0,44.0,clean
+2025,Emilia Romagna Grand Prix,BEA,87,2,"[29.0, 31.0]","['HARD', 'MEDIUM', 'HARD']",17.0,63.0,clean
+2025,Emilia Romagna Grand Prix,BOR,5,3,"[12.0, 29.0, 46.0]","['MEDIUM', 'HARD', 'HARD', 'MEDIUM']",18.0,63.0,clean
+2025,Emilia Romagna Grand Prix,COL,43,2,"[22.0, 46.0]","['MEDIUM', 'HARD', 'HARD']",16.0,63.0,clean
+2025,Emilia Romagna Grand Prix,GAS,10,2,"[9.0, 29.0]","['MEDIUM', 'HARD', 'HARD']",13.0,63.0,clean
+2025,Emilia Romagna Grand Prix,HAD,6,2,"[29.0, 46.0]","['MEDIUM', 'HARD', 'HARD']",9.0,63.0,clean
+2025,Emilia Romagna Grand Prix,HAM,44,2,"[29.0, 46.0]","['HARD', 'MEDIUM', 'HARD']",4.0,63.0,clean
+2025,Emilia Romagna Grand Prix,HUL,27,1,[29.0],"['HARD', 'MEDIUM']",12.0,63.0,clean
+2025,Emilia Romagna Grand Prix,LAW,30,2,"[10.0, 29.0]","['MEDIUM', 'HARD', 'HARD']",14.0,63.0,clean
+2025,Emilia Romagna Grand Prix,LEC,16,2,"[10.0, 29.0]","['MEDIUM', 'HARD', 'HARD']",6.0,63.0,clean
+2025,Emilia Romagna Grand Prix,NOR,4,2,"[28.0, 46.0]","['MEDIUM', 'HARD', 'HARD']",2.0,63.0,clean
+2025,Emilia Romagna Grand Prix,OCO,31,1,[1.0],"['MEDIUM', 'HARD']",19.0,27.0,clean
+2025,Emilia Romagna Grand Prix,PIA,81,2,"[13.0, 30.0]","['MEDIUM', 'HARD', 'HARD']",3.0,63.0,clean
+2025,Emilia Romagna Grand Prix,RUS,63,2,"[11.0, 29.0]","['MEDIUM', 'HARD', 'HARD']",7.0,63.0,clean
+2025,Emilia Romagna Grand Prix,SAI,55,2,"[11.0, 29.0]","['MEDIUM', 'HARD', 'HARD']",8.0,63.0,clean
+2025,Emilia Romagna Grand Prix,STR,18,2,"[14.0, 46.0]","['MEDIUM', 'HARD', 'MEDIUM']",15.0,63.0,clean
+2025,Emilia Romagna Grand Prix,TSU,22,1,[29.0],"['HARD', 'MEDIUM']",10.0,63.0,clean
+2025,Emilia Romagna Grand Prix,VER,1,2,"[29.0, 46.0]","['MEDIUM', 'HARD', 'HARD']",1.0,63.0,clean
+2025,Hungarian Grand Prix,ALB,23,2,"[14.0, 38.0]","['SOFT', 'MEDIUM', 'HARD']",15.0,69.0,clean
+2025,Hungarian Grand Prix,ALO,14,1,[39.0],"['MEDIUM', 'HARD']",5.0,70.0,clean
+2025,Hungarian Grand Prix,ANT,12,1,[21.0],"['MEDIUM', 'HARD']",10.0,69.0,clean
+2025,Hungarian Grand Prix,BEA,87,2,"[30.0, 48.0]","['MEDIUM', 'HARD', 'UNKNOWN']",19.0,48.0,suspect
+2025,Hungarian Grand Prix,BOR,5,1,[40.0],"['MEDIUM', 'HARD']",6.0,70.0,clean
+2025,Hungarian Grand Prix,COL,43,2,"[13.0, 35.0]","['MEDIUM', 'HARD', 'HARD']",19.0,69.0,clean
+2025,Hungarian Grand Prix,GAS,10,1,[32.0],"['HARD', 'MEDIUM']",17.0,69.0,clean
+2025,Hungarian Grand Prix,HAD,6,1,[33.0],"['MEDIUM', 'HARD']",11.0,69.0,clean
+2025,Hungarian Grand Prix,HAM,44,1,[42.0],"['HARD', 'MEDIUM']",12.0,69.0,clean
+2025,Hungarian Grand Prix,HUL,27,2,"[5.0, 41.0]","['SOFT', 'MEDIUM', 'MEDIUM']",13.0,69.0,clean
+2025,Hungarian Grand Prix,LAW,30,1,[40.0],"['MEDIUM', 'HARD']",8.0,70.0,clean
+2025,Hungarian Grand Prix,LEC,16,2,"[19.0, 40.0]","['MEDIUM', 'HARD', 'HARD']",4.0,70.0,clean
+2025,Hungarian Grand Prix,NOR,4,1,[31.0],"['MEDIUM', 'HARD']",1.0,70.0,clean
+2025,Hungarian Grand Prix,OCO,31,1,[14.0],"['MEDIUM', 'HARD']",16.0,69.0,clean
+2025,Hungarian Grand Prix,PIA,81,2,"[18.0, 45.0]","['MEDIUM', 'HARD', 'HARD']",2.0,70.0,clean
+2025,Hungarian Grand Prix,RUS,63,2,"[19.0, 43.0]","['MEDIUM', 'HARD', 'HARD']",3.0,70.0,clean
+2025,Hungarian Grand Prix,SAI,55,2,"[15.0, 51.0]","['SOFT', 'HARD', 'MEDIUM']",14.0,69.0,clean
+2025,Hungarian Grand Prix,STR,18,1,[36.0],"['MEDIUM', 'HARD']",7.0,70.0,clean
+2025,Hungarian Grand Prix,TSU,22,2,"[20.0, 37.0]","['MEDIUM', 'SOFT', 'HARD']",18.0,69.0,clean
+2025,Hungarian Grand Prix,VER,1,2,"[17.0, 48.0]","['MEDIUM', 'HARD', 'HARD']",9.0,70.0,clean
+2025,Italian Grand Prix,ALB,23,1,[41.0],"['HARD', 'MEDIUM']",7.0,53.0,clean
+2025,Italian Grand Prix,ALO,14,2,"[20.0, 24.0]","['MEDIUM', 'HARD', 'UNKNOWN']",19.0,24.0,suspect
+2025,Italian Grand Prix,ANT,12,1,[28.0],"['MEDIUM', 'HARD']",8.0,53.0,clean
+2025,Italian Grand Prix,BEA,87,1,[18.0],"['MEDIUM', 'HARD']",12.0,53.0,clean
+2025,Italian Grand Prix,BOR,5,1,[20.0],"['MEDIUM', 'HARD']",9.0,53.0,clean
+2025,Italian Grand Prix,COL,43,1,[33.0],"['MEDIUM', 'HARD']",17.0,52.0,clean
+2025,Italian Grand Prix,GAS,10,1,[49.0],"['HARD', 'SOFT']",16.0,52.0,clean
+2025,Italian Grand Prix,HAD,6,1,[32.0],"['HARD', 'MEDIUM']",10.0,53.0,clean
+2025,Italian Grand Prix,HAM,44,1,[38.0],"['MEDIUM', 'HARD']",6.0,53.0,clean
+2025,Italian Grand Prix,LAW,30,1,[9.0],"['SOFT', 'HARD']",14.0,53.0,clean
+2025,Italian Grand Prix,LEC,16,1,[33.0],"['MEDIUM', 'HARD']",4.0,53.0,clean
+2025,Italian Grand Prix,NOR,4,1,[46.0],"['MEDIUM', 'SOFT']",2.0,53.0,clean
+2025,Italian Grand Prix,OCO,31,1,[51.0],"['HARD', 'SOFT']",15.0,52.0,clean
+2025,Italian Grand Prix,PIA,81,1,[45.0],"['MEDIUM', 'SOFT']",3.0,53.0,clean
+2025,Italian Grand Prix,RUS,63,1,[27.0],"['MEDIUM', 'HARD']",5.0,53.0,clean
+2025,Italian Grand Prix,SAI,55,1,[30.0],"['MEDIUM', 'HARD']",11.0,53.0,clean
+2025,Italian Grand Prix,STR,18,1,[49.0],"['HARD', 'SOFT']",18.0,52.0,clean
+2025,Italian Grand Prix,TSU,22,1,[19.0],"['MEDIUM', 'HARD']",13.0,53.0,clean
+2025,Italian Grand Prix,VER,1,1,[37.0],"['MEDIUM', 'HARD']",1.0,53.0,clean
+2025,Japanese Grand Prix,ALB,23,1,[24.0],"['MEDIUM', 'HARD']",9.0,53.0,clean
+2025,Japanese Grand Prix,ALO,14,1,[24.0],"['MEDIUM', 'HARD']",11.0,53.0,clean
+2025,Japanese Grand Prix,ANT,12,1,[31.0],"['MEDIUM', 'HARD']",6.0,53.0,clean
+2025,Japanese Grand Prix,BEA,87,1,[23.0],"['MEDIUM', 'HARD']",10.0,53.0,clean
+2025,Japanese Grand Prix,BOR,5,1,[31.0],"['HARD', 'MEDIUM']",19.0,53.0,clean
+2025,Japanese Grand Prix,DOO,7,1,[15.0],"['SOFT', 'HARD']",15.0,53.0,clean
+2025,Japanese Grand Prix,GAS,10,1,[24.0],"['MEDIUM', 'HARD']",13.0,53.0,clean
+2025,Japanese Grand Prix,HAD,6,1,[25.0],"['MEDIUM', 'HARD']",8.0,53.0,clean
+2025,Japanese Grand Prix,HAM,44,1,[30.0],"['HARD', 'MEDIUM']",7.0,53.0,clean
+2025,Japanese Grand Prix,HUL,27,1,[22.0],"['MEDIUM', 'HARD']",16.0,53.0,clean
+2025,Japanese Grand Prix,LAW,30,1,[33.0],"['MEDIUM', 'SOFT']",17.0,53.0,clean
+2025,Japanese Grand Prix,LEC,16,1,[21.0],"['MEDIUM', 'HARD']",4.0,53.0,clean
+2025,Japanese Grand Prix,NOR,4,1,[21.0],"['MEDIUM', 'HARD']",2.0,53.0,clean
+2025,Japanese Grand Prix,OCO,31,1,[32.0],"['HARD', 'MEDIUM']",18.0,53.0,clean
+2025,Japanese Grand Prix,PIA,81,1,[20.0],"['MEDIUM', 'HARD']",3.0,53.0,clean
+2025,Japanese Grand Prix,RUS,63,1,[19.0],"['MEDIUM', 'HARD']",5.0,53.0,clean
+2025,Japanese Grand Prix,SAI,55,1,[33.0],"['MEDIUM', 'SOFT']",14.0,53.0,clean
+2025,Japanese Grand Prix,STR,18,2,"[9.0, 30.0]","['SOFT', 'HARD', 'MEDIUM']",20.0,52.0,clean
+2025,Japanese Grand Prix,TSU,22,1,[23.0],"['MEDIUM', 'HARD']",12.0,53.0,clean
+2025,Japanese Grand Prix,VER,1,1,[21.0],"['MEDIUM', 'HARD']",1.0,53.0,clean
+2025,Las Vegas Grand Prix,ALB,23,4,"[13.0, 14.0, 34.0, 35.0]","['HARD', 'MEDIUM', 'HARD', 'MEDIUM', 'UNKNOWN']",18.0,35.0,suspect
+2025,Las Vegas Grand Prix,ALO,14,1,[16.0],"['MEDIUM', 'HARD']",13.0,50.0,clean
+2025,Las Vegas Grand Prix,ANT,12,1,[2.0],"['SOFT', 'HARD']",4.0,50.0,clean
+2025,Las Vegas Grand Prix,BEA,87,1,[17.0],"['MEDIUM', 'HARD']",12.0,50.0,clean
+2025,Las Vegas Grand Prix,BOR,5,1,[1.0],"['HARD', 'UNKNOWN']",19.0,1.0,suspect
+2025,Las Vegas Grand Prix,COL,43,1,[25.0],"['HARD', 'MEDIUM']",17.0,49.0,clean
+2025,Las Vegas Grand Prix,GAS,10,1,[2.0],"['MEDIUM', 'HARD']",15.0,50.0,clean
+2025,Las Vegas Grand Prix,HAD,6,1,[20.0],"['MEDIUM', 'HARD']",8.0,50.0,clean
+2025,Las Vegas Grand Prix,HAM,44,1,[29.0],"['HARD', 'MEDIUM']",10.0,50.0,clean
+2025,Las Vegas Grand Prix,HUL,27,1,[30.0],"['HARD', 'MEDIUM']",9.0,50.0,clean
+2025,Las Vegas Grand Prix,LAW,30,2,"[2.0, 28.0]","['MEDIUM', 'HARD', 'HARD']",16.0,49.0,clean
+2025,Las Vegas Grand Prix,LEC,16,1,[24.0],"['MEDIUM', 'HARD']",6.0,50.0,clean
+2025,Las Vegas Grand Prix,NOR,4,1,[22.0],"['MEDIUM', 'HARD']",2.0,50.0,clean
+2025,Las Vegas Grand Prix,OCO,31,1,[27.0],"['MEDIUM', 'HARD']",11.0,50.0,clean
+2025,Las Vegas Grand Prix,PIA,81,1,[21.0],"['MEDIUM', 'HARD']",5.0,50.0,clean
+2025,Las Vegas Grand Prix,RUS,63,1,[17.0],"['MEDIUM', 'HARD']",3.0,50.0,clean
+2025,Las Vegas Grand Prix,SAI,55,1,[22.0],"['MEDIUM', 'HARD']",7.0,50.0,clean
+2025,Las Vegas Grand Prix,TSU,22,2,"[1.0, 27.0]","['MEDIUM', 'HARD', 'MEDIUM']",14.0,50.0,clean
+2025,Las Vegas Grand Prix,VER,1,1,[25.0],"['MEDIUM', 'HARD']",1.0,50.0,clean
+2025,Mexico City Grand Prix,ALB,23,1,[41.0],"['HARD', 'SOFT']",12.0,70.0,clean
+2025,Mexico City Grand Prix,ALO,14,2,"[20.0, 34.0]","['SOFT', 'MEDIUM', 'UNKNOWN']",16.0,34.0,suspect
+2025,Mexico City Grand Prix,ANT,12,2,"[22.0, 47.0]","['SOFT', 'MEDIUM', 'SOFT']",6.0,71.0,clean
+2025,Mexico City Grand Prix,BEA,87,2,"[24.0, 48.0]","['SOFT', 'MEDIUM', 'SOFT']",4.0,71.0,clean
+2025,Mexico City Grand Prix,BOR,5,1,[37.0],"['MEDIUM', 'SOFT']",10.0,71.0,clean
+2025,Mexico City Grand Prix,COL,43,1,[48.0],"['HARD', 'SOFT']",16.0,70.0,clean
+2025,Mexico City Grand Prix,GAS,10,1,[33.0],"['MEDIUM', 'SOFT']",15.0,70.0,clean
+2025,Mexico City Grand Prix,HAD,6,1,[34.0],"['MEDIUM', 'SOFT']",13.0,70.0,clean
+2025,Mexico City Grand Prix,HAM,44,2,"[23.0, 47.0]","['SOFT', 'MEDIUM', 'SOFT']",8.0,71.0,clean
+2025,Mexico City Grand Prix,HUL,27,1,[25.0],"['SOFT', 'UNKNOWN']",16.0,25.0,suspect
+2025,Mexico City Grand Prix,LAW,30,2,"[2.0, 5.0]","['SOFT', 'HARD', 'UNKNOWN']",20.0,5.0,suspect
+2025,Mexico City Grand Prix,LEC,16,1,[31.0],"['SOFT', 'MEDIUM']",2.0,71.0,clean
+2025,Mexico City Grand Prix,NOR,4,1,[34.0],"['SOFT', 'MEDIUM']",1.0,71.0,clean
+2025,Mexico City Grand Prix,OCO,31,1,[27.0],"['SOFT', 'MEDIUM']",9.0,71.0,clean
+2025,Mexico City Grand Prix,PIA,81,2,"[24.0, 47.0]","['SOFT', 'MEDIUM', 'SOFT']",5.0,71.0,clean
+2025,Mexico City Grand Prix,RUS,63,2,"[25.0, 48.0]","['SOFT', 'MEDIUM', 'SOFT']",7.0,71.0,clean
+2025,Mexico City Grand Prix,SAI,55,3,"[17.0, 46.0, 56.0]","['MEDIUM', 'SOFT', 'SOFT', 'SOFT']",15.0,67.0,clean
+2025,Mexico City Grand Prix,STR,18,2,"[26.0, 43.0]","['SOFT', 'MEDIUM', 'SOFT']",14.0,70.0,clean
+2025,Mexico City Grand Prix,TSU,22,1,[36.0],"['MEDIUM', 'SOFT']",11.0,71.0,clean
+2025,Mexico City Grand Prix,VER,1,1,[37.0],"['MEDIUM', 'SOFT']",3.0,71.0,clean
+2025,Miami Grand Prix,ALB,23,1,[26.0],"['MEDIUM', 'HARD']",5.0,57.0,clean
+2025,Miami Grand Prix,ALO,14,1,[28.0],"['HARD', 'MEDIUM']",15.0,56.0,clean
+2025,Miami Grand Prix,ANT,12,1,[25.0],"['MEDIUM', 'HARD']",6.0,57.0,clean
+2025,Miami Grand Prix,BEA,87,0,[],['HARD'],13.0,27.0,dnf
+2025,Miami Grand Prix,BOR,5,0,[],['HARD'],17.0,30.0,dnf
+2025,Miami Grand Prix,GAS,10,1,[32.0],"['HARD', 'MEDIUM']",13.0,57.0,clean
+2025,Miami Grand Prix,HAD,6,0,[],['HARD'],11.0,57.0,dnf
+2025,Miami Grand Prix,HAM,44,1,[28.0],"['HARD', 'MEDIUM']",8.0,57.0,clean
+2025,Miami Grand Prix,HUL,27,1,[36.0],"['HARD', 'MEDIUM']",14.0,56.0,clean
+2025,Miami Grand Prix,LAW,30,2,"[28.0, 36.0]","['HARD', 'MEDIUM', 'UNKNOWN']",17.0,36.0,suspect
+2025,Miami Grand Prix,LEC,16,1,[29.0],"['MEDIUM', 'HARD']",7.0,57.0,clean
+2025,Miami Grand Prix,NOR,4,1,[29.0],"['MEDIUM', 'HARD']",2.0,57.0,clean
+2025,Miami Grand Prix,OCO,31,0,[],['HARD'],12.0,57.0,dnf
+2025,Miami Grand Prix,PIA,81,1,[29.0],"['MEDIUM', 'HARD']",1.0,57.0,clean
+2025,Miami Grand Prix,RUS,63,1,[29.0],"['HARD', 'MEDIUM']",3.0,57.0,clean
+2025,Miami Grand Prix,SAI,55,1,[25.0],"['MEDIUM', 'HARD']",9.0,57.0,clean
+2025,Miami Grand Prix,STR,18,0,[],['HARD'],16.0,56.0,dnf
+2025,Miami Grand Prix,TSU,22,1,[27.0],"['MEDIUM', 'HARD']",10.0,57.0,clean
+2025,Miami Grand Prix,VER,1,1,[26.0],"['MEDIUM', 'HARD']",4.0,57.0,clean
+2025,Monaco Grand Prix,ALB,23,2,"[32.0, 40.0]","['MEDIUM', 'MEDIUM', 'HARD']",9.0,76.0,clean
+2025,Monaco Grand Prix,ALO,14,1,[16.0],"['HARD', 'HARD']",6.0,36.0,clean
+2025,Monaco Grand Prix,ANT,12,2,"[69.0, 71.0]","['HARD', 'MEDIUM', 'HARD']",18.0,75.0,clean
+2025,Monaco Grand Prix,BEA,87,2,"[1.0, 17.0]","['MEDIUM', 'HARD', 'MEDIUM']",12.0,76.0,clean
+2025,Monaco Grand Prix,BOR,5,3,"[1.0, 26.0, 35.0]","['MEDIUM', 'HARD', 'SOFT', 'MEDIUM']",14.0,76.0,clean
+2025,Monaco Grand Prix,COL,43,2,"[13.0, 26.0]","['HARD', 'MEDIUM', 'MEDIUM']",13.0,76.0,clean
+2025,Monaco Grand Prix,GAS,10,1,[1.0],"['MEDIUM', 'MEDIUM']",18.0,7.0,clean
+2025,Monaco Grand Prix,HAD,6,2,"[14.0, 19.0]","['MEDIUM', 'SOFT', 'HARD']",6.0,77.0,clean
+2025,Monaco Grand Prix,HAM,44,2,"[18.0, 56.0]","['HARD', 'HARD', 'MEDIUM']",5.0,78.0,clean
+2025,Monaco Grand Prix,HUL,27,2,"[12.0, 44.0]","['MEDIUM', 'HARD', 'SOFT']",16.0,76.0,clean
+2025,Monaco Grand Prix,LAW,30,2,"[31.0, 40.0]","['MEDIUM', 'SOFT', 'HARD']",8.0,77.0,clean
+2025,Monaco Grand Prix,LEC,16,2,"[22.0, 49.0]","['MEDIUM', 'HARD', 'MEDIUM']",2.0,78.0,clean
+2025,Monaco Grand Prix,NOR,4,2,"[19.0, 50.0]","['MEDIUM', 'HARD', 'HARD']",1.0,78.0,clean
+2025,Monaco Grand Prix,OCO,31,2,"[16.0, 28.0]","['MEDIUM', 'MEDIUM', 'HARD']",7.0,77.0,clean
+2025,Monaco Grand Prix,PIA,81,2,"[20.0, 48.0]","['MEDIUM', 'HARD', 'HARD']",3.0,78.0,clean
+2025,Monaco Grand Prix,RUS,63,3,"[53.0, 62.0, 68.0]","['HARD', 'MEDIUM', 'MEDIUM', 'HARD']",11.0,76.0,clean
+2025,Monaco Grand Prix,SAI,55,2,"[48.0, 53.0]","['HARD', 'MEDIUM', 'MEDIUM']",10.0,76.0,clean
+2025,Monaco Grand Prix,STR,18,2,"[17.0, 64.0]","['HARD', 'HARD', 'MEDIUM']",15.0,76.0,clean
+2025,Monaco Grand Prix,TSU,22,2,"[1.0, 73.0]","['SOFT', 'HARD', 'MEDIUM']",17.0,76.0,clean
+2025,Monaco Grand Prix,VER,1,2,"[28.0, 77.0]","['HARD', 'MEDIUM', 'SOFT']",4.0,78.0,clean
+2025,Qatar Grand Prix,ALB,23,2,"[7.0, 32.0]","['HARD', 'MEDIUM', 'MEDIUM']",11.0,57.0,clean
+2025,Qatar Grand Prix,ALO,14,2,"[7.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD']",7.0,57.0,clean
+2025,Qatar Grand Prix,ANT,12,2,"[7.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD']",5.0,57.0,clean
+2025,Qatar Grand Prix,BEA,87,4,"[7.0, 32.0, 40.0, 41.0]","['MEDIUM', 'MEDIUM', 'HARD', 'HARD', 'UNKNOWN']",19.0,41.0,suspect
+2025,Qatar Grand Prix,BOR,5,2,"[7.0, 32.0]","['MEDIUM', 'MEDIUM', 'SOFT']",13.0,57.0,clean
+2025,Qatar Grand Prix,COL,43,2,"[7.0, 32.0]","['HARD', 'MEDIUM', 'MEDIUM']",14.0,56.0,clean
+2025,Qatar Grand Prix,GAS,10,2,"[7.0, 32.0]","['MEDIUM', 'HARD', 'MEDIUM']",16.0,56.0,clean
+2025,Qatar Grand Prix,HAD,6,2,"[7.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD']",6.0,54.0,clean
+2025,Qatar Grand Prix,HAM,44,2,"[7.0, 32.0]","['SOFT', 'MEDIUM', 'MEDIUM']",12.0,57.0,clean
+2025,Qatar Grand Prix,HUL,27,0,[],['SOFT'],10.0,6.0,dnf
+2025,Qatar Grand Prix,LAW,30,2,"[7.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD']",9.0,57.0,clean
+2025,Qatar Grand Prix,LEC,16,2,"[7.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD']",8.0,57.0,clean
+2025,Qatar Grand Prix,NOR,4,2,"[25.0, 44.0]","['MEDIUM', 'MEDIUM', 'HARD']",4.0,57.0,clean
+2025,Qatar Grand Prix,OCO,31,2,"[8.0, 34.0]","['MEDIUM', 'MEDIUM', 'HARD']",15.0,56.0,clean
+2025,Qatar Grand Prix,PIA,81,2,"[24.0, 42.0]","['MEDIUM', 'MEDIUM', 'HARD']",2.0,57.0,clean
+2025,Qatar Grand Prix,RUS,63,2,"[7.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD']",6.0,57.0,clean
+2025,Qatar Grand Prix,SAI,55,2,"[7.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD']",3.0,57.0,clean
+2025,Qatar Grand Prix,STR,18,4,"[7.0, 24.0, 49.0, 55.0]","['MEDIUM', 'MEDIUM', 'MEDIUM', 'SOFT', 'UNKNOWN']",17.0,55.0,suspect
+2025,Qatar Grand Prix,TSU,22,2,"[7.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD']",10.0,57.0,clean
+2025,Qatar Grand Prix,VER,1,2,"[7.0, 32.0]","['MEDIUM', 'MEDIUM', 'HARD']",1.0,57.0,clean
+2025,Saudi Arabian Grand Prix,ALB,23,1,[22.0],"['MEDIUM', 'HARD']",9.0,50.0,clean
+2025,Saudi Arabian Grand Prix,ALO,14,1,[19.0],"['MEDIUM', 'HARD']",12.0,50.0,clean
+2025,Saudi Arabian Grand Prix,ANT,12,1,[19.0],"['MEDIUM', 'HARD']",6.0,50.0,clean
+2025,Saudi Arabian Grand Prix,BEA,87,1,[18.0],"['MEDIUM', 'HARD']",13.0,50.0,clean
+2025,Saudi Arabian Grand Prix,BOR,5,1,[1.0],"['MEDIUM', 'HARD']",18.0,49.0,clean
+2025,Saudi Arabian Grand Prix,DOO,7,2,"[1.0, 32.0]","['MEDIUM', 'HARD', 'HARD']",17.0,49.0,clean
+2025,Saudi Arabian Grand Prix,HAD,6,1,[34.0],"['HARD', 'MEDIUM']",10.0,50.0,clean
+2025,Saudi Arabian Grand Prix,HAM,44,1,[23.0],"['MEDIUM', 'HARD']",7.0,50.0,clean
+2025,Saudi Arabian Grand Prix,HUL,27,1,[33.0],"['HARD', 'MEDIUM']",15.0,49.0,clean
+2025,Saudi Arabian Grand Prix,LAW,30,1,[20.0],"['MEDIUM', 'HARD']",11.0,50.0,clean
+2025,Saudi Arabian Grand Prix,LEC,16,1,[29.0],"['MEDIUM', 'HARD']",3.0,50.0,clean
+2025,Saudi Arabian Grand Prix,NOR,4,1,[34.0],"['HARD', 'MEDIUM']",4.0,50.0,clean
+2025,Saudi Arabian Grand Prix,OCO,31,1,[1.0],"['MEDIUM', 'HARD']",14.0,50.0,clean
+2025,Saudi Arabian Grand Prix,PIA,81,1,[19.0],"['MEDIUM', 'HARD']",1.0,50.0,clean
+2025,Saudi Arabian Grand Prix,RUS,63,1,[20.0],"['MEDIUM', 'HARD']",5.0,50.0,clean
+2025,Saudi Arabian Grand Prix,SAI,55,1,[21.0],"['MEDIUM', 'HARD']",8.0,50.0,clean
+2025,Saudi Arabian Grand Prix,STR,18,1,[39.0],"['HARD', 'MEDIUM']",16.0,49.0,clean
+2025,Saudi Arabian Grand Prix,TSU,22,1,[1.0],"['MEDIUM', 'UNKNOWN']",19.0,1.0,suspect
+2025,Saudi Arabian Grand Prix,VER,1,1,[21.0],"['MEDIUM', 'HARD']",2.0,50.0,clean
+2025,Singapore Grand Prix,ALB,23,1,[42.0],"['MEDIUM', 'SOFT']",14.0,61.0,clean
+2025,Singapore Grand Prix,ALO,14,1,[27.0],"['SOFT', 'MEDIUM']",8.0,62.0,clean
+2025,Singapore Grand Prix,ANT,12,1,[25.0],"['MEDIUM', 'HARD']",5.0,62.0,clean
+2025,Singapore Grand Prix,BEA,87,1,[23.0],"['MEDIUM', 'HARD']",9.0,62.0,clean
+2025,Singapore Grand Prix,BOR,5,1,[13.0],"['MEDIUM', 'HARD']",17.0,61.0,clean
+2025,Singapore Grand Prix,COL,43,1,[14.0],"['SOFT', 'MEDIUM']",16.0,61.0,clean
+2025,Singapore Grand Prix,GAS,10,2,"[24.0, 51.0]","['MEDIUM', 'HARD', 'SOFT']",19.0,61.0,clean
+2025,Singapore Grand Prix,HAD,6,1,[20.0],"['SOFT', 'HARD']",11.0,61.0,clean
+2025,Singapore Grand Prix,HAM,44,2,"[24.0, 46.0]","['MEDIUM', 'HARD', 'SOFT']",7.0,62.0,clean
+2025,Singapore Grand Prix,HUL,27,2,"[25.0, 44.0]","['MEDIUM', 'HARD', 'SOFT']",20.0,61.0,clean
+2025,Singapore Grand Prix,LAW,30,1,[48.0],"['MEDIUM', 'SOFT']",15.0,61.0,clean
+2025,Singapore Grand Prix,LEC,16,1,[21.0],"['MEDIUM', 'HARD']",6.0,62.0,clean
+2025,Singapore Grand Prix,NOR,4,1,[26.0],"['MEDIUM', 'HARD']",3.0,62.0,clean
+2025,Singapore Grand Prix,OCO,31,1,[30.0],"['MEDIUM', 'HARD']",18.0,61.0,clean
+2025,Singapore Grand Prix,PIA,81,1,[27.0],"['MEDIUM', 'HARD']",4.0,62.0,clean
+2025,Singapore Grand Prix,RUS,63,1,[25.0],"['MEDIUM', 'HARD']",1.0,62.0,clean
+2025,Singapore Grand Prix,SAI,55,1,[50.0],"['MEDIUM', 'SOFT']",10.0,61.0,clean
+2025,Singapore Grand Prix,STR,18,1,[38.0],"['SOFT', 'MEDIUM']",13.0,61.0,clean
+2025,Singapore Grand Prix,TSU,22,1,[13.0],"['SOFT', 'HARD']",12.0,61.0,clean
+2025,Singapore Grand Prix,VER,1,1,[19.0],"['SOFT', 'HARD']",2.0,62.0,clean
+2025,Spanish Grand Prix,ALB,23,3,"[6.0, 26.0, 27.0]","['SOFT', 'SOFT', 'SOFT', 'UNKNOWN']",19.0,27.0,suspect
+2025,Spanish Grand Prix,ALO,14,3,"[15.0, 42.0, 54.0]","['SOFT', 'MEDIUM', 'SOFT', 'SOFT']",10.0,66.0,clean
+2025,Spanish Grand Prix,ANT,12,2,"[21.0, 49.0]","['SOFT', 'MEDIUM', 'SOFT']",7.0,53.0,clean
+2025,Spanish Grand Prix,BEA,87,3,"[8.0, 35.0, 54.0]","['SOFT', 'MEDIUM', 'MEDIUM', 'SOFT']",13.0,66.0,clean
+2025,Spanish Grand Prix,BOR,5,2,"[19.0, 49.0]","['SOFT', 'MEDIUM', 'SOFT']",12.0,66.0,clean
+2025,Spanish Grand Prix,COL,43,3,"[14.0, 39.0, 54.0]","['SOFT', 'MEDIUM', 'SOFT', 'SOFT']",16.0,66.0,clean
+2025,Spanish Grand Prix,GAS,10,3,"[10.0, 31.0, 55.0]","['SOFT', 'SOFT', 'MEDIUM', 'SOFT']",9.0,66.0,clean
+2025,Spanish Grand Prix,HAD,6,3,"[19.0, 48.0, 55.0]","['SOFT', 'MEDIUM', 'SOFT', 'SOFT']",8.0,66.0,clean
+2025,Spanish Grand Prix,HAM,44,3,"[16.0, 46.0, 55.0]","['SOFT', 'MEDIUM', 'SOFT', 'SOFT']",7.0,66.0,clean
+2025,Spanish Grand Prix,HUL,27,3,"[9.0, 45.0, 56.0]","['SOFT', 'MEDIUM', 'SOFT', 'SOFT']",6.0,66.0,clean
+2025,Spanish Grand Prix,LAW,30,2,"[18.0, 44.0]","['SOFT', 'MEDIUM', 'SOFT']",11.0,66.0,clean
+2025,Spanish Grand Prix,LEC,16,3,"[17.0, 40.0, 55.0]","['SOFT', 'MEDIUM', 'MEDIUM', 'SOFT']",3.0,66.0,clean
+2025,Spanish Grand Prix,NOR,4,3,"[21.0, 48.0, 55.0]","['SOFT', 'MEDIUM', 'SOFT', 'SOFT']",2.0,66.0,clean
+2025,Spanish Grand Prix,OCO,31,2,"[20.0, 43.0]","['SOFT', 'MEDIUM', 'MEDIUM']",17.0,66.0,clean
+2025,Spanish Grand Prix,PIA,81,3,"[22.0, 49.0, 55.0]","['SOFT', 'MEDIUM', 'SOFT', 'SOFT']",1.0,66.0,clean
+2025,Spanish Grand Prix,RUS,63,3,"[20.0, 41.0, 55.0]","['SOFT', 'MEDIUM', 'SOFT', 'SOFT']",4.0,66.0,clean
+2025,Spanish Grand Prix,SAI,55,3,"[9.0, 34.0, 55.0]","['SOFT', 'SOFT', 'MEDIUM', 'SOFT']",15.0,66.0,clean
+2025,Spanish Grand Prix,TSU,22,4,"[8.0, 24.0, 44.0, 54.0]","['MEDIUM', 'SOFT', 'SOFT', 'SOFT', 'SOFT']",14.0,66.0,suspect
+2025,Spanish Grand Prix,VER,1,4,"[13.0, 29.0, 47.0, 55.0]","['SOFT', 'SOFT', 'MEDIUM', 'SOFT', 'HARD']",5.0,66.0,suspect
+2025,São Paulo Grand Prix,ALB,23,2,"[35.0, 55.0]","['MEDIUM', 'SOFT', 'MEDIUM']",11.0,71.0,clean
+2025,São Paulo Grand Prix,ALO,14,2,"[28.0, 46.0]","['HARD', 'MEDIUM', 'MEDIUM']",14.0,71.0,clean
+2025,São Paulo Grand Prix,ANT,12,2,"[21.0, 47.0]","['SOFT', 'MEDIUM', 'MEDIUM']",2.0,71.0,clean
+2025,São Paulo Grand Prix,BEA,87,2,"[17.0, 42.0]","['SOFT', 'MEDIUM', 'MEDIUM']",6.0,71.0,clean
+2025,São Paulo Grand Prix,COL,43,2,"[29.0, 43.0]","['MEDIUM', 'SOFT', 'MEDIUM']",15.0,71.0,clean
+2025,São Paulo Grand Prix,GAS,10,2,"[18.0, 39.0]","['SOFT', 'MEDIUM', 'MEDIUM']",10.0,71.0,clean
+2025,São Paulo Grand Prix,HAD,6,2,"[18.0, 37.0]","['SOFT', 'MEDIUM', 'MEDIUM']",8.0,71.0,clean
+2025,São Paulo Grand Prix,HAM,44,4,"[2.0, 14.0, 32.0, 37.0]","['SOFT', 'HARD', 'MEDIUM', 'MEDIUM', 'UNKNOWN']",18.0,37.0,suspect
+2025,São Paulo Grand Prix,HUL,27,1,[36.0],"['MEDIUM', 'SOFT']",9.0,71.0,clean
+2025,São Paulo Grand Prix,LAW,30,1,[19.0],"['SOFT', 'MEDIUM']",7.0,71.0,clean
+2025,São Paulo Grand Prix,LEC,16,0,[],['MEDIUM'],3.0,5.0,dnf
+2025,São Paulo Grand Prix,NOR,4,2,"[30.0, 50.0]","['MEDIUM', 'SOFT', 'MEDIUM']",1.0,71.0,clean
+2025,São Paulo Grand Prix,OCO,31,2,"[8.0, 47.0]","['HARD', 'MEDIUM', 'MEDIUM']",12.0,71.0,clean
+2025,São Paulo Grand Prix,PIA,81,2,"[38.0, 51.0]","['MEDIUM', 'SOFT', 'MEDIUM']",5.0,71.0,clean
+2025,São Paulo Grand Prix,RUS,63,2,"[34.0, 48.0]","['MEDIUM', 'SOFT', 'MEDIUM']",4.0,71.0,clean
+2025,São Paulo Grand Prix,SAI,55,2,"[17.0, 38.0]","['SOFT', 'MEDIUM', 'MEDIUM']",13.0,71.0,clean
+2025,São Paulo Grand Prix,STR,18,2,"[29.0, 54.0]","['HARD', 'MEDIUM', 'MEDIUM']",16.0,71.0,clean
+2025,São Paulo Grand Prix,TSU,22,3,"[2.0, 24.0, 47.0]","['HARD', 'MEDIUM', 'MEDIUM', 'MEDIUM']",17.0,71.0,clean
+2025,São Paulo Grand Prix,VER,1,3,"[7.0, 34.0, 54.0]","['HARD', 'MEDIUM', 'MEDIUM', 'SOFT']",3.0,71.0,clean
+2025,United States Grand Prix,ALB,23,2,"[7.0, 36.0]","['HARD', 'MEDIUM', 'SOFT']",14.0,56.0,clean
+2025,United States Grand Prix,ALO,14,1,[30.0],"['MEDIUM', 'SOFT']",10.0,56.0,clean
+2025,United States Grand Prix,ANT,12,1,[31.0],"['MEDIUM', 'SOFT']",13.0,56.0,clean
+2025,United States Grand Prix,BEA,87,1,[30.0],"['MEDIUM', 'SOFT']",9.0,56.0,clean
+2025,United States Grand Prix,BOR,5,2,"[14.0, 36.0]","['SOFT', 'MEDIUM', 'SOFT']",18.0,55.0,clean
+2025,United States Grand Prix,COL,43,1,[32.0],"['MEDIUM', 'SOFT']",17.0,55.0,clean
+2025,United States Grand Prix,GAS,10,1,[27.0],"['MEDIUM', 'SOFT']",19.0,55.0,clean
+2025,United States Grand Prix,HAD,6,1,[28.0],"['HARD', 'SOFT']",16.0,56.0,clean
+2025,United States Grand Prix,HAM,44,1,[31.0],"['MEDIUM', 'SOFT']",4.0,56.0,clean
+2025,United States Grand Prix,HUL,27,1,[33.0],"['MEDIUM', 'SOFT']",8.0,56.0,clean
+2025,United States Grand Prix,LAW,30,1,[30.0],"['MEDIUM', 'SOFT']",11.0,56.0,clean
+2025,United States Grand Prix,LEC,16,1,[22.0],"['SOFT', 'MEDIUM']",3.0,56.0,clean
+2025,United States Grand Prix,NOR,4,1,[32.0],"['MEDIUM', 'SOFT']",2.0,56.0,clean
+2025,United States Grand Prix,OCO,31,1,[24.0],"['HARD', 'MEDIUM']",15.0,56.0,clean
+2025,United States Grand Prix,PIA,81,1,[30.0],"['MEDIUM', 'SOFT']",5.0,56.0,clean
+2025,United States Grand Prix,RUS,63,1,[33.0],"['MEDIUM', 'SOFT']",6.0,56.0,clean
+2025,United States Grand Prix,SAI,55,0,[],['MEDIUM'],8.0,5.0,dnf
+2025,United States Grand Prix,STR,18,1,[28.0],"['SOFT', 'MEDIUM']",12.0,56.0,clean
+2025,United States Grand Prix,TSU,22,1,[29.0],"['MEDIUM', 'SOFT']",7.0,56.0,clean
+2025,United States Grand Prix,VER,1,1,[33.0],"['MEDIUM', 'SOFT']",1.0,56.0,clean

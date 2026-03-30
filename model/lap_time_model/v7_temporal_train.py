@@ -16,7 +16,7 @@ def run_v7_pipeline():
     mapping_path = os.path.join(project_root, 'data', 'training_data', 'category_mappings.json')
     model_dir = os.path.join(project_root, 'model', 'lap_time_model')
     
-    # Load Data
+    # Load Data 
     logging.info("Loading dataset...")
     df = pd.read_csv(data_path).fillna(0)
     
@@ -217,15 +217,7 @@ def run_v7_pipeline():
     for _, row in circuit_df.iterrows():
         logging.info(f"{row['Circuit']:<26} | {row['RMSE']:.2f}s    | {row['N laps']}")
         
-    # Full Comparison Table
-    logging.info("\nFull model comparison table:")
-    logging.info("Version | Train          | Test   | RMSE  | MAE   | R²")
-    logging.info("--------+----------------+--------+-------+-------+----")
-    logging.info("v4      | all 2025       | last 5 | 0.37s | 0.26s | 0.99  (leaky)")
-    logging.info("v5      | all 2025       | last 5 | 6.94s | 5.35s | -0.00 (honest, wrong CV)")
-    logging.info("v6      | rounds 1-19    | last 5 | 6.38s | 4.74s | 0.15  (honest, 1 season)")
-    logging.info(f"v7      | 2023+2024      | 2025   | {rmse:.2f}s | {mae:.2f}s | {r2:.2f}  (target)")
-    
+
     # -------------------------------------------------------------------------
     # 7. Feature importance
     # -------------------------------------------------------------------------
