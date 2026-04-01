@@ -151,7 +151,8 @@ def optimize_strategy(driver_id, team_encoded, circuit, grid_position, total_lap
     
     race_times = simulate_all_strategies(
         all_strategies, driver_id, team_encoded, circuit, grid_position, total_laps,
-        LAP_TIME_MODEL, CIRCUIT_BASELINES, PIT_LOSS_ESTIMATES, COMPOUND_ENCODING, track_temperature
+        LAP_TIME_MODEL, CIRCUIT_BASELINES, PIT_LOSS_ESTIMATES, COMPOUND_ENCODING,
+        track_temperature, circuit_profiles=circuit_profiles
     )
     
     for i, strategy in enumerate(all_strategies):
@@ -183,7 +184,7 @@ def optimize_strategy(driver_id, team_encoded, circuit, grid_position, total_lap
             4
         )
         s['combined_score'] = round(
-            (s['time_score'] * 0.70) + (s['prior_score'] * 0.30),
+            (s['time_score'] * 0.50) + (s['prior_score'] * 0.50),
             4
         )
 
