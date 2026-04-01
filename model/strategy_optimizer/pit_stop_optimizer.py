@@ -237,7 +237,7 @@ def print_strategy_report(results, circuit, total_laps, top_n=10):
               f"{compounds_str:<28} {s['total_race_time']:.2f}s"
               f"   +{s['delta_to_best_physics']:.2f}s")
 
-    print(f"\n--- COMBINED RANKING (physics 70% + historical prior 30%) ---")
+    print(f"\n--- COMBINED RANKING (physics 50% + historical prior 50%) ---")
     print(f"{'Rank':<5} {'Stops':<6} {'Pit laps':<16} "
           f"{'Compounds':<28} {'Score':<8} {'Race time':<11} {'Prior'}")
     print("-" * 85)

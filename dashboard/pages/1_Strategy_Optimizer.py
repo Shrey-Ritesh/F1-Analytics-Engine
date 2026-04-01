@@ -15,7 +15,7 @@ from dashboard.utils.charts import make_stint_bar, format_race_time, format_pit_
 st.set_page_config(page_title="Strategy Optimizer · F1", page_icon="🏎", layout="wide")
 
 st.title("🔧 Pit Stop Strategy Optimizer")
-st.caption("Physics simulation (70%) + historical prior (30%)")
+st.caption("Physics simulation (50%) + historical prior (50%)")
 
 # ── Sidebar inputs ─────────────────────────────────────────────────────────
 with st.sidebar:
