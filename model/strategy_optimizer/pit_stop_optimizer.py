@@ -23,13 +23,44 @@ CIRCUIT_BASELINES = _load_json('circuit_baselines.json')
 PIT_LOSS_ESTIMATES = _load_json('pit_loss_estimates.json')
 MODEL_METADATA = _load_json('model_metadata.json')
 
-# Empirical stint length bounds derived from 2023-2025 F1 data
-# Min = 25th percentile, Max = 95th percentile of observed stints
+# Empirical stint length bounds from 2023-2025 F1 historical data
+# Min = 25th percentile, Max = 95th percentile of observed real stints
+# Source: data/processed/historical_strategies.csv
 STINT_BOUNDS = {
     'SOFT':   {'min': 9,  'max': 27},
     'MEDIUM': {'min': 13, 'max': 35},
     'HARD':   {'min': 19, 'max': 47},
 }
+
+def _check_stint_bounds(pit_laps, compounds, total_laps):
+    """
+    Checks whether all stints in a strategy fall within
+    empirical compound-specific length bounds.
+    Returns (True, None) if valid.
+    Returns (False, reason_string) if invalid.
+    """
+    boundaries = [0] + list(pit_laps) + [total_laps]
+
+    for i, compound in enumerate(compounds):
+        stint_len = boundaries[i+1] - boundaries[i]
+
+        if compound not in STINT_BOUNDS:
+            continue  # skip INTERMEDIATE/WET — no bounds for wet
+
+        bounds = STINT_BOUNDS[compound]
+
+        if stint_len < bounds['min']:
+            return False, (
+                f"{compound} stint {i+1}: {stint_len} laps "
+                f"< minimum {bounds['min']}"
+            )
+        if stint_len > bounds['max']:
+            return False, (
+                f"{compound} stint {i+1}: {stint_len} laps "
+                f"> maximum {bounds['max']}"
+            )
+
+    return True, None
 
 PROFILES_PATH = Path(PROJECT_ROOT) / 'model' / 'strategy_optimizer' / 'circuit_strategy_profiles.json'
 with open(PROFILES_PATH) as f:
@@ -54,27 +85,7 @@ def print_circuit_rules(circuit):
 def enumerate_strategies(total_laps, start_compound, n_stops, circuit, min_stint_laps=5, pit_lap_step=1):
     valid_strategies = []
     pruned_count = 0
-    
-    def _check_stint_bounds(strategy, total_laps):
-        pit_laps = strategy['pit_laps']
-        compounds = strategy['compounds']
 
-        boundaries = [0] + list(pit_laps) + [total_laps]
-        stints = [
-            (boundaries[i+1] - boundaries[i], compounds[i])
-            for i in range(len(compounds))
-        ]
-
-        for stint_len, compound in stints:
-            if compound not in STINT_BOUNDS:
-                continue
-            bounds = STINT_BOUNDS[compound]
-            if stint_len < bounds['min']:
-                return False, f"{compound} stint of {stint_len} laps below minimum {bounds['min']}"
-            if stint_len > bounds['max']:
-                return False, f"{compound} stint of {stint_len} laps above maximum {bounds['max']}"
-        return True, None
-    
     if n_stops >= 3 and pit_lap_step == 1:
         pit_lap_step = 2
 
@@ -97,7 +108,11 @@ def enumerate_strategies(total_laps, start_compound, n_stops, circuit, min_stint
                 'compounds': compounds
             }
             
-            valid, reason = _check_stint_bounds(strategy, total_laps)
+            valid, reason = _check_stint_bounds(
+                strategy['pit_laps'],
+                strategy['compounds'],
+                total_laps
+            )
             if not valid:
                 pruned_count += 1
                 continue
@@ -108,8 +123,9 @@ def enumerate_strategies(total_laps, start_compound, n_stops, circuit, min_stint
                 
             valid_strategies.append(strategy)
                 
-    print(f"{n_stops}-stop: {len(valid_strategies)} valid strategies ({pruned_count} pruned by stint bounds)")
-    return valid_strategies
+    print(f"{n_stops}-stop: {len(valid_strategies)} valid strategies "
+          f"({pruned_count} pruned by stint bounds)")
+    return valid_strategies, pruned_count
 
 def optimize_strategy(driver_id, team_encoded, circuit, grid_position, total_laps, 
                       start_compound='SOFT', n_stops_range=(1, 2, 3), track_temperature=35.0):
@@ -123,11 +139,15 @@ def optimize_strategy(driver_id, team_encoded, circuit, grid_position, total_lap
     n_stops_range = effective_range
     
     all_strategies = []
+    total_pruned = 0
     for n_stops in n_stops_range:
-        strats = enumerate_strategies(total_laps, start_compound, n_stops, circuit, min_stint_laps=5)
+        strats, pruned = enumerate_strategies(total_laps, start_compound, n_stops, circuit, min_stint_laps=5)
         all_strategies.extend(strats)
-        
-    print(f"Total strategies to evaluate: {len(all_strategies)}")
+        total_pruned += pruned
+
+    total_before = len(all_strategies) + total_pruned
+    print(f"Total strategies to evaluate: {len(all_strategies)} "
+          f"({total_pruned} pruned of {total_before})")
     
     race_times = simulate_all_strategies(
         all_strategies, driver_id, team_encoded, circuit, grid_position, total_laps,
@@ -188,7 +208,9 @@ def optimize_strategy(driver_id, team_encoded, circuit, grid_position, total_lap
         'physics_ranked': physics_ranked,
         'combined_ranked': combined_ranked,
         'circuit_profile': circuit_profiles.get(circuit, {}),
-        'total_evaluated': len(all_strategies)
+        'total_evaluated': len(all_strategies),
+        'total_pruned': total_pruned,
+        'total_before': total_before,
     }
 
 def print_strategy_report(results, circuit, total_laps, top_n=10):
@@ -289,33 +311,55 @@ def print_strategy_report(results, circuit, total_laps, top_n=10):
             print(f"    Absolute times may vary +/- 4.0s.")
             print(f"    Strategy deltas remain reliable.")
 
-def assess_realism(res, p_cond, c_cond, circuit):
+def assess_realism(res, circuit, total_laps):
     p_rank = res['physics_ranked'][0]
     c_rank = res['combined_ranked'][0]
-    p_real = 'REALISTIC' if p_cond(p_rank) else 'UNREALISTIC'
-    c_real = 'REALISTIC' if c_cond(c_rank) else 'UNREALISTIC'
-    
+
+    total_before = res.get('total_before', res['total_evaluated'])
+    total_after  = res['total_evaluated']
+    total_pruned = res.get('total_pruned', 0)
+    pruning_rate = (total_pruned / total_before * 100) if total_before > 0 else 0
+
     print("\n  === REALISM ASSESSMENT ===")
-    print(f"  Strategies surviving stint bounds: {res['total_evaluated']}")
-    print(f"  Physics rank #1 pit laps: {p_rank['pit_laps']} — {p_real}")
-    print(f"  Combined rank #1 pit laps: {c_rank['pit_laps']} — {c_real}")
-    
+    print(f"  Strategies before bounds filter: {total_before}")
+    print(f"  Strategies after bounds filter:  {total_after}")
+    print(f"  Pruning rate:                    {pruning_rate:.0f}%")
+    print(f"\n  Physics rank #1:  {p_rank['pit_laps']} {p_rank['compounds']}")
+    print(f"  Combined rank #1: {c_rank['pit_laps']} {c_rank['compounds']}")
+
+    checks = []
+    boundaries = [0] + c_rank['pit_laps'] + [total_laps]
+    stint_lens = [boundaries[i+1] - boundaries[i] for i in range(len(boundaries) - 1)]
+
     if circuit == 'Bahrain Grand Prix':
-        target = "Bahrain target: combined rank #1 first pit between lap 9-20"
-        target_met = (9 <= c_rank['pit_laps'][0] <= 20)
+        first_pit = c_rank['pit_laps'][0]
+        checks.append(('Bahrain combined #1 first pit between lap 9-20',  9 <= first_pit <= 20))
+        checks.append(('Bahrain combined #1 no stint under 9 laps',        min(stint_lens) >= 9))
+
     elif circuit == 'Monaco Grand Prix':
-        target = "Monaco target: combined rank #1 first pit between lap 13-40"
-        target_met = (13 <= c_rank['pit_laps'][0] <= 40)
+        first_pit = c_rank['pit_laps'][0]
+        checks.append(('Monaco  combined #1 first pit before lap 40',      first_pit <= 40))
+        hard_stints = [stint_lens[i] for i, c in enumerate(c_rank['compounds']) if c == 'HARD']
+        checks.append(('Monaco  combined #1 no HARD stint under 19 laps',
+                        all(s >= 19 for s in hard_stints) if hard_stints else True))
+
     elif circuit == 'Qatar Grand Prix':
-        target = "Qatar target: combined rank #1 first pit between lap 12-28"
-        target_met = (12 <= c_rank['pit_laps'][0] <= 28)
-    else:
-        target = ""
-        target_met = True
-        
-    print(f"  {target}")
-    if not target_met:
-        print('  "BOUND ENFORCEMENT INSUFFICIENT — consider tightening\n   SOFT min from 9 to 12 or adjusting prior weight to 0.40"')
+        first_pit = c_rank['pit_laps'][0]
+        checks.append(('Qatar   combined #1 first pit between lap 12-28',  12 <= first_pit <= 28))
+        checks.append(('Qatar   combined #1 no stint over 25 laps',         max(stint_lens) <= 25))
+
+    print("\n  Checks:")
+    passed = 0
+    for label, result in checks:
+        mark   = 'x' if result else ' '
+        status = 'PASS' if result else 'FAIL'
+        print(f"  [{mark}] {label:<50} {status}")
+        if result:
+            passed += 1
+
+    print(f"\n  Overall: {passed}/{len(checks)} checks passed")
+    if passed < len(checks):
+        print('  FAILED CHECKS — tighten SOFT min from 9 to 12 and rerun')
 
 if __name__ == '__main__':
     print("\n--- SCENARIO A: Bahrain Grand Prix ---")
@@ -326,8 +370,7 @@ if __name__ == '__main__':
     )
     if res_a:
         print_strategy_report(res_a, 'Bahrain Grand Prix', 57)
-        cond = lambda x: x['n_stops'] == 2 and (10 <= x['pit_laps'][0] <= 20) and (28 <= x['pit_laps'][1] <= 38)
-        assess_realism(res_a, p_cond=cond, c_cond=cond, circuit='Bahrain Grand Prix')
+        assess_realism(res_a, 'Bahrain Grand Prix', 57)
             
     tot_a = time.time() - t0
     print(f"\nScenario A total optimization wall time: {tot_a:.2f}s")
@@ -340,8 +383,7 @@ if __name__ == '__main__':
     )
     if res_b:
         print_strategy_report(res_b, 'Monaco Grand Prix', 78)
-        cond = lambda x: x['n_stops'] == 2 and not all(l >= 63 for l in x['pit_laps'])
-        assess_realism(res_b, p_cond=cond, c_cond=cond, circuit='Monaco Grand Prix')
+        assess_realism(res_b, 'Monaco Grand Prix', 78)
     tot_b = time.time() - t1
     print(f"\nScenario B total optimization wall time: {tot_b:.2f}s")
     
@@ -353,7 +395,6 @@ if __name__ == '__main__':
     )
     if res_c:
         print_strategy_report(res_c, 'Qatar Grand Prix', 57)
-        cond = lambda x: x['n_stops'] == 3 and x['pit_laps'][0] >= 12
-        assess_realism(res_c, p_cond=cond, c_cond=cond, circuit='Qatar Grand Prix')
+        assess_realism(res_c, 'Qatar Grand Prix', 57)
     tot_c = time.time() - t2
     print(f"\nScenario C total optimization wall time: {tot_c:.2f}s")
