@@ -1,89 +1,197 @@
-# F1 Analytics Engine 🏎️📊
+# F1 Analytics Engine 🏎️
 
-An advanced, end-to-end Machine Learning data pipeline designed to parse live telemetry and historical Formula 1 race data, engineer deep strategic features, and serialize robust predictive models using Python, XGBoost, and the FastF1 API.
+End-to-end ML system for Formula 1 race strategy prediction, lap time modelling, and driver performance analysis. Built with Python, XGBoost, FastF1, and Streamlit.
 
-This system is built deliberately for algorithmic strategy simulation—moving beyond simple descriptive statistics to establish predictive capabilities like predicting variance (Lap Time Deltas) based purely on racing physics and tire degradation without succumbing to temporal track length bias.
+**Dataset:** 76,163 laps · 2023–2025 seasons · 24 circuits · ~32 drivers
 
 ---
 
-## Architecture Flow
+## Quickstart
 
-```mermaid
-flowchart TD
-    subgraph Data Ingestion
-        A[FastF1 API / Ergast] -->|Timing, Telemetry & Weather| B(ingestion/fetch_data.py)
-        B -->|Raw CSVs| C[(data/raw_data)]
-    end
+> All commands must be run from inside the `f1_ai_strategy_system/` directory.
 
-    subgraph Preprocessing
-        C --> D(preprocessing/clean_data.py)
-        D -->|Imputation & Type Cast| E[(data/cleaned_data.csv)]
-        E --> F(feature_engineering/build_features.py)
-        F -->|Standardized Base| G[(data/master_dataset.csv)]
-    end
-
-    subgraph Feature Engineering
-        G --> H(feature_engineering/expand_features.py)
-        H -->|Derived Physics & ML Encoding| I[(f1_features_dataset.csv)]
-        I --> J[(training_data/f1_training_dataset.csv)]
-        I --> K[(training_data/category_mappings.json)]
-        
-        G --> L(feature_engineering/driver_performance_analyzer_v2.py)
-        L -->|Weighted Formula Ranking| M[(processed/driver_performance_metrics_v2.csv)]
-    end
-
-    subgraph Machine Learning Pipeline
-        J --> N(model/lap_time_model/v7_temporal_train.py)
-        N -->|Temporal Split Target: lap_time_seconds| O{XGBoost Regressor}
-        O -->|1.88s Test Error| P[(lap_time_model_v7.pkl)]
-    end
+```bash
+cd "f1_ai_strategy_system"
 ```
 
 ---
 
-## Core Modules & Capabilities
+## 1. Launch the Dashboard
 
-### 1. Multi-Season Ingestion & Preprocessing
-Extracts raw timing, laps, weather, and compound arrays seamlessly from FastF1 APIs spanning 2023, 2024, and 2025. Automates cleaning, structural joining, and imputation logic into a unified foundational `master_dataset.csv`.
+The main UI — strategy optimizer, circuit intelligence, driver performance, and historical analysis.
 
-### 2. Feature Engineering Logic (`expand_features.py`)
-Expands the crude raw telemetry from 9 base columns to an intelligently synthesized **39-Feature DataFrame**, producing elements fundamentally critical to machine learning trees:
-- **Compound Degradation Core**: Calculating specific tire stress interactions based on stint progression and dynamic compound constants.
-- **Track Baselines**: Establishing strict, non-leaky empirical median capability bounds for isolated dry-stint physics.
-- **Dirty Air & Cold Tire Flags**: Penalty checks measuring gap proximity and thermal tire warmup.
-- **Dual Export Protocol**: Spits out a human-readable CSV while identically outputting a label-encoded integer matrix optimized specifically to avoid Python dtype errors in sklearn algorithms, backed by an index definition JSON.
+```bash
+PYTHONPATH=. streamlit run dashboard/Home.py
+```
 
-### 3. Driver Performance Analyzer 
-Independently ranks driver efficiency mathematically. Eliminates statistical spoofing (e.g. drivers inflating their stats via sampling only small, fast circuits) by normalizing to `lap_time_delta` against standard deviation consistency limits. 
+Then open **http://localhost:8501** in your browser.
 
-### 4. Lap Time Prediction Engine (v7)
-A highly optimized, multi-season `XGBRegressor` machine learning model.
-- **Anti-Leakage Auditing**: Strips all target leakages (`expected_lap_time`, `final_race_position`) prior to fitting, forcing the tree to learn from natively unassisted physics.
-- **Temporal Out-of-Sample Isolation**: Strictly trains exclusively on historic `2023` and `2024` telemetry, mathematically evaluated entirely on out-of-sample data simulating the `2025` season directly.
-- **Model Metadata Guardrails**: Outputs a `.json` mapping algorithm flagging low-confidence tracks (e.g., Extreme Wet Silverstone/Circuit Gevilles) to inform Strategy Simulator bounds dynamically.
-- **Performance**: Predicts out-of-sample empirical absolute lap times dynamically across 24 countries natively with an intrinsic **RMSE of 1.88 seconds.**
+> **Note:** If `streamlit` isn't on your PATH, use the venv binary:
+> ```bash
+> PYTHONPATH=. venv/bin/streamlit run dashboard/Home.py
+> ```
 
 ---
 
-## Project Setup
+## 2. Run the Strategy Optimizer (CLI)
 
-### Requirements
-- Python 3.9+
-- `pip install -r requirements.txt` (which installs pandas, numpy, scikit-learn, xgboost, fastf1, requests)
-- For XGBoost on Mac OS: You might need to install OpenMP via Homebrew (`brew install libomp`)
+Runs Bahrain, Monaco, and Qatar validation scenarios and prints ranked strategy tables with realism checks.
 
-### Automation
-To spin up and run the entire unified end-to-end pipeline from fetching data through processing:
 ```bash
+PYTHONPATH=. python -m model.strategy_optimizer.pit_stop_optimizer
+```
+
+---
+
+## 3. Retrain the Lap Time Model
+
+Trains XGBoost on 2023–2024 data, evaluates on 2025, saves `lap_time_model_v7.pkl`.
+
+```bash
+PYTHONPATH=. python model/lap_time_model/v7_temporal_train.py
+```
+
+---
+
+## 4. Rebuild Driver Performance Metrics
+
+Recomputes driver scores (pace, consistency, win rate, podium rate) from the training dataset.
+
+```bash
+PYTHONPATH=. python feature_engineering/driver_performance_analyzer_v2.py
+```
+
+---
+
+## 5. Run the Full Data Pipeline
+
+Fetches raw data from the FastF1 API, cleans, engineers features, and writes all CSVs. **Slow — makes live API calls.**
+
+```bash
+PYTHONPATH=. python main.py
+```
+
+---
+
+## Architecture
+
+```
+FastF1 API
+    ↓
+ingestion/fetch_data.py          — raw lap/weather/compound data
+    ↓
+preprocessing/clean_data.py      — imputation, type casting
+    ↓
+feature_engineering/
+  build_features.py              — 9 base features
+  expand_features.py             — 9 → 39 features (no leakage)
+  driver_performance_analyzer_v2 — driver ranking scores
+    ↓
+model/lap_time_model/
+  v7_temporal_train.py           — XGBoost regressor (RMSE 1.88s)
+  lap_time_model_v7.pkl          — production model
+    ↓
+model/strategy_optimizer/
+  pit_stop_optimizer.py          — enumerate + rank all valid strategies
+  race_simulator.py              — vectorized batch lap prediction
+    ↓
+dashboard/                       — Streamlit multi-page app
+```
+
+---
+
+## Module Status
+
+| Module | Status |
+|--------|--------|
+| Data pipeline | ✅ Complete |
+| Feature engineering | ✅ Complete |
+| Lap time model v7 | ✅ Complete |
+| Pit stop optimizer | ✅ Complete |
+| Driver performance | ✅ Complete |
+| Dashboard (5 pages) | ✅ Complete |
+| Safety car predictor | 🔲 Not started |
+| Race outcome predictor | 🔲 Not started |
+
+---
+
+## Model Performance
+
+| Metric | Value |
+|--------|-------|
+| Algorithm | XGBoost Regressor |
+| Train set | 2023 + 2024 (42,294 laps) |
+| Test set | 2025 (21,737 laps) |
+| RMSE | 1.88s |
+| MAE | 1.46s |
+| R² | 0.97 |
+
+---
+
+## Project Structure
+
+```
+f1_ai_strategy_system/
+├── data/
+│   ├── processed/
+│   │   ├── driver_performance_metrics_v2.csv
+│   │   └── historical_strategies.csv
+│   ├── training_data/
+│   │   ├── f1_training_dataset.csv
+│   │   └── category_mappings.json
+│   └── f1_features_dataset.csv
+├── feature_engineering/
+│   ├── build_features.py
+│   ├── expand_features.py
+│   └── driver_performance_analyzer_v2.py
+├── ingestion/fetch_data.py
+├── preprocessing/clean_data.py
+├── model/
+│   ├── lap_time_model/
+│   │   ├── v7_temporal_train.py
+│   │   ├── lap_time_model_v7.pkl
+│   │   ├── circuit_baselines.json
+│   │   ├── pit_loss_estimates.json
+│   │   └── model_metadata.json
+│   └── strategy_optimizer/
+│       ├── pit_stop_optimizer.py
+│       ├── race_simulator.py
+│       ├── regulations.py
+│       ├── regulations.json
+│       └── circuit_strategy_profiles.json
+├── dashboard/
+│   ├── Home.py
+│   ├── pages/
+│   │   ├── 1_Strategy_Optimizer.py
+│   │   ├── 2_Circuit_Intelligence.py
+│   │   ├── 3_Driver_Performance.py
+│   │   └── 4_Historical_Analysis.py
+│   └── utils/
+│       ├── constants.py
+│       ├── data_loader.py
+│       └── charts.py
+├── main.py
+└── requirements.txt
+```
+
+---
+
+## Setup from Scratch
+
+```bash
+# Clone the repo
+git clone https://github.com/Shrey-Ritesh/F1-Analytics-Engine.git
+cd F1-Analytics-Engine/f1_ai_strategy_system
+
+# Create virtual environment
+python3.9 -m venv venv
 source venv/bin/activate
-python main.py
-```
-*(Configure the target season/year dynamically internally).*
 
-To retrain the master XGBoost prediction model:
-```bash
-python model/lap_time_model/v7_temporal_train.py
+# Install dependencies
+pip install -r requirements.txt
+
+# macOS only — XGBoost requires OpenMP
+brew install libomp
 ```
 
----
-*Created as the central computational backend for an AI-Based Formula 1 Race Strategy & Outcome Prediction System.*
+> `PYTHONPATH=.` is required for all commands because the codebase uses absolute imports like `from model.strategy_optimizer import ...`. Always set it as shown in the commands above.
