@@ -11,19 +11,51 @@ def build_driver_performance_metrics_v2(data_path: str, output_path: str):
     if not os.path.exists(data_path):
         logging.error(f"Dataset not found at {data_path}")
         return
-        
+
     df = pd.read_csv(data_path)
-    
-    # 1. Compute lap_time_delta
-    # We define delta as actual lap time minus expected lap time
+
+    # 1. Compute lap_time_delta (pace metric — driver vs field)
+    # expected_lap_time is in the training dataset (used only for computing delta here,
+    # not as an ML feature — no leakage since we're computing a driver summary stat)
     df['lap_time_delta'] = df['lap_time_seconds'] - df['expected_lap_time']
-    
-    # 2. Lap level metrics
-    lap_stats = df.groupby('driver_id').agg(
-        driver_avg_delta=('lap_time_delta', 'mean'),
-        driver_consistency_raw=('lap_time_delta', 'std')
-    ).reset_index()
-    
+
+    # 2. Clean racing laps mask — exclude pit laps, formation lap, cold tires, wet laps
+    # tire_compound is encoded: 0=HARD, 1=INTERMEDIATE, 2=MEDIUM, 3=SOFT, 4=WET
+    # These inflate variance for fast drivers who push on new rubber vs manage on old
+    clean_mask = (
+        (df['pit_stop'] == 0) &
+        (df['lap'] > 1) &
+        (df['tire_age_laps'] > 2) &          # skip cold-tire outlier laps
+        (df['tire_compound'].isin([0, 2, 3])) # dry compounds only (HARD/MEDIUM/SOFT)
+    )
+    clean_df = df[clean_mask].copy()
+
+    # 3. Consistency = mean within-stint std of lap_time_delta, per driver
+    # Groups by driver + race + stint so we measure "how repeatable is each stint"
+    # A driver who manages tires precisely scores high; a sloppy driver scores low
+    # This avoids penalising strategic pace variation between stints
+    stint_std = (
+        clean_df
+        .groupby(['driver_id', 'race_year', 'round_number', 'stint_number'])['lap_time_delta']
+        .std()
+        .reset_index(name='stint_delta_std')
+    )
+    consistency_per_driver = (
+        stint_std
+        .groupby('driver_id')['stint_delta_std']
+        .mean()
+        .reset_index(name='driver_consistency_raw')
+    )
+
+    # 4. Pace = mean delta on clean laps only
+    pace_stats = (
+        clean_df
+        .groupby('driver_id')['lap_time_delta']
+        .mean()
+        .reset_index(name='driver_avg_delta')
+    )
+
+    lap_stats = pace_stats.merge(consistency_per_driver, on='driver_id', how='left')
     max_std = lap_stats['driver_consistency_raw'].max()
     lap_stats['driver_consistency_raw'] = lap_stats['driver_consistency_raw'].fillna(max_std)
     
@@ -36,7 +68,7 @@ def build_driver_performance_metrics_v2(data_path: str, output_path: str):
         'total_races': len(x),
         'wins': (x['final_race_position'] == 1).sum(),
         'podiums': (x['final_race_position'] <= 3).sum()
-    })).reset_index()
+    }), include_groups=False).reset_index()
     
     race_stats['win_rate_raw'] = race_stats['wins'] / race_stats['total_races']
     race_stats['podium_rate_raw'] = race_stats['podiums'] / race_stats['total_races']
