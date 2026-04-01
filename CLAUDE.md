@@ -29,9 +29,18 @@ PYTHONPATH=. venv/bin/python feature_engineering/driver_performance_analyzer_v2.
 
 # Full data pipeline (slow — fetches from FastF1 API)
 PYTHONPATH=. venv/bin/python main.py
+
+# Validation & debugging utilities (inspect optimizer internals)
+PYTHONPATH=. python model/strategy_optimizer/validations/check_pit_data.py
+PYTHONPATH=. python model/strategy_optimizer/validations/check_priors.py
+PYTHONPATH=. python model/strategy_optimizer/validations/check_stint_ranges.py
+PYTHONPATH=. python model/strategy_optimizer/validations/sanity_check.py
+PYTHONPATH=. python model/strategy_optimizer/validations/extra_validations.py
 ```
 
 **PYTHONPATH=. is required** for all module imports. Streamlit uses conda's system `streamlit` binary but must have the venv modules on the path.
+
+See `model/strategy_optimizer/validations/README.md` for details on each validation script.
 
 ---
 
@@ -87,7 +96,15 @@ f1_ai_strategy_system/
 │       ├── historical_strategy_extractor.py    ← circuit profile builder + prior scoring
 │       ├── regulations.py                      ← FIA rule validator
 │       ├── regulations.json                    ← 2025 circuit-specific rules
-│       └── circuit_strategy_profiles.json      ← 24 circuits, stop dist + pit windows
+│       ├── circuit_strategy_profiles.json      ← 24 circuits, stop dist + pit windows
+│       └── validations/                        ← validation & debugging utilities
+│           ├── README.md                       ← validation script guide
+│           ├── __init__.py
+│           ├── check_pit_data.py
+│           ├── check_priors.py
+│           ├── check_stint_ranges.py
+│           ├── sanity_check.py
+│           └── extra_validations.py
 ├── dashboard/
 │   ├── Home.py                                 ← entry point
 │   ├── pages/
@@ -141,7 +158,7 @@ lap_time_seconds < circuit_baseline_pace * 1.07  # removes SC/VSC laps
 ### How it works
 1. **Enumerate** valid strategies (pit laps × compound combinations) — pruned by STINT_BOUNDS and FIA regulations
 2. **Simulate** all strategies in one vectorized `model.predict()` call (2M rows in ~0.5s)
-3. **Score** each strategy: `combined = 0.70 × time_score + 0.30 × prior_score`
+3. **Score** each strategy: `combined = 0.50 × time_score + 0.50 × prior_score` (updated April 2026)
 4. **Prior score** = `0.35 × stop_score + 0.40 × pit_window_score + 0.25 × compound_score`
 
 ### STINT_BOUNDS (empirical, 25th–95th percentile from 2023–2025 data)
@@ -156,13 +173,22 @@ HARD:   min=19, max=47 laps
 COMPOUND_ENCODING = {'HARD': 0, 'MEDIUM': 2, 'SOFT': 3}
 ```
 
-### Known issue (not yet fixed)
-The optimizer over-recommends 3-stop strategies because:
-1. **Tire degradation is linear in the model** — a 40-lap HARD stint looks catastrophically slow compared to a 20-lap stint, but real tires plateau. Fix: cap `tire_age_laps` at compound-specific plateau in feature matrix (SOFT: 15, MEDIUM: 22, HARD: 30).
-2. **No track position cost** — each pit stop loses ~8-12s of track position (circuit-dependent). Fix: add `traffic_cost = overtaking_difficulty × 10s` per stop to the simulated race time.
-3. **Prior weight is 30%** — consider raising to 40% since historical data strongly favours 1-2 stops at most circuits.
+### 3-Stop Bias (Fixed April 2026)
 
-These fixes go in `model/strategy_optimizer/race_simulator.py` and `pit_stop_optimizer.py`.
+**Problem:** Optimizer over-recommended 3-stop strategies at circuits where 1-2 stops are historically preferred (Bahrain, Saudi Arabia, etc.).
+
+**Root causes:**
+1. **Tire degradation linear** — XGBoost learned from individual lap times where fresh tires ARE faster, but doesn't model the real world where tires plateau (SOFT after 10 laps, MEDIUM after 16, HARD after 22)
+2. **No track position cost** — didn't account for ~15s lost per pit stop due to rejoining in traffic (circuit-dependent)
+3. **Prior weight too low (30%)** — historical data strongly favours 1-2 stops
+
+**Solution implemented:**
+1. Added `TIRE_AGE_PLATEAU` dict in `race_simulator.py` — cap tire age at plateau in feature matrix (prevents over-penalisation of long stints)
+2. Added `DEG_FEATURE_SCALE = 0.30` — scale down degradation features by 30% to correct ~3-4× over-estimation
+3. Added `traffic_cost_per_stop = overtaking_difficulty × 15.0` — penalise extra stops based on circuit (0.70–0.80 difficulty range)
+4. Raised prior weight: 0.30 → 0.50 — gives historical data equal weight with physics
+
+**Result:** All 6/6 realism checks pass (Bahrain/Monaco/Qatar validation scenarios). Physics ranking still shows 3-stop as fastest (because it is, on lap times alone), but combined ranking correctly favours strategies aligned with historical data.
 
 ---
 
@@ -242,16 +268,42 @@ Qatar:    min_stops=2, max_laps_per_set=25
 
 ## What to work on next
 
-### Priority 1 — Fix 3-stop bias in optimizer (race_simulator.py)
-- Cap `tire_age_laps` at plateau per compound in `build_feature_matrix()`
-- Add `traffic_cost` per pit stop based on `overtaking_difficulty`
-- Raise prior weight from 0.30 to 0.40 in `optimize_strategy()`
-
-### Priority 2 — Module 4: Safety Car Predictor
+### Priority 1 — Module 4: Safety Car Predictor
 - Classification model (XGBoost) per lap
 - Features: circuit characteristics, historical SC rate, gap variance, race phase
 - Output: P(safety car on this lap)
+- Integration: feed to race simulator to adjust pit strategy windows
 
-### Priority 3 — Module 5: Race Outcome Predictor
+### Priority 2 — Module 5: Race Outcome Predictor
 - Combines driver scores + predicted pace + pit strategies + SC probability
 - Output: P(finishing position) per driver
+- Dashboard page: live race position predictor
+
+### Priority 3 — Extend Strategy Optimizer
+- **Wet weather handling:** separate INTERMEDIATE/WET compound models
+- **Tire temperature model:** warm-up penalties in opening stint
+- **Safety car scenarios:** recompute strategies post-SC with different pit windows
+- **Multi-scenario analysis:** plot strategy sensitivity to fuel loads, tire degradation uncertainty
+
+---
+
+## Recent Changes (April 2026)
+
+### Completed
+✅ **Fix 3-stop bias** — Applied tire plateau caps, degradation feature scaling, traffic cost, and prior weight adjustment (0.30 → 0.50)
+✅ **Dashboard labels** — Updated from 70/30 to 50/50 in all UI captions
+✅ **Validation scripts reorganization** — Moved 5 CLI utilities into `model/strategy_optimizer/validations/` with updated path resolution
+✅ **Documentation** — Updated README.md and CLAUDE.md with new commands and project structure
+
+### Validation Results (Bahrain/Monaco/Qatar)
+- **Physics ranking:** Still favours 3-stop (raw lap times alone)
+- **Combined ranking:** Correctly aligns with historical preference (Bahrain: 2-stop, Monaco: 2-stop, Qatar: 3-stop)
+- **Realism checks:** 6/6 pass (pit windows enforced, 94–97% invalid strategies pruned)
+
+### Files Changed
+- `model/strategy_optimizer/race_simulator.py` — Added TIRE_AGE_PLATEAU, DEG_FEATURE_SCALE, traffic_cost
+- `model/strategy_optimizer/pit_stop_optimizer.py` — Updated prior weight 0.40 → 0.50, fixed labels
+- `dashboard/pages/1_Strategy_Optimizer.py` — Fixed weight label 70/30 → 50/50
+- `model/strategy_optimizer/validations/` (NEW) — 5 validation scripts + README
+- `README.md` — Added §6 validation commands + updated structure tree
+- `CLAUDE.md` — Updated (this file) with new commands, fixed 3-stop issue, updated priorities
