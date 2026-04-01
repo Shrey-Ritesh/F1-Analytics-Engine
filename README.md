@@ -73,6 +73,31 @@ PYTHONPATH=. python main.py
 
 ---
 
+## 6. Validation & Debugging Utilities
+
+Inspect strategy optimizer internals, validate prior scores, and test scenarios:
+
+```bash
+# View pit stop data by circuit/year
+PYTHONPATH=. python model/strategy_optimizer/validations/check_pit_data.py
+
+# Check historical prior scores
+PYTHONPATH=. python model/strategy_optimizer/validations/check_priors.py
+
+# Analyze stint length distributions (basis for STINT_BOUNDS)
+PYTHONPATH=. python model/strategy_optimizer/validations/check_stint_ranges.py
+
+# Validate circuit profile data
+PYTHONPATH=. python model/strategy_optimizer/validations/sanity_check.py
+
+# Run extended test scenarios on multiple circuits
+PYTHONPATH=. python model/strategy_optimizer/validations/extra_validations.py
+```
+
+See `model/strategy_optimizer/validations/README.md` for details on each script.
+
+---
+
 ## Architecture
 
 ```
@@ -158,7 +183,16 @@ f1_ai_strategy_system/
 │       ├── race_simulator.py
 │       ├── regulations.py
 │       ├── regulations.json
-│       └── circuit_strategy_profiles.json
+│       ├── circuit_strategy_profiles.json
+│       ├── historical_strategy_extractor.py
+│       └── validations/
+│           ├── __init__.py
+│           ├── README.md
+│           ├── check_pit_data.py
+│           ├── check_priors.py
+│           ├── check_stint_ranges.py
+│           ├── sanity_check.py
+│           └── extra_validations.py
 ├── dashboard/
 │   ├── Home.py
 │   ├── pages/

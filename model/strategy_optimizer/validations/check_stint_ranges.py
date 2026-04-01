@@ -1,18 +1,25 @@
+"""
+Analyze stint length distribution from historical strategies.
+Computes percentiles and breakdowns by compound and stint position.
+"""
 import pandas as pd
 import ast
-import os
+from pathlib import Path
 
-strategies = pd.read_csv('data/processed/historical_strategies.csv')
+# Resolve path relative to this file's location
+strategies_path = Path(__file__).parent.parent.parent.parent / 'data' / 'processed' / 'historical_strategies.csv'
+
+strategies = pd.read_csv(strategies_path)
 
 records = []
 for _, row in strategies[strategies['data_quality'] == 'clean'].iterrows():
     pit_laps = ast.literal_eval(row['pit_laps'])
     compounds = ast.literal_eval(row['compounds'])
     total_laps = row['total_laps']
-    
+
     # Build stint boundaries
     boundaries = [0] + pit_laps + [total_laps]
-    
+
     for i, compound in enumerate(compounds):
         stint_len = boundaries[i+1] - boundaries[i]
         records.append({

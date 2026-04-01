@@ -1,5 +1,15 @@
+"""
+Extended validation scenarios across multiple circuits.
+Tests optimizer performance on Miami, Emilia Romagna, Silverstone, Monza.
+"""
 import time
-from model.strategy_optimizer.pit_stop_optimizer import optimize_strategy, print_strategy_report
+import sys
+from pathlib import Path
+
+# Add parent directory to path for local imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from pit_stop_optimizer import optimize_strategy, print_strategy_report
 
 scenarios = [
     {'circuit': 'Miami Grand Prix', 'laps': 57},
