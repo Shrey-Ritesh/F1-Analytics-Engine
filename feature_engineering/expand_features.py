@@ -225,7 +225,7 @@ def expand_features(data_dir: str):
     # Save the mappings to a JSON file for future reference
     mappings_path = os.path.join(training_dir, 'category_mappings.json')
     with open(mappings_path, 'w') as f:
-        json.dump(mappings_dict, f, indent=4)
+        json.dump(mappings_dict, f, indent=4, ensure_ascii=False)
         
     # Export the perfectly encoded dataset
     ml_out_path = os.path.join(training_dir, 'f1_training_dataset.csv')

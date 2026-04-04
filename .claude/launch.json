@@ -1,0 +1,41 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "F1 Dashboard",
+      "runtimeExecutable": "streamlit",
+      "runtimeArgs": ["run", "/Users/shrey/Desktop/AI assistant F1 Model /dashboard/Home.py", "--server.headless", "true", "--server.port", "8501"],
+      "env": {
+        "PYTHONPATH": "/Users/shrey/Desktop/AI assistant F1 Model "
+      },
+      "port": 8501
+    },
+    {
+      "name": "F1 Preview Dashboard",
+      "runtimeExecutable": "streamlit",
+      "runtimeArgs": ["run", "/Users/shrey/Desktop/f1_dashboard_preview/dashboard.py", "--server.headless", "true", "--server.port", "8502"],
+      "env": {
+        "PYTHONPATH": "/Users/shrey/Desktop/f1_dashboard_preview"
+      },
+      "port": 8502
+    },
+    {
+      "name": "Pit Stop Strategy Optimizer",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "model.strategy_optimizer.pit_stop_optimizer"],
+      "env": {
+        "PYTHONPATH": "/Users/shrey/Desktop/AI assistant F1 Model "
+      },
+      "port": null
+    },
+    {
+      "name": "F1 Data Pipeline (full)",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["main.py"],
+      "env": {
+        "PYTHONPATH": "/Users/shrey/Desktop/AI assistant F1 Model "
+      },
+      "port": null
+    }
+  ]
+}
