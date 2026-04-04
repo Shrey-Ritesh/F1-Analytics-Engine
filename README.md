@@ -354,7 +354,7 @@ PYTHONPATH=. python -c "import xgboost, fastf1, streamlit; print('All good')"
 PYTHONPATH=. streamlit run dashboard/Home.py
 ```
 
-Open **http://localhost:8501** in your browser.
+Open the local URL printed in your terminal once the server starts.
 
 ---
 
