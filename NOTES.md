@@ -89,3 +89,58 @@ There is no `safety_car_lap` column in the dataset. SC laps must be **inferred**
 - Existing pipeline uses **1.5 kg/lap**
 - Phase 2 `fuel_model.py` will use **1.85 kg/lap** (more accurate F1 value)
 - The existing `fuel_load_estimate` column in the dataset uses 1.5 kg/lap — Phase 2 will add a new `fuel_load_kg` column alongside it
+
+---
+
+## Pit Stop Optimizer — Known Issues & Phase 2 Fixes
+
+### 7. Physics Model Has a Systematic Multi-Stop Bias
+**Finding:** The optimizer's combined score (50% physics time + 50% historical prior) consistently over-recommends 3-stop strategies, even at circuits where 1-stop is historically dominant 80–94% of the time (Azerbaijan, Saudi Arabia, Singapore).
+
+**Root cause:** The XGBoost lap time model correctly predicts SOFT tires are faster lap-to-lap. With no constraint on track position value, the physics component always prefers the highest feasible stop count. The `time_score` normalization creates extreme spread (e.g. `0.0015` for 1-stop vs `0.9958` for 3-stop at Azerbaijan), which the 50% prior weight cannot overcome regardless of how confident the prior is.
+
+**Validation results across 8 circuits (driver_id=1, team=3, grid=P3, temp=35°C):**
+| Circuit | Hist. dominant | Model top pick | Match |
+|---|---|---|---|
+| Azerbaijan GP | 1-stop (94%) | 3-stop | ✗ |
+| Saudi Arabian GP | 1-stop (91%) | 3-stop | ✗ |
+| Singapore GP | 1-stop (80%) | 2-stop | ✗ |
+| Bahrain GP | 2-stop (82%) | 3-stop | ✗ |
+| Hungarian GP | 2-stop (76%) | 2-stop | ✓ |
+| Spanish GP | 2-stop (70%) | 3-stop | ✗ |
+| Qatar GP | 3-stop (43%) | 3-stop | ✓ |
+| Austrian GP | 3-stop (36%) | 3-stop | ✓ |
+
+Overall: **3/8 correct (38%)**. The model only gets it right when physics and history agree (high-deg circuits that genuinely need more stops).
+
+---
+
+### 8. `fuel_model.py` and `circuit_dna.py` Will NOT Fix the Multi-Stop Bias
+- **`fuel_model.py`** corrects fuel load by ~0.055s/lap. Total swing between 1-stop and 3-stop over 50 laps ≈ 1–3s — nowhere near the 87–156s gaps observed. Negligible impact on strategy ranking.
+- **`circuit_dna.py`** builds a circuit fingerprint/archetype clustering. It's a representation layer — it doesn't touch the optimizer's scoring function. No direct effect unless explicitly wired in.
+
+---
+
+### 9. Three Things That Will Actually Fix the Bias
+
+**Fix 1 — Circuit-specific prior weight (quick, within optimizer)**
+Scale the prior weight by `overtaking_difficulty` from `circuit_strategy_profiles.json`. At low-overtaking circuits (OT > 0.7), raise prior weight to ~65–70% instead of 50%. This is the minimum viable fix and can be done before Phase 2.
+
+```python
+# In optimize_strategy(), replace hardcoded 0.50 / 0.50:
+ot = circuit_profiles.get(circuit, {}).get('overtaking_difficulty', 0.5)
+prior_weight = 0.50 + 0.20 * ot        # 0.50 at OT=0 → 0.70 at OT=1.0
+physics_weight = 1.0 - prior_weight
+s['combined_score'] = physics_weight * s['time_score'] + prior_weight * s['prior_score']
+```
+
+**Fix 2 — `race_outcome.py` (Phase 2, high impact)**
+Replacing lap-time-sum with actual position-based race outcome modeling will implicitly capture track position value. Losing 10 positions in a pit stop at Monaco that you can never recover is not reflected in any lap time model.
+
+**Fix 3 — Tire degradation fix (already planned in NOTES #1)**
+Better slope-based degradation rates will make Hard tires look more competitive on long stints, narrowing the performance gap that currently makes multi-stop look overwhelmingly better to the physics component.
+
+---
+
+### 10. Prior Score Calibration Is Sound — The Weighting Is the Problem
+The `score_strategy_prior()` function in `historical_strategy_extractor.py` works correctly. At Azerbaijan, the 1-stop prior score is **0.887** — it correctly identifies the dominant strategy. The issue is purely in how time_score and prior_score are combined. Do not change the prior scoring function; change the weight in `optimize_strategy()`.

@@ -11,7 +11,8 @@
       "Bash(PYTHONPATH=. venv/bin/python -m model.strategy_optimizer.pit_stop_optimizer)",
       "Bash(rm check_pit_data.py check_priors.py check_stint_ranges.py extra_validations.py sanity_check.py)",
       "Bash(ls -la *.py)",
-      "Bash(python -c \":*)"
+      "Bash(python -c \":*)",
+      "Read(//Users/shrey/Desktop/AI assistant F1 Model /model/strategy_optimizer/**)"
     ]
   }
 }
