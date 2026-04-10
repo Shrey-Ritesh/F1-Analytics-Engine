@@ -22,7 +22,7 @@ An end-to-end AI-powered Formula 1 race strategy and outcome prediction system. 
 
 **Dataset:** 76,163 laps · 2023, 2024, 2025 seasons · 24 circuits · ~32 drivers · 39 features per lap
 
-**Tech stack:** Python · Pandas · NumPy · XGBoost · Scikit-learn · FastF1 · Streamlit · Plotly · Anthropic API (Phase 2)
+**Tech stack:** Python · Pandas · NumPy · XGBoost · Scikit-learn · FastF1 · Streamlit · Plotly
 
 **Core idea:** Rather than treating a race as a single prediction problem, the system breaks race strategy down into its physical components — fuel load, tyre degradation, safety car probability, qualifying pace, undercut windows — and models each independently before combining them into a final race outcome prediction. A scenario simulator and LLM chatbot layer then let users explore "what if" questions in natural language.
 
@@ -170,7 +170,7 @@ flowchart TD
 
 ### Lap Time Model (XGBoost v7)
 - **Target:** `lap_time_seconds`
-- **Training:** 2023–2024 data (42,294 laps); tested on 2025 (21,737 laps) — strict temporal split, no leakage
+- **Training:** 2023–2024 data (42,294 laps); tested on 2025 (21,737 laps)
 - **Top features:** `circuit_baseline_pace`, `tire_age_laps`, `compound_base_deg_rate`, `fuel_load_estimate`, `dirty_air_flag`
 - **Output:** `model/lap_time_model/lap_time_model_v7.pkl`
 
