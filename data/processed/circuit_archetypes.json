@@ -1,0 +1,58 @@
+{
+  "archetypes": {
+    "street_circuit": [
+      "Abu Dhabi Grand Prix",
+      "Australian Grand Prix",
+      "Austrian Grand Prix",
+      "Bahrain Grand Prix",
+      "Belgian Grand Prix",
+      "British Grand Prix",
+      "Canadian Grand Prix",
+      "Dutch Grand Prix",
+      "Hungarian Grand Prix",
+      "Japanese Grand Prix",
+      "Qatar Grand Prix",
+      "Spanish Grand Prix",
+      "S\u00e3o Paulo Grand Prix"
+    ],
+    "high_degradation": [
+      "Las Vegas Grand Prix"
+    ],
+    "power_circuit": [
+      "Monaco Grand Prix"
+    ],
+    "balanced": [
+      "Azerbaijan Grand Prix",
+      "Chinese Grand Prix",
+      "Emilia Romagna Grand Prix",
+      "Italian Grand Prix",
+      "Mexico City Grand Prix",
+      "Miami Grand Prix",
+      "Saudi Arabian Grand Prix",
+      "Singapore Grand Prix",
+      "United States Grand Prix"
+    ]
+  },
+  "feature_names": [
+    "baseline_lap_time",
+    "lap_time_std",
+    "avg_stint_length",
+    "track_temperature_mean",
+    "pit_loss_time",
+    "soft_deg_rate",
+    "medium_deg_rate",
+    "hard_deg_rate",
+    "overtaking_difficulty",
+    "one_stop_pct",
+    "two_stop_pct",
+    "three_stop_pct",
+    "dominant_stop_count",
+    "first_pit_mean",
+    "pit_window_spread",
+    "strategy_entropy",
+    "deg_spread",
+    "compound_diversity"
+  ],
+  "n_circuits": 24,
+  "kmeans_k": 4
+}
