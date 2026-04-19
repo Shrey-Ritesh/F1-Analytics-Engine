@@ -1,35 +1,35 @@
 {
   "archetypes": {
     "street_circuit": [
-      "Abu Dhabi Grand Prix",
-      "Australian Grand Prix",
+      "Azerbaijan Grand Prix",
+      "Italian Grand Prix",
+      "Miami Grand Prix",
+      "Saudi Arabian Grand Prix",
+      "Singapore Grand Prix"
+    ],
+    "high_degradation": [
       "Austrian Grand Prix",
       "Bahrain Grand Prix",
+      "Qatar Grand Prix",
+      "Spanish Grand Prix"
+    ],
+    "high_overtaking": [
+      "Abu Dhabi Grand Prix",
+      "Australian Grand Prix",
       "Belgian Grand Prix",
       "British Grand Prix",
       "Canadian Grand Prix",
       "Dutch Grand Prix",
       "Hungarian Grand Prix",
-      "Japanese Grand Prix",
-      "Qatar Grand Prix",
-      "Spanish Grand Prix",
-      "S\u00e3o Paulo Grand Prix"
-    ],
-    "high_degradation": [
       "Las Vegas Grand Prix"
     ],
-    "power_circuit": [
-      "Monaco Grand Prix"
-    ],
     "balanced": [
-      "Azerbaijan Grand Prix",
       "Chinese Grand Prix",
       "Emilia Romagna Grand Prix",
-      "Italian Grand Prix",
+      "Japanese Grand Prix",
       "Mexico City Grand Prix",
-      "Miami Grand Prix",
-      "Saudi Arabian Grand Prix",
-      "Singapore Grand Prix",
+      "Monaco Grand Prix",
+      "S\u00e3o Paulo Grand Prix",
       "United States Grand Prix"
     ]
   },
@@ -51,7 +51,7 @@
     "pit_window_spread",
     "strategy_entropy",
     "deg_spread",
-    "compound_diversity"
+    "top_compound_freq"
   ],
   "n_circuits": 24,
   "kmeans_k": 4

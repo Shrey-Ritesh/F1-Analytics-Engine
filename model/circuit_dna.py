@@ -2,11 +2,32 @@
 circuit_dna.py — Phase 2 circuit fingerprinting and archetype clustering
 ========================================================================
 Builds an 18-feature fingerprint for each of the 24 F1 circuits and
-assigns one of 4 archetypes via KMeans clustering.
+assigns one of 4 archetypes via KMeans (k=4) clustering.
 
-Archetypes: street_circuit | high_degradation | power_circuit | balanced
+Archetypes
+----------
+  street_circuit   — 1-stop dominant, track position is precious
+                     (Azerbaijan, Italian, Miami, Saudi Arabian, Singapore)
+  high_degradation — multi-stop forced by tire wear, 3-stop tendency
+                     (Austrian, Bahrain, Qatar, Spanish)
+  high_overtaking  — 2-stop dominant, overtaking feasible, active strategy
+                     (Abu Dhabi, Australian, Belgian, British, Canadian,
+                      Dutch, Hungarian, Las Vegas)
+  balanced         — mixed strategy profile, no single dominant approach
+                     (Chinese, Emilia Romagna, Japanese, Mexico City,
+                      Monaco, São Paulo, United States)
 
-Outputs:
+Design note
+-----------
+Clustering uses CLUSTERING_FEATURES (9 strategy-profile features), a
+curated subset of FEATURE_NAMES.  Raw lap-physics features (soft_deg_rate,
+lap_time_std) are excluded from clustering because their extreme outliers
+(Las Vegas surface / Monaco safety-car variance) collapse KMeans into
+singletons even after log-transform.  All 18 FEATURE_NAMES are still
+written to the output CSV for use by downstream modules.
+
+Outputs
+-------
   data/processed/circuit_dna.csv          — per-circuit fingerprint + label
   data/processed/circuit_archetypes.json  — archetype → circuits mapping
 """
@@ -52,10 +73,27 @@ FEATURE_NAMES = [
     "pit_window_spread",
     "strategy_entropy",
     "deg_spread",
-    "compound_diversity",
+    "top_compound_freq",
 ]
 
-ARCHETYPE_LABELS = ["street_circuit", "high_degradation", "power_circuit", "balanced"]
+ARCHETYPE_LABELS = ["street_circuit", "high_degradation", "high_overtaking", "balanced"]
+
+# Features used for KMeans clustering — strategy-focused subset of FEATURE_NAMES.
+# Raw lap-physics features (soft_deg_rate, lap_time_std) are excluded here because
+# they contain extreme outliers (Las Vegas deg spike, Monaco SC variance) that
+# collapse clusters into singletons even after log-transform.
+# All 18 FEATURE_NAMES still appear in the output CSV for downstream modules.
+CLUSTERING_FEATURES = [
+    "overtaking_difficulty",
+    "one_stop_pct",
+    "two_stop_pct",
+    "three_stop_pct",
+    "dominant_stop_count",
+    "strategy_entropy",
+    "first_pit_mean",
+    "avg_stint_length",
+    "top_compound_freq",
+]
 
 
 # ---------------------------------------------------------------------------
@@ -188,7 +226,9 @@ def build_fingerprints(
         # --- Derived features ---
         strategy_entropy = _shannon_entropy(stop_dist)
         deg_spread = soft_deg_rate - hard_deg_rate
-        compound_diversity = min(len(top_compounds), 3)
+        # Frequency of the most common compound sequence (0–1).
+        # Replaces the old compound_diversity which was constant=3 for all circuits.
+        top_compound_freq = float(top_compounds[0][1]) if top_compounds else 0.0
 
         rows.append({
             "circuit": circuit,
@@ -209,7 +249,7 @@ def build_fingerprints(
             "pit_window_spread": pit_window_spread,
             "strategy_entropy": strategy_entropy,
             "deg_spread": deg_spread,
-            "compound_diversity": compound_diversity,
+            "top_compound_freq": top_compound_freq,
         })
 
     result = pd.DataFrame(rows).set_index("circuit")
@@ -224,6 +264,11 @@ def cluster_circuits(fingerprint_df: pd.DataFrame, k: int = 4) -> pd.DataFrame:
     """
     Run KMeans clustering on the fingerprint DataFrame and assign archetype labels.
 
+    Two features — soft_deg_rate and lap_time_std — are log1p-transformed
+    internally before StandardScaler + KMeans to prevent extreme outliers
+    (Las Vegas deg spike, Monaco safety-car variance) from collapsing clusters
+    into singletons.  Raw values are preserved in the output DataFrame.
+
     Parameters
     ----------
     fingerprint_df : DataFrame with FEATURE_NAMES columns (index = circuit name)
@@ -235,57 +280,60 @@ def cluster_circuits(fingerprint_df: pd.DataFrame, k: int = 4) -> pd.DataFrame:
     """
     df = fingerprint_df.copy()
 
-    # Normalize
-    scaler = StandardScaler()
-    X = scaler.fit_transform(df[FEATURE_NAMES].values)
+    # Cluster on CLUSTERING_FEATURES only (strategy-focused subset).
+    # All 18 FEATURE_NAMES are preserved in df / output CSV for downstream use.
+    X_raw = df[CLUSTERING_FEATURES].values.astype(float)
 
-    # KMeans
+    # Normalize and cluster
+    scaler = StandardScaler()
+    X = scaler.fit_transform(X_raw)
+
     km = KMeans(n_clusters=k, random_state=42, n_init=10)
     labels = km.fit_predict(X)
     df["archetype_id"] = labels
 
-    # Map cluster id → archetype label using centroids (in original feature space)
+    # Centroids in original (unscaled) feature space — used for label assignment.
     centroids = scaler.inverse_transform(km.cluster_centers_)
-    centroid_df = pd.DataFrame(centroids, columns=FEATURE_NAMES)
+    centroid_df = pd.DataFrame(centroids, columns=CLUSTERING_FEATURES)
 
     assigned: dict[int, str] = {}
-    remaining_clusters = list(range(k))
+    remaining = list(range(k))
 
-    # Rule 1: street_circuit — highest overtaking_difficulty AND lowest one_stop_pct
-    #   Score = overtaking_difficulty rank (desc) + (1 - one_stop_pct rank asc)
-    od_rank = centroid_df["overtaking_difficulty"].rank(ascending=False)
-    os_rank = centroid_df["one_stop_pct"].rank(ascending=True)   # lower one_stop → higher rank
-    street_score = od_rank + os_rank
-    street_cluster = int(street_score.idxmin())   # lowest combined rank = best street match
+    # --- Greedy priority label assignment ---
+
+    # 1. street_circuit: highest one_stop_pct × overtaking_difficulty
+    #    Circuits where track position is precious → drivers run long stints
+    #    rather than sacrificing position for a faster tire.
+    street_score = centroid_df["one_stop_pct"] * centroid_df["overtaking_difficulty"]
+    street_cluster = int(street_score.idxmax())
     assigned[street_cluster] = "street_circuit"
-    remaining_clusters = [c for c in remaining_clusters if c != street_cluster]
+    remaining = [c for c in remaining if c != street_cluster]
 
-    # Rule 2: high_degradation — highest soft_deg_rate + medium_deg_rate
-    deg_sum = centroid_df["soft_deg_rate"] + centroid_df["medium_deg_rate"]
-    # Only consider remaining clusters
-    best_deg = deg_sum.iloc[remaining_clusters].idxmax()
-    hd_cluster = int(best_deg)
+    # 2. high_degradation: highest (three_stop_pct - one_stop_pct)
+    #    Circuits that chew through tires force multi-stop strategies.
+    #    Subtracting one_stop_pct avoids picking up circuits that happen to
+    #    have high strategy_entropy but are 1-stop dominated.
+    deg_score = centroid_df["three_stop_pct"] - centroid_df["one_stop_pct"]
+    hd_cluster = int(deg_score.iloc[remaining].idxmax())
     assigned[hd_cluster] = "high_degradation"
-    remaining_clusters = [c for c in remaining_clusters if c != hd_cluster]
+    remaining = [c for c in remaining if c != hd_cluster]
 
-    # Rule 3: power_circuit — lowest baseline_lap_time + high lap_time_std
-    #   Score = baseline_lap_time rank (asc, lower is better) + lap_time_std rank (desc)
-    blt_rank = centroid_df["baseline_lap_time"].rank(ascending=True)
-    lts_rank = centroid_df["lap_time_std"].rank(ascending=False)
-    power_score = blt_rank + lts_rank
-    best_power = power_score.iloc[remaining_clusters].idxmin()
-    pc_cluster = int(best_power)
-    assigned[pc_cluster] = "power_circuit"
-    remaining_clusters = [c for c in remaining_clusters if c != pc_cluster]
+    # 3. high_overtaking: highest two_stop_pct × strategy_entropy
+    #    Open circuits where overtaking is feasible → aggressive 2-stop strategies
+    #    dominate and the field adopts a varied mix of approaches.
+    ot_score = centroid_df["two_stop_pct"] * centroid_df["strategy_entropy"]
+    ot_cluster = int(ot_score.iloc[remaining].idxmax())
+    assigned[ot_cluster] = "high_overtaking"
+    remaining = [c for c in remaining if c != ot_cluster]
 
-    # Rule 4: balanced — whatever is left
-    if remaining_clusters:
-        assigned[remaining_clusters[0]] = "balanced"
+    # 4. balanced: whatever cluster remains
+    if remaining:
+        assigned[remaining[0]] = "balanced"
 
-    # Safety fallback: if any cluster unassigned (shouldn't happen with k=4)
+    # Safety fallback (shouldn't trigger with k=4)
     for cid in range(k):
         if cid not in assigned:
-            assigned[cid] = ARCHETYPE_LABELS[cid]
+            assigned[cid] = ARCHETYPE_LABELS[cid % len(ARCHETYPE_LABELS)]
 
     df["archetype_label"] = df["archetype_id"].map(assigned)
     return df

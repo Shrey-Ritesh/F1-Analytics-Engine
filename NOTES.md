@@ -142,5 +142,18 @@ Better slope-based degradation rates will make Hard tires look more competitive 
 
 ---
 
+### 11. circuit_dna.py — CLUSTERING_FEATURES ≠ FEATURE_NAMES (by design)
+`circuit_dna.py` exposes two separate lists:
+- `FEATURE_NAMES` (18 features) — the full fingerprint written to `circuit_dna.csv` for use by downstream modules
+- `CLUSTERING_FEATURES` (9 features) — the strategy-focused subset actually passed to KMeans
+
+Raw lap-physics features (`soft_deg_rate`, `lap_time_std`) are excluded from clustering because their extreme outliers (Las Vegas abrasive surface, Monaco safety-car/red-flag variance) collapse KMeans into singletons even after log1p transform. Keeping all 18 in the CSV means other modules can still use the raw deg rates for physics calculations.
+
+**Final archetypes (circuit counts: 5 / 4 / 8 / 7):**
+- `street_circuit` — Azerbaijan, Italian, Miami, Saudi Arabian, Singapore
+- `high_degradation` — Austrian, Bahrain, Qatar, Spanish
+- `high_overtaking` — Abu Dhabi, Australian, Belgian, British, Canadian, Dutch, Hungarian, Las Vegas
+- `balanced` — Chinese, Emilia Romagna, Japanese, Mexico City, Monaco, São Paulo, United States
+
 ### 10. Prior Score Calibration Is Sound — The Weighting Is the Problem
 The `score_strategy_prior()` function in `historical_strategy_extractor.py` works correctly. At Azerbaijan, the 1-stop prior score is **0.887** — it correctly identifies the dominant strategy. The issue is purely in how time_score and prior_score are combined. Do not change the prior scoring function; change the weight in `optimize_strategy()`.
