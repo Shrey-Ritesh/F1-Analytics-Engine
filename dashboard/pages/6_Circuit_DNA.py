@@ -127,12 +127,17 @@ with col_right:
     theta = [f.replace("_", " ").title() for f in CLUSTERING_FEATURES]
     r_vals = [float(sel_row_norm[f]) for f in CLUSTERING_FEATURES]
 
+    def hex_to_rgba(hex_color: str, alpha: float) -> str:
+        h = hex_color.lstrip("#")
+        r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+        return f"rgba({r},{g},{b},{alpha})"
+
     fig_radar = go.Figure()
     fig_radar.add_trace(go.Scatterpolar(
         r=r_vals + [r_vals[0]],
         theta=theta + [theta[0]],
         fill="toself",
-        fillcolor=f"{arch_color}30",
+        fillcolor=hex_to_rgba(arch_color, 0.19),
         line=dict(color=arch_color, width=2),
         name=selected_circuit.replace(" Grand Prix", ""),
     ))
@@ -146,17 +151,16 @@ with col_right:
         r=centroid_r + [centroid_r[0]],
         theta=theta + [theta[0]],
         mode="lines",
-        line=dict(color="#ffffff55", width=1, dash="dot"),
+        line=dict(color="rgba(255,255,255,0.33)", width=1, dash="dot"),
         name=f"{arch_display[archetype][0]} avg",
     ))
 
+    dark_layout(fig_radar, height=420)
     fig_radar.update_layout(
-        **dark_layout(),
         polar=dict(
             radialaxis=dict(visible=True, range=[0, 1], color="#555"),
             bgcolor="#111",
         ),
-        height=420,
         showlegend=True,
     )
     st.plotly_chart(fig_radar, use_container_width=True)
@@ -189,7 +193,7 @@ fig_pca = px.scatter(
     height=480,
 )
 fig_pca.update_traces(textposition="top center", marker=dict(size=10))
-fig_pca.update_layout(**dark_layout())
+dark_layout(fig_pca, height=480)
 st.plotly_chart(fig_pca, use_container_width=True)
 
 st.divider()

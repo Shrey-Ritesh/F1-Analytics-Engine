@@ -129,12 +129,8 @@ with col_form:
             name="Position",
         ))
         fig_form.update_yaxes(autorange="reversed", title="Position")
-        fig_form.update_layout(
-            **dark_layout(),
-            height=260,
-            title=f"Last {len(positions)} races",
-            xaxis_title="",
-        )
+        dark_layout(fig_form, title=f"Last {len(positions)} races", height=260)
+        fig_form.update_layout(xaxis_title="")
         st.plotly_chart(fig_form, use_container_width=True)
 
 with col_grid_sweep:
@@ -172,9 +168,8 @@ with col_grid_sweep:
         marker=dict(size=14, color="white", symbol="star"),
         name="Selected grid",
     ))
+    dark_layout(fig_sweep, height=260)
     fig_sweep.update_layout(
-        **dark_layout(),
-        height=260,
         xaxis_title="Grid Position",
         yaxis_title="Predicted Finish",
         yaxis=dict(autorange="reversed"),
@@ -210,13 +205,8 @@ fig_comp = go.Figure(go.Bar(
     textposition="outside",
 ))
 fig_comp.update_yaxes(autorange="reversed")
-fig_comp.update_layout(
-    **dark_layout(),
-    height=380,
-    xaxis_tickangle=-45,
-    yaxis_title="Predicted Finish",
-    xaxis_title="",
-)
+dark_layout(fig_comp, height=380)
+fig_comp.update_layout(xaxis_tickangle=-45, yaxis_title="Predicted Finish", xaxis_title="")
 st.plotly_chart(fig_comp, use_container_width=True)
 
 # ── Driver form leaderboard ─────────────────────────────────────────────────

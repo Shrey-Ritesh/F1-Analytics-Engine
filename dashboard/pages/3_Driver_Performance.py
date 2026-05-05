@@ -66,7 +66,7 @@ with tab2:
         "Compare drivers (max 5)",
         options=df["driver"].tolist(),
         default=default_sel,
-        format_option=lambda x: f"{x} — {DRIVER_NAMES.get(x, x)}",
+        format_func=lambda x: f"{x} — {DRIVER_NAMES.get(x, x)}",
     )
     if len(selected) > 5:
         st.warning("Select at most 5 drivers.")

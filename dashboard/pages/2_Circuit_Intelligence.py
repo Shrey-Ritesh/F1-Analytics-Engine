@@ -85,7 +85,7 @@ if windows:
     fig3 = go.Figure()
     colors_w = ["#2ECC71", "#F39C12", "#E74C3C"]
     for idx, (n_stops_key, stop_data) in enumerate(sorted(windows.items())):
-        stop_labels = [f"Stop {int(k) + 1}" for k in sorted(stop_data.keys())]
+        stop_labels = [f"Stop {k.split('_')[1]}" for k in sorted(stop_data.keys())]
         means = [stop_data[k][0] for k in sorted(stop_data.keys())]
         stds  = [stop_data[k][1] for k in sorted(stop_data.keys())]
         fig3.add_trace(go.Scatter(
