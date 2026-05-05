@@ -233,7 +233,7 @@ with tab4:
 
             stop_labels, means, stds = [], [], []
             for stop_key, (mean, std) in w_data.items():
-                stop_labels.append(f"Stop {int(stop_key) + 1}")
+                stop_labels.append(f"Stop {stop_key.split('_')[1]}")
                 means.append(mean)
                 stds.append(std)
 
