@@ -157,3 +157,57 @@ Raw lap-physics features (`soft_deg_rate`, `lap_time_std`) are excluded from clu
 
 ### 10. Prior Score Calibration Is Sound — The Weighting Is the Problem
 The `score_strategy_prior()` function in `historical_strategy_extractor.py` works correctly. At Azerbaijan, the 1-stop prior score is **0.887** — it correctly identifies the dominant strategy. The issue is purely in how time_score and prior_score are combined. Do not change the prior scoring function; change the weight in `optimize_strategy()`.
+
+---
+
+## Lap Time Model — v8 Architecture
+
+### 12. v8 Model — What Was Tried, What Failed, What Shipped (2026-05-13)
+
+#### Approaches that failed
+
+**Per-year circuit baselines** (first attempt): RMSE improved 1.877→1.756s but bias flipped from -1.05s to +0.83s.
+
+**Per-race circuit baselines** (second attempt): Failed catastrophically (RMSE 5.28s). Anomalous early laps in São Paulo 2025 (baseline 99.2s vs typical 76s) and British GP 2025 caused corrupted baselines for every prediction at those circuits. **Do not use per-race baselines.**
+
+**compound_year_offset feature** (third attempt): Designed to fix the flat HARD -1.35s / MEDIUM -0.93s compound bias. Failed with massive overfitting (train RMSE 0.76s, test RMSE 3.33s). Root cause: 2025 compound offsets are negative (cars faster than pooled baseline), but all training offsets are positive — XGBoost cannot extrapolate past the training boundary for this feature. Excluding Canada from training also backfired since Canada is in the test set. **Do not use compound_year_offset or exclude Canada from training.**
+
+#### v8 Final Architecture (`lap_time_model_v8.pkl`)
+
+- **Baseline strategy**: Per-year — each year's clean laps (laps 3–15, dry, no pit stops) compute that year's circuit baseline. Mirrors production where qualifying/FP3 data anchors the baseline.
+- **Fuel correction**: 1.85 kg/lap (was 1.5), 0.035 s/kg sensitivity (was 0.03). New columns `fuel_load_kg` and `fuel_time_effect_v2` — originals preserved.
+- **Features removed vs v7** (corr(abs_error) < 0.04 confirmed on 2025 test set): `gap_to_car_ahead_seconds`, `gap_to_leader_seconds`, `dirty_air_flag`.
+- **Features added vs v7**: `race_year` (gain rank 11), `driver_avg_lap_time` (rank 3), `driver_podium_rate` (rank 7, partial_r=-0.26), `driver_win_rate` (rank 14, partial_r=-0.19).
+- **Hyperparameters**: Added `min_child_weight` regularisation axis. Best: `max_depth=4, lr=0.1, n_estimators=400, subsample=1.0, colsample_bytree=0.8, min_child_weight=5`.
+
+#### v8 vs v7 Results
+
+| Metric       | v7      | v8      | Delta   |
+|---|---|---|---|
+| RMSE         | 1.877s  | 1.766s  | -0.111s |
+| MAE          | 1.460s  | 1.218s  | -0.242s |
+| Median error | 1.164s  | 0.853s  | -0.311s |
+| p75 error    | 2.229s  | 1.562s  | -0.667s |
+| Outliers >3s | 10.4%   | 8.6%    | -1.8pp  |
+| Bias         | -1.050s | +0.789s | flipped |
+
+#### Multi-agent diagnostic findings
+
+1. **Compound bias is flat**: HARD -1.35s, MEDIUM -0.93s, SOFT -0.31s bias in v7 is constant across all tire age and lap buckets — a compound-level year-drift issue, not a degradation curve issue.
+2. **Canada was 51% of all >3s outliers in v7**: 2025 Canada baseline was 4.5s/lap faster than 2023–2024. v8 per-year baselines fix this (Canada v8 RMSE: 0.97s vs v7 4.21s).
+3. **Position/gap features add no signal**: Corr(gap_to_car_ahead_seconds, abs_error) = 0.008. Removed.
+4. **SC contamination is negligible**: Only 0.3% of 2025 laps inferred as SC/VSC, zero pass the 1.07× clean mask. No dedicated SC feature is needed.
+5. **Per-stint systematic offset**: Std of per-stint mean residual = 1.398s (vs ~1.17s expected if random). `driver_avg_lap_time` and `driver_podium_rate` partially address this.
+
+#### Remaining known issues in v8
+
+- **Australia 2025** (RMSE 11.2s): 2025 Australian GP baseline is +21.9s above training — likely a red-flag/restart-dominated race. Per-year baseline computes to 104.9s instead of ~83s. Flagged low-confidence.
+- **Azerbaijan / Miami / São Paulo** (3–4.5s RMSE): Per-year baselines reflect early-lap qualifying pace; these circuits have high SC frequency so actual race pace is slower. Flagged low-confidence.
+- **Global bias +0.79s**: Model slightly over-corrects for 2025 car development. Apply a +0.79s post-hoc calibration offset in the production inference wrapper (not yet implemented).
+
+#### Next improvement opportunities
+
+1. SC/VSC flag as a feature (§5 inference method) — helps predict caution-period laps.
+2. Slope-based tire degradation (§1 planned fix) — would improve Hard tire predictions.
+3. Bayesian hyperparameter search via Optuna (100 trials vs current 64-combo grid).
+4. Widen strategy bounds to ±3s for Australian, Azerbaijan, Miami, São Paulo Grand Prix.
